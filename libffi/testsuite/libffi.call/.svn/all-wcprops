@@ -1,0 +1,311 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call
+END
+return_sc.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/return_sc.c
+END
+float.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/float.c
+END
+struct1.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/struct1.c
+END
+cls_float.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/cls_float.c
+END
+struct2.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/struct2.c
+END
+return_uc.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/return_uc.c
+END
+cls_20byte.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/cls_20byte.c
+END
+nested_struct1.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/nested_struct1.c
+END
+struct3.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/struct3.c
+END
+struct4.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/struct4.c
+END
+struct5.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/struct5.c
+END
+cls_24byte.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/cls_24byte.c
+END
+struct6.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/struct6.c
+END
+struct7.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/struct7.c
+END
+cls_double.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/cls_double.c
+END
+struct8.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/struct8.c
+END
+struct9.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/struct9.c
+END
+cls_uint.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/cls_uint.c
+END
+many_win32.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/many_win32.c
+END
+strlen_win32.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/strlen_win32.c
+END
+pyobjc-tc.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/pyobjc-tc.c
+END
+cls_uchar.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/cls_uchar.c
+END
+many.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/many.c
+END
+cls_1_1byte.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/cls_1_1byte.c
+END
+cls_ulonglong.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/cls_ulonglong.c
+END
+return_ll.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/return_ll.c
+END
+cls_3_1byte.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/cls_3_1byte.c
+END
+cls_12byte.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/cls_12byte.c
+END
+strlen.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/strlen.c
+END
+cls_3byte1.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/cls_3byte1.c
+END
+cls_4_1byte.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/cls_4_1byte.c
+END
+cls_3byte2.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/cls_3byte2.c
+END
+ffitest.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/ffitest.h
+END
+cls_16byte.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/cls_16byte.c
+END
+closure_fn0.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/closure_fn0.c
+END
+closure_fn1.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/closure_fn1.c
+END
+problem1.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/problem1.c
+END
+closure_fn2.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/closure_fn2.c
+END
+closure_fn3.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/closure_fn3.c
+END
+cls_ushort.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/cls_ushort.c
+END
+call.exp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/call.exp
+END
+promotion.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/promotion.c
+END
+nested_struct.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/nested_struct.c
+END
+float1.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/float1.c
+END
+cls_2byte.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/cls_2byte.c
+END
+float2.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/float2.c
+END
+cls_4byte.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/cls_4byte.c
+END
+cls_5byte.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/cls_5byte.c
+END
+cls_6byte.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/cls_6byte.c
+END
+cls_7byte.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/cls_7byte.c
+END
+cls_8byte.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/2/trunk/Einstein/libffi/testsuite/libffi.call/cls_8byte.c
+END

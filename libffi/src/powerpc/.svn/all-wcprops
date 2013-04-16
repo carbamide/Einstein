@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/trunk/Einstein/libffi/src/powerpc
+END
+ppc_closure.S
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2/trunk/Einstein/libffi/src/powerpc/ppc_closure.S
+END
+darwin_closure.S
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2/trunk/Einstein/libffi/src/powerpc/darwin_closure.S
+END
+ffitarget.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2/trunk/Einstein/libffi/src/powerpc/ffitarget.h
+END
+aix.S
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2/trunk/Einstein/libffi/src/powerpc/aix.S
+END
+darwin.S
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2/trunk/Einstein/libffi/src/powerpc/darwin.S
+END
+ffi.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2/trunk/Einstein/libffi/src/powerpc/ffi.c
+END
+sysv.S
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2/trunk/Einstein/libffi/src/powerpc/sysv.S
+END
+linux64_closure.S
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2/trunk/Einstein/libffi/src/powerpc/linux64_closure.S
+END
+asm.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2/trunk/Einstein/libffi/src/powerpc/asm.h
+END
+ffi_darwin.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2/trunk/Einstein/libffi/src/powerpc/ffi_darwin.c
+END
+linux64.S
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2/trunk/Einstein/libffi/src/powerpc/linux64.S
+END
+aix_closure.S
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2/trunk/Einstein/libffi/src/powerpc/aix_closure.S
+END

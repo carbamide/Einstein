@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/Einstein/libffi-armlinux/lib
+END
+libffi.a
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2/trunk/Einstein/libffi-armlinux/lib/libffi.a
+END
+libffi.so
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2/trunk/Einstein/libffi-armlinux/lib/libffi.so
+END

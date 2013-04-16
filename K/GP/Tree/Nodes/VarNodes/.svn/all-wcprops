@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Tree/Nodes/VarNodes
+END
+TGPSetStaticVariable.cp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Tree/Nodes/VarNodes/TGPSetStaticVariable.cp
+END
+TGPGetStaticVariable.cp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Tree/Nodes/VarNodes/TGPGetStaticVariable.cp
+END
+TGPSetStaticVariable.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Tree/Nodes/VarNodes/TGPSetStaticVariable.h
+END
+TGPGetStaticVariable.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Tree/Nodes/VarNodes/TGPGetStaticVariable.h
+END

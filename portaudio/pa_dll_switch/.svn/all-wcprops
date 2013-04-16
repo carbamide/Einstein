@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_dll_switch
+END
+PaDllEntry.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_dll_switch/PaDllEntry.h
+END
+pa_lib.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_dll_switch/pa_lib.c
+END
+letter_from_tim_010817.txt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_dll_switch/letter_from_tim_010817.txt
+END
+portaudio.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_dll_switch/portaudio.h
+END
+loadPA_DLL.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_dll_switch/loadPA_DLL.cpp
+END

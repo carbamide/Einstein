@@ -1,0 +1,359 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/459/trunk/Einstein/Drivers
+END
+TMainPlatformDriver.impl.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/48/trunk/Einstein/Drivers/TMainPlatformDriver.impl.h
+END
+TNativeCalls.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TNativeCalls.h
+END
+TMainTabletDriver.cp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TMainTabletDriver.cp
+END
+UGlue.cp
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/Einstein/Drivers/UGlue.cp
+END
+TInetTool.cp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TInetTool.cp
+END
+PMainSoundDriverPrims.a
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2/trunk/Einstein/Drivers/PMainSoundDriverPrims.a
+END
+TVersionString.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TVersionString.h
+END
+TEinsteinFlashDriverPrims.a
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TEinsteinFlashDriverPrims.a
+END
+PEinsteinInTranslatorPrims.a
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2/trunk/Einstein/Drivers/PEinsteinInTranslatorPrims.a
+END
+TEinsteinNativeCalls.cp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TEinsteinNativeCalls.cp
+END
+TMainPlatformDriver.cp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/48/trunk/Einstein/Drivers/TMainPlatformDriver.cp
+END
+PEinsteinOutTranslatorPrims.a
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/2/trunk/Einstein/Drivers/PEinsteinOutTranslatorPrims.a
+END
+PBatteryDriver.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2/trunk/Einstein/Drivers/PBatteryDriver.h
+END
+TMainStartupDriver.impl.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TMainStartupDriver.impl.h
+END
+TSerialChipVoyagerPrims.a
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TSerialChipVoyagerPrims.a
+END
+PATStack.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/trunk/Einstein/Drivers/PATStack.h
+END
+Einstein.rex.src
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2/trunk/Einstein/Drivers/Einstein.rex.src
+END
+TTabletDriver.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TTabletDriver.h
+END
+TMainDisplayDriverPrims.a
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TMainDisplayDriverPrims.a
+END
+PMainBatteryDriverPrims.a
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2/trunk/Einstein/Drivers/PMainBatteryDriverPrims.a
+END
+TMainStartupDriver.cp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TMainStartupDriver.cp
+END
+TMainTabletDriverPrims.a
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TMainTabletDriverPrims.a
+END
+Glue.a
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/434/trunk/Einstein/Drivers/Glue.a
+END
+Einstein.rex
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/48/trunk/Einstein/Drivers/Einstein.rex
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/48/trunk/Einstein/Drivers/Makefile
+END
+PMainSoundDriver.impl.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2/trunk/Einstein/Drivers/PMainSoundDriver.impl.h
+END
+TSplashScreenInfo.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TSplashScreenInfo.h
+END
+TEinsteinFlashDriver.impl.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TEinsteinFlashDriver.impl.h
+END
+TEinsteinNativeCallsPrims.a
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TEinsteinNativeCallsPrims.a
+END
+TFlashDriver.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TFlashDriver.h
+END
+TMainPlatformDriverPrims.a
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/459/trunk/Einstein/Drivers/TMainPlatformDriverPrims.a
+END
+PEinsteinInTranslator.impl.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2/trunk/Einstein/Drivers/PEinsteinInTranslator.impl.h
+END
+PInTranslator.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2/trunk/Einstein/Drivers/PInTranslator.h
+END
+PEinsteinOutTranslator.impl.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/2/trunk/Einstein/Drivers/PEinsteinOutTranslator.impl.h
+END
+POutTranslator.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2/trunk/Einstein/Drivers/POutTranslator.h
+END
+TStartupDriver.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TStartupDriver.h
+END
+PMainSoundDriver.cp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2/trunk/Einstein/Drivers/PMainSoundDriver.cp
+END
+TInetService.impl.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TInetService.impl.h
+END
+TSerialChipVoyager.impl.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TSerialChipVoyager.impl.h
+END
+TMainVersionString.impl.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TMainVersionString.impl.h
+END
+TEinsteinFlashDriver.cp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TEinsteinFlashDriver.cp
+END
+PEinsteinInTranslator.cp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2/trunk/Einstein/Drivers/PEinsteinInTranslator.cp
+END
+TMainDisplayDriver.impl.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TMainDisplayDriver.impl.h
+END
+PEinsteinOutTranslator.cp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2/trunk/Einstein/Drivers/PEinsteinOutTranslator.cp
+END
+PMainBatteryDriver.impl.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2/trunk/Einstein/Drivers/PMainBatteryDriver.impl.h
+END
+TCommTool.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TCommTool.h
+END
+TInetService.cp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TInetService.cp
+END
+TScreenDriver.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TScreenDriver.h
+END
+TSerialChipVoyager.cp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TSerialChipVoyager.cp
+END
+TMainTabletDriver.impl.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TMainTabletDriver.impl.h
+END
+TMainVersionString.cp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TMainVersionString.cp
+END
+TInetTool.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TInetTool.h
+END
+UGlue.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2/trunk/Einstein/Drivers/UGlue.h
+END
+PAppleTalkStack.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2/trunk/Einstein/Drivers/PAppleTalkStack.h
+END
+TPlatformDriver.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TPlatformDriver.h
+END
+PSoundDriver.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2/trunk/Einstein/Drivers/PSoundDriver.h
+END
+TMainDisplayDriver.cp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TMainDisplayDriver.cp
+END
+PMainBatteryDriver.cp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2/trunk/Einstein/Drivers/PMainBatteryDriver.cp
+END
+TEinsteinNativeCalls.impl.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2/trunk/Einstein/Drivers/TEinsteinNativeCalls.impl.h
+END

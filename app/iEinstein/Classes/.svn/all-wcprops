@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/221/trunk/Einstein/app/iEinstein/Classes
+END
+iEinsteinView.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/190/trunk/Einstein/app/iEinstein/Classes/iEinsteinView.h
+END
+iEinsteinAppDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/207/trunk/Einstein/app/iEinstein/Classes/iEinsteinAppDelegate.h
+END
+iEinsteinView.mm
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/196/trunk/Einstein/app/iEinstein/Classes/iEinsteinView.mm
+END
+iEinsteinAppDelegate.mm
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/215/trunk/Einstein/app/iEinstein/Classes/iEinsteinAppDelegate.mm
+END
+iEinsteinViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/215/trunk/Einstein/app/iEinstein/Classes/iEinsteinViewController.h
+END
+iEinsteinViewController.mm
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/221/trunk/Einstein/app/iEinstein/Classes/iEinsteinViewController.mm
+END

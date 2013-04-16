@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/131/trunk/Einstein/libffi-osx/src/x86
+END
+darwin64.S
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/131/trunk/Einstein/libffi-osx/src/x86/darwin64.S
+END
+ffitarget.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/131/trunk/Einstein/libffi-osx/src/x86/ffitarget.h
+END
+x86-ffi64.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/131/trunk/Einstein/libffi-osx/src/x86/x86-ffi64.c
+END
+darwin.S
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2/trunk/Einstein/libffi-osx/src/x86/darwin.S
+END
+ffi_darwin.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2/trunk/Einstein/libffi-osx/src/x86/ffi_darwin.c
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_linux_alsa
+END
+pa_linux_alsa.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_linux_alsa/pa_linux_alsa.c
+END
+pa_linux_alsa.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_linux_alsa/pa_linux_alsa.h
+END

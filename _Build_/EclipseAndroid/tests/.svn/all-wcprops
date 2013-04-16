@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/434/trunk/Einstein/_Build_/EclipseAndroid/tests
+END
+default.properties
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/266/trunk/Einstein/_Build_/EclipseAndroid/tests/default.properties
+END
+proguard.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/434/trunk/Einstein/_Build_/EclipseAndroid/tests/proguard.cfg
+END
+local.properties
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/266/trunk/Einstein/_Build_/EclipseAndroid/tests/local.properties
+END
+AndroidManifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/266/trunk/Einstein/_Build_/EclipseAndroid/tests/AndroidManifest.xml
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/266/trunk/Einstein/_Build_/EclipseAndroid/tests/build.xml
+END

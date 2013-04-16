@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_win/msvc
+END
+make.bat
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_win/msvc/make.bat
+END
+portaudio.def
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_win/msvc/portaudio.def
+END
+Makefile.msvc
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_win/msvc/Makefile.msvc
+END
+clean.bat
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_win/msvc/clean.bat
+END
+setenv.bat
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_win/msvc/setenv.bat
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_win/msvc/readme.txt
+END

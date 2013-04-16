@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2/trunk/Einstein/portaudio
+END
+configure
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/Einstein/portaudio/configure
+END
+Makefile.in
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/trunk/Einstein/portaudio/Makefile.in
+END
+V19-devel-readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2/trunk/Einstein/portaudio/V19-devel-readme.txt
+END
+config.log
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/Einstein/portaudio/config.log
+END
+configure.in
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2/trunk/Einstein/portaudio/configure.in
+END
+config.doxy
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/trunk/Einstein/portaudio/config.doxy
+END
+config.status
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2/trunk/Einstein/portaudio/config.status
+END
+SConscript
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/Einstein/portaudio/SConscript
+END
+fixdir.bat
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/Einstein/portaudio/fixdir.bat
+END
+config.guess
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2/trunk/Einstein/portaudio/config.guess
+END
+fixfile.bat
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/trunk/Einstein/portaudio/fixfile.bat
+END
+config.sub
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/Einstein/portaudio/config.sub
+END
+LICENSE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/trunk/Einstein/portaudio/LICENSE.txt
+END
+portaudio-2.0.pc
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2/trunk/Einstein/portaudio/portaudio-2.0.pc
+END
+SConstruct
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/Einstein/portaudio/SConstruct
+END
+config.cache
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2/trunk/Einstein/portaudio/config.cache
+END
+portaudio-2.0.pc.in
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2/trunk/Einstein/portaudio/portaudio-2.0.pc.in
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/Einstein/portaudio/index.html
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/Einstein/portaudio/README.txt
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/trunk/Einstein/portaudio/Makefile
+END
+aclocal.m4
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/Einstein/portaudio/aclocal.m4
+END
+install-sh
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/Einstein/portaudio/install-sh
+END

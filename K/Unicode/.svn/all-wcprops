@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/113/trunk/Einstein/K/Unicode
+END
+TString.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/113/trunk/Einstein/K/Unicode/TString.h
+END
+UUTF16Conv.cp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/113/trunk/Einstein/K/Unicode/UUTF16Conv.cp
+END
+TMutableStringRef.cp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/113/trunk/Einstein/K/Unicode/TMutableStringRef.cp
+END
+UUTF16Conv.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/113/trunk/Einstein/K/Unicode/UUTF16Conv.h
+END
+TMutableStringRef.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/113/trunk/Einstein/K/Unicode/TMutableStringRef.h
+END
+UUTF16CStr.cp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/113/trunk/Einstein/K/Unicode/UUTF16CStr.cp
+END
+TStringRef.cp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/113/trunk/Einstein/K/Unicode/TStringRef.cp
+END
+UnicodeDefinitions.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/113/trunk/Einstein/K/Unicode/UnicodeDefinitions.h
+END
+TString.cp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/113/trunk/Einstein/K/Unicode/TString.cp
+END
+UUTF16CStr.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/113/trunk/Einstein/K/Unicode/UUTF16CStr.h
+END
+TStringRef.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/113/trunk/Einstein/K/Unicode/TStringRef.h
+END

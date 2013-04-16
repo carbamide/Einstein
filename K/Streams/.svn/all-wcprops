@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/463/trunk/Einstein/K/Streams
+END
+TStream.cp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/271/trunk/Einstein/K/Streams/TStream.cp
+END
+TFileStream.cp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/463/trunk/Einstein/K/Streams/TFileStream.cp
+END
+TFileStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/463/trunk/Einstein/K/Streams/TFileStream.h
+END
+TStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/457/trunk/Einstein/K/Streams/TStream.h
+END
+TRandomAccessStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/113/trunk/Einstein/K/Streams/TRandomAccessStream.h
+END

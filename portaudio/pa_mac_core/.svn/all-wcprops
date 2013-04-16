@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_mac_core
+END
+pa_mac_core_utilities.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_mac_core/pa_mac_core_utilities.c
+END
+pa_mac_core.c.old
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_mac_core/pa_mac_core.c.old
+END
+notes.txt
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_mac_core/notes.txt
+END
+pa_mac_core_old.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_mac_core/pa_mac_core_old.c
+END
+pa_mac_core.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_mac_core/pa_mac_core.c
+END
+pa_mac_core.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2/trunk/Einstein/portaudio/pa_mac_core/pa_mac_core.h
+END

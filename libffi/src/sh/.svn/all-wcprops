@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/2/trunk/Einstein/libffi/src/sh
+END
+ffitarget.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2/trunk/Einstein/libffi/src/sh/ffitarget.h
+END
+ffi.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/Einstein/libffi/src/sh/ffi.c
+END
+sysv.S
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/Einstein/libffi/src/sh/sysv.S
+END

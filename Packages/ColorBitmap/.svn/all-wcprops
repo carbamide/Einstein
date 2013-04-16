@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/Einstein/Packages/ColorBitmap
+END
+Constants.f
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2/trunk/Einstein/Packages/ColorBitmap/Constants.f
+END
+ColorBitmap.rsrc
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/2/trunk/Einstein/Packages/ColorBitmap/ColorBitmap.rsrc
+END
+ColorBitmap.layout
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/2/trunk/Einstein/Packages/ColorBitmap/ColorBitmap.layout
+END
+ColorBitmap.pict
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/2/trunk/Einstein/Packages/ColorBitmap/ColorBitmap.pict
+END
+GreyBitmap.rsrc
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2/trunk/Einstein/Packages/ColorBitmap/GreyBitmap.rsrc
+END
+ColorBitmap
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2/trunk/Einstein/Packages/ColorBitmap/ColorBitmap
+END
+BWBitmap.rsrc
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/2/trunk/Einstein/Packages/ColorBitmap/BWBitmap.rsrc
+END

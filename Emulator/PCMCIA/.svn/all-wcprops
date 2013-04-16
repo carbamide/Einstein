@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/134/trunk/Einstein/Emulator/PCMCIA
+END
+TPCMCIACard.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2/trunk/Einstein/Emulator/PCMCIA/TPCMCIACard.h
+END
+TNE2000Card.cp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/134/trunk/Einstein/Emulator/PCMCIA/TNE2000Card.cp
+END
+TATACard.cp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2/trunk/Einstein/Emulator/PCMCIA/TATACard.cp
+END
+TPCMCIAController.cp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/121/trunk/Einstein/Emulator/PCMCIA/TPCMCIAController.cp
+END
+TNE2000Card.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/121/trunk/Einstein/Emulator/PCMCIA/TNE2000Card.h
+END
+TLinearCard.cp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2/trunk/Einstein/Emulator/PCMCIA/TLinearCard.cp
+END
+TATACard.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2/trunk/Einstein/Emulator/PCMCIA/TATACard.h
+END
+TPCMCIAController.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/121/trunk/Einstein/Emulator/PCMCIA/TPCMCIAController.h
+END
+TPCMCIACard.cp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/121/trunk/Einstein/Emulator/PCMCIA/TPCMCIACard.cp
+END
+TLinearCard.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2/trunk/Einstein/Emulator/PCMCIA/TLinearCard.h
+END

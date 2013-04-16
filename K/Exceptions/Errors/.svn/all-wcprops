@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/113/trunk/Einstein/K/Exceptions/Errors
+END
+TMemError.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/113/trunk/Einstein/K/Exceptions/Errors/TMemError.h
+END
+TError.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/113/trunk/Einstein/K/Exceptions/Errors/TError.h
+END
+TMemError.cp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/113/trunk/Einstein/K/Exceptions/Errors/TMemError.cp
+END
+TError.cp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/113/trunk/Einstein/K/Exceptions/Errors/TError.cp
+END

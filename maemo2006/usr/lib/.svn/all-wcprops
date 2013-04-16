@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/Einstein/maemo2006/usr/lib
+END
+libXau.so.0
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2/trunk/Einstein/maemo2006/usr/lib/libXau.so.0
+END
+libX11.so.6.2.1
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2/trunk/Einstein/maemo2006/usr/lib/libX11.so.6.2.1
+END
+libX11.so.6
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/2/trunk/Einstein/maemo2006/usr/lib/libX11.so.6
+END
+libXau.so.0.0.0
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2/trunk/Einstein/maemo2006/usr/lib/libXau.so.0.0.0
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/460/trunk/Einstein/_Build_/EclipseAndroid/src/org/messagepademu/einstein/startup
+END
+StartupConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/458/trunk/Einstein/_Build_/EclipseAndroid/src/org/messagepademu/einstein/startup/StartupConstants.java
+END
+Startup.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/460/trunk/Einstein/_Build_/EclipseAndroid/src/org/messagepademu/einstein/startup/Startup.java
+END
+IStartup.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/458/trunk/Einstein/_Build_/EclipseAndroid/src/org/messagepademu/einstein/startup/IStartup.java
+END

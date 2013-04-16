@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/50/trunk/Einstein/_Tests_
+END
+UMemoryTests.cp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/33/trunk/Einstein/_Tests_/UMemoryTests.cp
+END
+UHostInfoTests.cp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/50/trunk/Einstein/_Tests_/UHostInfoTests.cp
+END
+tests.cp
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/Einstein/_Tests_/tests.cp
+END
+UMemoryTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2/trunk/Einstein/_Tests_/UMemoryTests.h
+END
+UHostInfoTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2/trunk/Einstein/_Tests_/UHostInfoTests.h
+END
+UProcessorTests.cp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/33/trunk/Einstein/_Tests_/UProcessorTests.cp
+END
+tests.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2/trunk/Einstein/_Tests_/tests.h
+END
+UScreenTests.cp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/33/trunk/Einstein/_Tests_/UScreenTests.cp
+END
+UScreenTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2/trunk/Einstein/_Tests_/UScreenTests.h
+END
+UProcessorTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2/trunk/Einstein/_Tests_/UProcessorTests.h
+END

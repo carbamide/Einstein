@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/Einstein/libffi-nokia/src
+END
+ffi.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2/trunk/Einstein/libffi-nokia/src/ffi.c
+END
+types.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2/trunk/Einstein/libffi-nokia/src/types.c
+END
+sysv.S
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2/trunk/Einstein/libffi-nokia/src/sysv.S
+END
+prep_cif.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2/trunk/Einstein/libffi-nokia/src/prep_cif.c
+END

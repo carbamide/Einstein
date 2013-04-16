@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Tree/Nodes/BooleanNodes
+END
+TGPNodeBoolean.cp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Tree/Nodes/BooleanNodes/TGPNodeBoolean.cp
+END
+TGPNodeOr.cp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Tree/Nodes/BooleanNodes/TGPNodeOr.cp
+END
+TGPNodeNot.cp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Tree/Nodes/BooleanNodes/TGPNodeNot.cp
+END
+TGPNodeAnd.cp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Tree/Nodes/BooleanNodes/TGPNodeAnd.cp
+END
+TGPNodeBoolean.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Tree/Nodes/BooleanNodes/TGPNodeBoolean.h
+END
+TGPNodeOr.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Tree/Nodes/BooleanNodes/TGPNodeOr.h
+END
+TGPNodeNot.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Tree/Nodes/BooleanNodes/TGPNodeNot.h
+END
+TGPNodeAnd.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Tree/Nodes/BooleanNodes/TGPNodeAnd.h
+END

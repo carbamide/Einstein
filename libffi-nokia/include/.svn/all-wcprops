@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/Einstein/libffi-nokia/include
+END
+fficonfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2/trunk/Einstein/libffi-nokia/include/fficonfig.h
+END
+ffitarget.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2/trunk/Einstein/libffi-nokia/include/ffitarget.h
+END
+ffi_common.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2/trunk/Einstein/libffi-nokia/include/ffi_common.h
+END
+ffi.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2/trunk/Einstein/libffi-nokia/include/ffi.h
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/113/trunk/Einstein/K/Exceptions/IO
+END
+TIOException.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/113/trunk/Einstein/K/Exceptions/IO/TIOException.h
+END
+TEOFException.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/113/trunk/Einstein/K/Exceptions/IO/TEOFException.h
+END
+TIOException.cp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/113/trunk/Einstein/K/Exceptions/IO/TIOException.cp
+END
+TEOFException.cp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/113/trunk/Einstein/K/Exceptions/IO/TEOFException.cp
+END

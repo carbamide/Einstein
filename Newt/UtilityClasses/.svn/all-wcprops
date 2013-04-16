@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/448/trunk/Einstein/Newt/UtilityClasses
+END
+CArrayIterator.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/448/trunk/Einstein/Newt/UtilityClasses/CArrayIterator.h
+END
+CDynamicArray.cp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/448/trunk/Einstein/Newt/UtilityClasses/CDynamicArray.cp
+END
+CArrayIterator.cp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/448/trunk/Einstein/Newt/UtilityClasses/CArrayIterator.cp
+END
+CDynamicArray.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/448/trunk/Einstein/Newt/UtilityClasses/CDynamicArray.h
+END

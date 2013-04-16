@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/136/trunk/Einstein/Drivers/NE2000Driver
+END
+NE2K
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/121/trunk/Einstein/Drivers/NE2000Driver/NE2K
+END
+NE2K.pkg
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/136/trunk/Einstein/Drivers/NE2000Driver/NE2K.pkg
+END
+Project Data
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/121/trunk/Einstein/Drivers/NE2000Driver/Project%20Data
+END
+NE2000.cp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/136/trunk/Einstein/Drivers/NE2000Driver/NE2000.cp
+END
+Makeout
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/121/trunk/Einstein/Drivers/NE2000Driver/Makeout
+END
+Install
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/121/trunk/Einstein/Drivers/NE2000Driver/Install
+END
+FilesInBuild
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/121/trunk/Einstein/Drivers/NE2000Driver/FilesInBuild
+END
+NE2000.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/121/trunk/Einstein/Drivers/NE2000Driver/NE2000.h
+END
+NE2000.impl.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/121/trunk/Einstein/Drivers/NE2000Driver/NE2000.impl.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/121/trunk/Einstein/Drivers/NE2000Driver/Makefile
+END
+NE2000Prims.a
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/136/trunk/Einstein/Drivers/NE2000Driver/NE2000Prims.a
+END

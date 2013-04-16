@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Data
+END
+TGPStringData.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Data/TGPStringData.h
+END
+TGPType.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Data/TGPType.h
+END
+TGPDataRef.cp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Data/TGPDataRef.cp
+END
+TGPBooleanData.cp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Data/TGPBooleanData.cp
+END
+TGPData.cp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Data/TGPData.cp
+END
+TGPVoidData.cp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Data/TGPVoidData.cp
+END
+TGPDataRef.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Data/TGPDataRef.h
+END
+TGPBooleanData.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Data/TGPBooleanData.h
+END
+TGPData.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Data/TGPData.h
+END
+TGPStringData.cp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Data/TGPStringData.cp
+END
+TGPVoidData.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Data/TGPVoidData.h
+END
+TGPType.cp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/113/trunk/Einstein/K/GP/Data/TGPType.cp
+END

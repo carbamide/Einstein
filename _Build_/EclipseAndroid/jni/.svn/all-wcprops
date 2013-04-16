@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/458/trunk/Einstein/_Build_/EclipseAndroid/jni
+END
+einstein.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/267/trunk/Einstein/_Build_/EclipseAndroid/jni/einstein.c
+END
+Android.mk
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/457/trunk/Einstein/_Build_/EclipseAndroid/jni/Android.mk
+END
+Application.mk
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/458/trunk/Einstein/_Build_/EclipseAndroid/jni/Application.mk
+END

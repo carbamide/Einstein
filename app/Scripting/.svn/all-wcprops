@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/2/trunk/Einstein/app/Scripting
+END
+EinsteinInstallPackageCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/2/trunk/Einstein/app/Scripting/EinsteinInstallPackageCommand.h
+END
+EinsteinDoNewtonScriptCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/2/trunk/Einstein/app/Scripting/EinsteinDoNewtonScriptCommand.h
+END
+EinsteinInstallPackageCommand.mm
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/2/trunk/Einstein/app/Scripting/EinsteinInstallPackageCommand.mm
+END
+EinsteinDoNewtonScriptCommand.mm
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/2/trunk/Einstein/app/Scripting/EinsteinDoNewtonScriptCommand.mm
+END
+Einstein.sdef
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2/trunk/Einstein/app/Scripting/Einstein.sdef
+END

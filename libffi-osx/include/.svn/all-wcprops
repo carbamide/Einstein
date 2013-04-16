@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/150/trunk/Einstein/libffi-osx/include
+END
+ffi.h.in
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2/trunk/Einstein/libffi-osx/include/ffi.h.in
+END
+fficonfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/150/trunk/Einstein/libffi-osx/include/fficonfig.h
+END
+ffitarget.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/131/trunk/Einstein/libffi-osx/include/ffitarget.h
+END
+ffi_common.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2/trunk/Einstein/libffi-osx/include/ffi_common.h
+END
+Makefile.in
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2/trunk/Einstein/libffi-osx/include/Makefile.in
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2/trunk/Einstein/libffi-osx/include/Makefile.am
+END
+ffi.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/150/trunk/Einstein/libffi-osx/include/ffi.h
+END

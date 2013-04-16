@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2/trunk/Einstein/libffi-osx/src/powerpc
+END
+darwin_closure.S
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/2/trunk/Einstein/libffi-osx/src/powerpc/darwin_closure.S
+END
+ffitarget.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/2/trunk/Einstein/libffi-osx/src/powerpc/ffitarget.h
+END
+darwin.S
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2/trunk/Einstein/libffi-osx/src/powerpc/darwin.S
+END
+asm.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2/trunk/Einstein/libffi-osx/src/powerpc/asm.h
+END
+ffi_darwin.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2/trunk/Einstein/libffi-osx/src/powerpc/ffi_darwin.c
+END

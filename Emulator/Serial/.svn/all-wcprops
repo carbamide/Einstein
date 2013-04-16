@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/33/trunk/Einstein/Emulator/Serial
+END
+TVoyagerSerialPort.cp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/33/trunk/Einstein/Emulator/Serial/TVoyagerSerialPort.cp
+END
+TFileBasedSerialPort.cp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/2/trunk/Einstein/Emulator/Serial/TFileBasedSerialPort.cp
+END
+TNullSerialPort.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2/trunk/Einstein/Emulator/Serial/TNullSerialPort.h
+END
+TVoyagerSerialPort.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2/trunk/Einstein/Emulator/Serial/TVoyagerSerialPort.h
+END
+TFileBasedSerialPort.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/2/trunk/Einstein/Emulator/Serial/TFileBasedSerialPort.h
+END
