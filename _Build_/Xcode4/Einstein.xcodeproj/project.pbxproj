@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		291EC69B1723475400D40B90 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 291EC6981723475400D40B90 /* SVProgressHUD.bundle */; };
+		291EC69C1723475400D40B90 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 291EC69A1723475400D40B90 /* SVProgressHUD.m */; };
+		291EC69E1723479B00D40B90 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 291EC69D1723479B00D40B90 /* QuartzCore.framework */; };
 		294FA21C171A22AC00304730 /* Glue.cp in Sources */ = {isa = PBXBuildFile; fileRef = C9EF94D5160E48E5009E89C3 /* Glue.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		294FA21D171A22E900304730 /* TFibre.cp in Sources */ = {isa = PBXBuildFile; fileRef = C9D54E1315FA23E700D91131 /* TFibre.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		294FA21F171A23FE00304730 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 294FA21E171A23FE00304730 /* Default.png */; };
@@ -237,6 +240,10 @@
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		291EC6981723475400D40B90 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		291EC6991723475400D40B90 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		291EC69A1723475400D40B90 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		291EC69D1723479B00D40B90 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		294FA21E171A23FE00304730 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../_Build_/Xcode4/Default.png; sourceTree = "<group>"; };
 		294FA220171A240100304730 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../_Build_/Xcode4/Default@2x.png"; sourceTree = "<group>"; };
 		294FA222171A240700304730 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../_Build_/Xcode4/Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -718,6 +725,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				291EC69E1723479B00D40B90 /* QuartzCore.framework in Frameworks */,
 				298BCB92171BAE1E00BB11E4 /* MessageUI.framework in Frameworks */,
 				F1CAFBE41241F7C200A0382E /* CoreAudio.framework in Frameworks */,
 				F1CAFBF51241F7E600A0382E /* AudioToolbox.framework in Frameworks */,
@@ -849,6 +857,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				291EC69D1723479B00D40B90 /* QuartzCore.framework */,
 				298BCB91171BAE1E00BB11E4 /* MessageUI.framework */,
 				C97C7CB81242827600CDCD05 /* iOS Frameworks */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
@@ -1667,6 +1676,9 @@
 				C9B4AA2F123D474800D8D2C7 /* iEinsteinViewController.h */,
 				C94ADB39123E9ADD00406839 /* iEinsteinViewController.mm */,
 				C94ADB3E123E9AEC00406839 /* main.mm */,
+				291EC6981723475400D40B90 /* SVProgressHUD.bundle */,
+				291EC6991723475400D40B90 /* SVProgressHUD.h */,
+				291EC69A1723475400D40B90 /* SVProgressHUD.m */,
 			);
 			name = iOS;
 			path = ../../app/iEinstein;
@@ -1879,6 +1891,7 @@
 				294FA223171A240700304730 /* Default-568h@2x.png in Resources */,
 				294FA225171A285400304730 /* Default-Portrait~ipad.png in Resources */,
 				294FA227171A285600304730 /* Default-Portrait@2x~ipad.png in Resources */,
+				291EC69B1723475400D40B90 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2086,6 +2099,7 @@
 				298BCB8E171BADBA00BB11E4 /* IASKSlider.m in Sources */,
 				298BCB8F171BADBA00BB11E4 /* IASKSwitch.m in Sources */,
 				298BCB90171BADBA00BB11E4 /* IASKTextField.m in Sources */,
+				291EC69C1723475400D40B90 /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

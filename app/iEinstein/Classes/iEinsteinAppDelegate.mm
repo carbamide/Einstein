@@ -3,6 +3,7 @@
 
 #include "Emulator/JIT/TJITPerformance.h"
 
+#import "SVProgressHUD.h"
 
 @implementation iEinsteinAppDelegate
 
@@ -31,6 +32,8 @@
         [viewController stopEmulator];
         [viewController verifyDeleteFlashRAM:4];
     }
+
+	[SVProgressHUD showWithStatus:@"Loading Emulator..." maskType:SVProgressHUDMaskTypeClear];
 
     [viewController initEmulator] ? NSLog(@"Succesfully initialized") : NSLog(@"Failure initializing");
 

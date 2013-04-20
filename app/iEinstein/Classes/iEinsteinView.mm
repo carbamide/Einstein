@@ -1,6 +1,7 @@
 #import "iEinsteinView.h"
 #import "TIOSScreenManager.h"
 #import "InsertDiskView.h"
+#import "SVProgressHUD.h"
 
 #include "TInterruptManager.h"
 #include "TPlatformManager.h"
@@ -141,6 +142,8 @@
 
 - (void)setNeedsDisplayInNewtonRect:(NSValue *)v
 {
+	[SVProgressHUD dismiss];
+	
     CGRect inRect = [v CGRectValue];
     CGRect r = screenImageRect;
 
