@@ -1317,10 +1317,6 @@ TNativePrimitives::ExecuteBatteryDriverNative( KUInt32 inInstruction )
 				outputCapacity = [[(NSDictionary*)battery objectForKey:@kIOPSCurrentCapacityKey] doubleValue];
 			 }
 			 */
-			if (mLog)
-			{
-				mLog->LogLine( "PMainBatteryDriver::Status" );
-			}
 			{
 				KUInt32 theInfoStructAddr = mProcessor->GetRegister( 2 );
 				(void) mMemory->Write(theInfoStructAddr + 0x00, 0x00000003);	// mBatteryType
@@ -1416,10 +1412,6 @@ TNativePrimitives::ExecuteScreenDriverNative( KUInt32 inInstruction )
 	switch (inInstruction & 0xFF)
 	{
 		case 0x01:
-			if (mLog)
-			{
-				mLog->LogLine( "TMainDisplayDriver::Delete" );
-			}
 			mProcessor->SetRegister( 0, 0 );
 			break;
 
@@ -1432,10 +1424,6 @@ TNativePrimitives::ExecuteScreenDriverNative( KUInt32 inInstruction )
 //			break;
 
 		case 0x03:
-			if (mLog)
-			{
-				mLog->LogLine( "TMainDisplayDriver::GetScreenInfo" );
-			}
 			{
 				KUInt32 theInfoStructAddr = mProcessor->GetRegister( 1 );
 				(void) mMemory->Write(theInfoStructAddr + 0x00, mScreenManager->GetScreenHeight() );
@@ -1450,27 +1438,15 @@ TNativePrimitives::ExecuteScreenDriverNative( KUInt32 inInstruction )
 			break;
 
 		case 0x04:
-			if (mLog)
-			{
-				mLog->LogLine( "TMainDisplayDriver::PowerInit" );
-			}
 			mProcessor->SetRegister( 0, 0 );
 			break;
 
 		case 0x05:
-			if (mLog)
-			{
-				mLog->LogLine( "TMainDisplayDriver::PowerOn" );
-			}
 			mScreenManager->PowerOnScreen();
 			mProcessor->SetRegister( 0, 0 );
 			break;
 
 		case 0x06:
-			if (mLog)
-			{
-				mLog->LogLine( "TMainDisplayDriver::PowerOff" );
-			}
 			mScreenManager->PowerOffScreen();
 			mProcessor->SetRegister( 0, 0 );
 			break;
