@@ -1,10 +1,7 @@
-#ifndef EINSTEIN_VIEW_CONTROLLER_H
-#define EINSTEIN_VIEW_CONTROLLER_H
 #import "IASKAppSettingsViewController.h"
 
 #include <K/Defines/KDefinitions.h>
 #import <UIKit/UIKit.h>
-
 
 class TNetworkManager;
 class TSoundManager;
@@ -15,18 +12,15 @@ class TPlatformManager;
 class TLog;
 
 @interface iEinsteinViewController : UIViewController <IASKSettingsDelegate, UIActionSheetDelegate>
-{
-    TNetworkManager *mNetworkManager;
-    TSoundManager *mSoundManager;
-    TScreenManager *mScreenManager;
-    TROMImage *mROMImage;
-    TEmulator *mEmulator;
-    TPlatformManager *mPlatformManager;
-    TLog *mLog;
-    int lastKnownScreenResolution;
-}
 
-- (void)installNewPackages;
+@property (nonatomic) TNetworkManager *mNetworkManager;
+@property (nonatomic) TSoundManager *mSoundManager;
+@property (nonatomic) TScreenManager *mScreenManager;
+@property (nonatomic) TROMImage *mROMImage;
+@property (nonatomic) TEmulator *mEmulator;
+@property (nonatomic) TPlatformManager *mPlatformManager;
+@property (nonatomic) TLog *mLog;
+@property (nonatomic) int lastKnownScreenResolution;
 
 - (BOOL)initEmulator;
 - (void)startEmulator;
@@ -42,4 +36,3 @@ class TLog;
 
 extern void openEinsteinMenu(iEinsteinViewController *);
 
-#endif // ifndef EINSTEIN_VIEW_CONTROLLER_H

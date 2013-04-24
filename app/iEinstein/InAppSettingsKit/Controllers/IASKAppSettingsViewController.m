@@ -14,6 +14,7 @@
 //  This code is licensed under the BSD license that is available at: http://www.opensource.org/licenses/bsd-license.php
 //
 
+#define kIASKMinimumScaleFactor    0.75
 
 #import "IASKAppSettingsViewController.h"
 #import "IASKSettingsReader.h"
@@ -158,8 +159,6 @@ CGRect IASKCGRectSwap(CGRect rect);
 - (void)viewDidUnload {
   [super viewDidUnload];
 
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
 	self.view = nil;
 	self.viewList = nil;
 }
@@ -490,8 +489,8 @@ CGRect IASKCGRectSwap(CGRect rect);
 	} else {
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
 	}
-	cell.textLabel.minimumFontSize = kIASKMinimumFontSize;
-	cell.detailTextLabel.minimumFontSize = kIASKMinimumFontSize;
+	cell.textLabel.minimumScaleFactor = kIASKMinimumScaleFactor;
+	cell.detailTextLabel.minimumScaleFactor = kIASKMinimumScaleFactor;
 	return cell;
 }
 
@@ -778,9 +777,7 @@ CGRect IASKCGRectSwap(CGRect rect);
             }
             
             mailViewController.mailComposeDelegate = vc;
-#if (__IPHONE_OS_VERSION_MIN_REQUIRED >= 50000)
-#pragma message "Now that we're iOS5 and up, remove this workaround"
-#endif
+			
             if([vc respondsToSelector:@selector(presentViewController:animated:completion:)]) {
                 [vc presentViewController:mailViewController
                                    animated:YES
@@ -824,9 +821,6 @@ CGRect IASKCGRectSwap(CGRect rect);
                                          error:error];
      }
     
-#if (__IPHONE_OS_VERSION_MIN_REQUIRED >= 50000)
-#pragma message "Now that we're iOS5 and up, remove this workaround"
-#endif
     if([self respondsToSelector:@selector(dismissViewControllerAnimated:completion:)]) {
         [self dismissViewControllerAnimated:YES
                                  completion:nil];

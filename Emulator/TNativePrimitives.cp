@@ -737,9 +737,6 @@ TNativePrimitives::ExecutePlatformDriverNative( KUInt32 inInstruction )
 				static int firstPause = 1;
 				if (firstPause) {
 					firstPause--;
-					if (firstPause==0) {
-			//			mPlatformManager->InstallNewPackages();
-					}
 				}
 			}
 			mProcessor->SetRegister( 0, 0 );

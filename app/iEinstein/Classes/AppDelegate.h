@@ -2,12 +2,9 @@
 
 @class iEinsteinViewController;
 
-@interface iEinsteinAppDelegate : NSObject <UIApplicationDelegate>
-{
-    IBOutlet UIWindow *window;
-    IBOutlet iEinsteinViewController *viewController;
-}
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+@property (strong, nonatomic) IBOutlet UIWindow *window;
 @property (strong, nonatomic) iEinsteinViewController *viewController;
 
 @end

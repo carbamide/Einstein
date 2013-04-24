@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Einstein.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
 		<key>iOSEinstein.xcscheme</key>
 		<dict>
 			<key>orderHint</key>

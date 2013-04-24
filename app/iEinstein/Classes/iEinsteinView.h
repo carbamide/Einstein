@@ -6,14 +6,13 @@ class TScreenManager;
 class TEmulator;
 
 @interface iEinsteinView : UIView
-{
-    TScreenManager *mScreenManager;
-    TEmulator *mEmulator;
-    CGImageRef mScreenImage;
-    CGRect screenImageRect;
-    KUInt32 newtonScreenHeight;
-    KUInt32 newtonScreenWidth;
-}
+
+@property (nonatomic) TScreenManager *mScreenManager;
+@property (nonatomic) TEmulator *mEmulator;
+@property (nonatomic) CGImageRef mScreenImage;
+@property (nonatomic) CGRect screenImageRect;
+@property (nonatomic) KUInt32 newtonScreenHeight;
+@property (nonatomic) KUInt32 newtonScreenWidth;
 
 @property (strong, nonatomic) InsertDiskView *insertDiskView;
 
