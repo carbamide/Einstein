@@ -1487,12 +1487,6 @@ TNativePrimitives::ExecuteScreenDriverNative( KUInt32 inInstruction )
 			break;
 			
 		case 0x08:
-			if (mLog)
-			{
-				mLog->FLogLine(
-					"TMainDisplayDriver::GetFeature( %.8X )",
-					(unsigned int) mProcessor->GetRegister(1) );
-			}
 			{
 				KUInt32 theFeature = (unsigned int) mProcessor->GetRegister(1);
 				if (theFeature == 0x00000000) {
