@@ -18,6 +18,7 @@
 - (void)awakeFromNib
 {
 	_insertDiskView = [[InsertDiskView alloc] initWithFrame:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? CGRectMake(788, 0.0, 240.0, 1024) : CGRectMake(340, 0.0, 240.0, 480)];
+	
 	[_insertDiskView setDelegate:(iEinsteinViewController *)[self superview]];
 	
 	[self addSubview:_insertDiskView];
@@ -49,95 +50,95 @@
 
 - (void)setScreenManager:(TScreenManager *)sm
 {
-    mScreenManager = sm;
+    _mScreenManager = sm;
 }
 
 - (void)setEmulator:(TEmulator *)em
 {
-    mEmulator = em;
+    _mEmulator = em;
 }
 
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef theContext = UIGraphicsGetCurrentContext();
-
-    if (mScreenManager == NULL) {
-        // Just fill black
-
+	
+    if (_mScreenManager == NULL) {
         CGFloat black[] = { 0.0, 0.0, 0.0, 1.0 };
+		
         CGRect frame = [self frame];
+		
         CGContextSetFillColor(theContext, black);
         CGContextFillRect(theContext, frame);
     }
     else {
-        if (mScreenImage == NULL) {
+        if (_mScreenImage == NULL) {
             CGColorSpaceRef theColorSpace = CGColorSpaceCreateDeviceRGB();
-
-            newtonScreenWidth = mScreenManager->GetScreenWidth();
-            newtonScreenHeight = mScreenManager->GetScreenHeight();
-
-            mScreenImage = CGImageCreate(
-                    newtonScreenWidth, newtonScreenHeight,
-                    8, 32, newtonScreenWidth * sizeof(KUInt32),
-                    theColorSpace,
-                    kAlphaNoneSkipFirstPlusHostByteOrder,
-                    ((TIOSScreenManager *)mScreenManager)->GetDataProvider(),
-                    NULL, false,
-                    kCGRenderingIntentDefault);
-
+			
+            _newtonScreenWidth = _mScreenManager->GetScreenWidth();
+            _newtonScreenHeight = _mScreenManager->GetScreenHeight();
+			
+            _mScreenImage = CGImageCreate(
+										  _newtonScreenWidth, _newtonScreenHeight,
+										  8, 32, _newtonScreenWidth * sizeof(KUInt32),
+										  theColorSpace,
+										  kAlphaNoneSkipFirstPlusHostByteOrder,
+										  ((TIOSScreenManager *)_mScreenManager)->GetDataProvider(),
+										  NULL, false,
+										  kCGRenderingIntentDefault);
+			
             CGColorSpaceRelease(theColorSpace);
-
+			
             CGRect screenBounds = [[UIScreen mainScreen] bounds];
             CGRect r = [self frame];
-
-            if (screenBounds.size.width > newtonScreenWidth && screenBounds.size.height > newtonScreenHeight) {
-                if (newtonScreenWidth == newtonScreenHeight) {
+			
+            if (screenBounds.size.width > _newtonScreenWidth && screenBounds.size.height > _newtonScreenHeight) {
+                if (_newtonScreenWidth == _newtonScreenHeight) {
                     // Newton screen resolution is square (like 320x320)
-
-                    int mod = (int)screenBounds.size.width % newtonScreenWidth;
+					
+                    int mod = (int)screenBounds.size.width % _newtonScreenWidth;
                     r.size.width -= mod;
                     r.size.height = r.size.width;
                 }
                 else {
                     // Newton screen resolution is rectangular (like 320x480)
-
-                    int wmod = (int)r.size.width % newtonScreenWidth;
-                    int hmod = (int)r.size.height % newtonScreenHeight;
-
+					
+                    int wmod = (int)r.size.width % _newtonScreenWidth;
+                    int hmod = (int)r.size.height % _newtonScreenHeight;
+					
                     if (wmod > hmod) {
                         r.size.width -= wmod;
-
-                        int scale = (int)r.size.width / newtonScreenWidth;
-                        r.size.height = newtonScreenHeight * scale;
+						
+                        int scale = (int)r.size.width / _newtonScreenWidth;
+                        r.size.height = _newtonScreenHeight * scale;
                     }
                     else {
                         r.size.height -= hmod;
-
-                        int scale = (int)r.size.height / newtonScreenHeight;
-                        r.size.width = newtonScreenWidth * scale;
+						
+                        int scale = (int)r.size.height / _newtonScreenHeight;
+                        r.size.width = _newtonScreenWidth * scale;
                     }
                 }
-
+				
                 // Center image on screen
-
+				
                 r.origin.x += (screenBounds.size.width - r.size.width) / 2;
                 r.origin.y += (screenBounds.size.height - r.size.height) / 2;
             }
-
-            screenImageRect = CGRectIntegral(r);
+			
+            _screenImageRect = CGRectIntegral(r);
         }
-
+		
         CGContextSetInterpolationQuality(theContext, kCGInterpolationNone);
-        CGContextDrawImage(theContext, screenImageRect, mScreenImage);
+        CGContextDrawImage(theContext, _screenImageRect, _mScreenImage);
     }
 }
 
 - (void)reset
 {
-    mEmulator = NULL;
-    mScreenManager = NULL;
-    CGImageRelease(mScreenImage);
-    mScreenImage = NULL;
+    _mEmulator = NULL;
+    _mScreenManager = NULL;
+    CGImageRelease(_mScreenImage);
+    _mScreenImage = NULL;
 }
 
 - (void)setNeedsDisplayInNewtonRect:(NSValue *)v
@@ -145,54 +146,54 @@
 	[SVProgressHUD dismiss];
 	
     CGRect inRect = [v CGRectValue];
-    CGRect r = screenImageRect;
-
-    float wratio = r.size.width / newtonScreenWidth;
-    float hratio = r.size.height / newtonScreenHeight;
-
+    CGRect r = _screenImageRect;
+	
+    float wratio = r.size.width / _newtonScreenWidth;
+    float hratio = r.size.height / _newtonScreenHeight;
+	
     int left = (inRect.origin.x * wratio) + r.origin.x;
     int top = (inRect.origin.y * hratio) + r.origin.y;
     int right = left + (inRect.size.width * wratio);
     int bottom = top + (inRect.size.height * hratio);
-
+	
     CGRect outRect = CGRectMake(left, top, right - left + 1, bottom - top + 1);
-
+	
     [self setNeedsDisplayInRect:outRect];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{	
+{
     UITouch *t = [touches anyObject];
-
-    if (t) {
-        if (!mEmulator->GetPlatformManager()->IsPowerOn()) {
-            mEmulator->GetPlatformManager()->SendPowerSwitchEvent();
-        }
-
-        CGPoint p = [t locationInView:self];
-        CGRect r = screenImageRect;
-        int x = (1.0 - ((p.y - r.origin.y) / r.size.height)) * newtonScreenHeight;
-        int y = ((p.x - r.origin.x) / r.size.width) * newtonScreenWidth;
-        mScreenManager->PenDown(x, y);
-    }
+	
+	if (!_mEmulator->GetPlatformManager()->IsPowerOn()) {
+		_mEmulator->GetPlatformManager()->SendPowerSwitchEvent();
+	}
+	
+	CGPoint p = [t locationInView:self];
+	CGRect r = _screenImageRect;
+	
+	int x = (1.0 - ((p.y - r.origin.y) / r.size.height)) * _newtonScreenHeight;
+	int y = ((p.x - r.origin.x) / r.size.width) * _newtonScreenWidth;
+	
+	_mScreenManager->PenDown(x, y);
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	UITouch *t = [touches anyObject];
-
-    if (t) {
-        CGPoint p = [t locationInView:self];
-        CGRect r = screenImageRect;
-        int x = (1.0 - ((p.y - r.origin.y) / r.size.height)) * newtonScreenHeight;
-        int y = ((p.x - r.origin.x) / r.size.width) * newtonScreenWidth;
-        mScreenManager->PenDown(x, y);
-    }
+	
+	CGPoint p = [t locationInView:self];
+	CGRect r = _screenImageRect;
+	
+	int x = (1.0 - ((p.y - r.origin.y) / r.size.height)) * _newtonScreenHeight;
+	int y = ((p.x - r.origin.x) / r.size.width) * _newtonScreenWidth;
+	
+	_mScreenManager->PenDown(x, y);
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    mScreenManager->PenUp();
+    _mScreenManager->PenUp();
 }
 
 @end

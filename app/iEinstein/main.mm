@@ -22,22 +22,11 @@
 // ==============================
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
 int main(int argc, char *argv[]) 
 {    
 	@autoreleasepool {
-		int retVal = UIApplicationMain(argc, argv, nil, nil);
-		return retVal;
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
 	}
 }
-
-void iOSDoLogLine(const char* inLine)
-{
-	NSLog(@"%@", @(inLine));
-}
-
-// TODO: how to get the ROM from the user into the system:
-//  - see section "Sharing Files with the User" in "iOS Application Programming Guide"
-//  - and http://www.raywenderlich.com/1948/how-integrate-itunes-file-sharing-with-your-ios-app
-// TODO: screen rotation
-// ...
