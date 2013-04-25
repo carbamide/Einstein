@@ -21,6 +21,14 @@
     [_window addSubview:[_viewController view]];
     [_window makeKeyAndVisible];
 
+	NSString *docdir = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"717006.rom" ofType:nil];
+	NSString *filePath2 = [docdir stringByAppendingPathComponent:@"717006.rom"];
+	
+	if (![[NSFileManager defaultManager] fileExistsAtPath:filePath2]) {
+		[[NSFileManager defaultManager] copyItemAtPath:filePath toPath:filePath2 error:nil];
+	}
+	
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     bool clearFlash = [(NSNumber *)[prefs objectForKey:@"clear_flash_ram"] boolValue];
 

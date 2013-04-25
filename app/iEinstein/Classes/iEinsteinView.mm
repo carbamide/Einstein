@@ -17,7 +17,7 @@
 
 - (void)awakeFromNib
 {
-	_insertDiskView = [[InsertDiskView alloc] initWithFrame:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? CGRectMake(788, 0.0, 240.0, 1024) : CGRectMake(340, 0.0, 240.0, 480)];
+	_insertDiskView = [[InsertDiskView alloc] initWithFrame:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? CGRectMake(788, 0.0, 240.0, 1024) : CGRectMake(340, 0.0, 240.0, [[UIScreen mainScreen] bounds].size.height > 500 ? 568 : 480)];
 	
 	[_insertDiskView setDelegate:(iEinsteinViewController *)[self superview]];
 	

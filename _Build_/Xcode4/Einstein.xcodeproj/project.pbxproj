@@ -33,6 +33,11 @@
 		298BCB8F171BADBA00BB11E4 /* IASKSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 298BCB80171BADBA00BB11E4 /* IASKSwitch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		298BCB90171BADBA00BB11E4 /* IASKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 298BCB82171BADBA00BB11E4 /* IASKTextField.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		298BCB92171BAE1E00BB11E4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 298BCB91171BAE1E00BB11E4 /* MessageUI.framework */; };
+		29CF1EF01728D42C00FCCA9D /* 114.png in Resources */ = {isa = PBXBuildFile; fileRef = 29CF1EEF1728D42C00FCCA9D /* 114.png */; };
+		29CF1EF21728D43300FCCA9D /* 72.png in Resources */ = {isa = PBXBuildFile; fileRef = 29CF1EF11728D43300FCCA9D /* 72.png */; };
+		29CF1EF41728D43800FCCA9D /* 57.png in Resources */ = {isa = PBXBuildFile; fileRef = 29CF1EF31728D43800FCCA9D /* 57.png */; };
+		29CF1EF61728D45300FCCA9D /* 144.png in Resources */ = {isa = PBXBuildFile; fileRef = 29CF1EF51728D45300FCCA9D /* 144.png */; };
+		29CF1EF81728D49600FCCA9D /* 717006.rom in Resources */ = {isa = PBXBuildFile; fileRef = 29CF1EF71728D49600FCCA9D /* 717006.rom */; };
 		29D313AD171B52560043E060 /* TNullSoundManager.cp in Sources */ = {isa = PBXBuildFile; fileRef = C99E34AE111B7C08002165EC /* TNullSoundManager.cp */; };
 		29D313B0171B54080043E060 /* InsertDiskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D313AF171B54080043E060 /* InsertDiskView.m */; };
 		C901E551132659120074513E /* TCircleBuffer.cp in Sources */ = {isa = PBXBuildFile; fileRef = C99E3321111B7570002165EC /* TCircleBuffer.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -45,8 +50,6 @@
 		C97C7E1D124282A600CDCD05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97C7E1B124282A600CDCD05 /* Foundation.framework */; };
 		C97C7EA3124283FE00CDCD05 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97C7EA2124283FE00CDCD05 /* MainWindow_iPad.xib */; };
 		C995672C123F793D009A5668 /* TIOSScreenManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = C995672B123F793D009A5668 /* TIOSScreenManager.mm */; };
-		C99FDB7412D40365002FC776 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = C99FDB7212D40365002FC776 /* Icon-72.png */; };
-		C99FDB7512D40365002FC776 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C99FDB7312D40365002FC776 /* Icon.png */; };
 		C9B4A5371242E0DE003F7AD5 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C9B4A5361242E0DE003F7AD5 /* Settings.bundle */; };
 		C9B4AA39123D474800D8D2C7 /* iEinsteinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9B4AA33123D474800D8D2C7 /* iEinsteinViewController.xib */; };
 		C9B4AA3B123D474800D8D2C7 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9B4AA35123D474800D8D2C7 /* MainWindow.xib */; };
@@ -164,6 +167,11 @@
 		298BCB91171BAE1E00BB11E4 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		29CF1EEF1728D42C00FCCA9D /* 114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 114.png; sourceTree = "<group>"; };
+		29CF1EF11728D43300FCCA9D /* 72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 72.png; sourceTree = "<group>"; };
+		29CF1EF31728D43800FCCA9D /* 57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57.png; sourceTree = "<group>"; };
+		29CF1EF51728D45300FCCA9D /* 144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 144.png; sourceTree = "<group>"; };
+		29CF1EF71728D49600FCCA9D /* 717006.rom */ = {isa = PBXFileReference; lastKnownFileType = file; path = 717006.rom; sourceTree = "<group>"; };
 		29D313AE171B54080043E060 /* InsertDiskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertDiskView.h; sourceTree = "<group>"; };
 		29D313AF171B54080043E060 /* InsertDiskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertDiskView.m; sourceTree = "<group>"; };
 		C901968613282E1500C3342F /* TAndroidScreenManager.cp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TAndroidScreenManager.cp; sourceTree = "<group>"; tabWidth = 4; usesTabs = 1; };
@@ -514,8 +522,6 @@
 		C99E3703111C18D2002165EC /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		C99E3705111C18D2002165EC /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		C99E374F111C1F0E002165EC /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
-		C99FDB7212D40365002FC776 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
-		C99FDB7312D40365002FC776 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		C9B4A5361242E0DE003F7AD5 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		C9B4AA24123D471D00D8D2C7 /* iOSEinstein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSEinstein.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B4AA2D123D474800D8D2C7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../app/iEinstein/Classes/AppDelegate.h; sourceTree = "<group>"; };
@@ -738,6 +744,11 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				29CF1EF71728D49600FCCA9D /* 717006.rom */,
+				29CF1EF51728D45300FCCA9D /* 144.png */,
+				29CF1EF31728D43800FCCA9D /* 57.png */,
+				29CF1EF11728D43300FCCA9D /* 72.png */,
+				29CF1EEF1728D42C00FCCA9D /* 114.png */,
 				F1CB7616131730260017B0BB /* iOS */,
 			);
 			name = Resources;
@@ -1558,8 +1569,6 @@
 		F1CB763C1317326C0017B0BB /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				C99FDB7312D40365002FC776 /* Icon.png */,
-				C99FDB7212D40365002FC776 /* Icon-72.png */,
 			);
 			name = Icons;
 			sourceTree = "<group>";
@@ -1638,8 +1647,6 @@
 			files = (
 				C9B4AA39123D474800D8D2C7 /* iEinsteinViewController.xib in Resources */,
 				C9B4AA3B123D474800D8D2C7 /* MainWindow.xib in Resources */,
-				C99FDB7512D40365002FC776 /* Icon.png in Resources */,
-				C99FDB7412D40365002FC776 /* Icon-72.png in Resources */,
 				C97C7EA3124283FE00CDCD05 /* MainWindow_iPad.xib in Resources */,
 				C9B4A5371242E0DE003F7AD5 /* Settings.bundle in Resources */,
 				294FA21F171A23FE00304730 /* Default.png in Resources */,
@@ -1648,6 +1655,11 @@
 				294FA225171A285400304730 /* Default-Portrait~ipad.png in Resources */,
 				294FA227171A285600304730 /* Default-Portrait@2x~ipad.png in Resources */,
 				291EC69B1723475400D40B90 /* SVProgressHUD.bundle in Resources */,
+				29CF1EF01728D42C00FCCA9D /* 114.png in Resources */,
+				29CF1EF21728D43300FCCA9D /* 72.png in Resources */,
+				29CF1EF41728D43800FCCA9D /* 57.png in Resources */,
+				29CF1EF61728D45300FCCA9D /* 144.png in Resources */,
+				29CF1EF81728D49600FCCA9D /* 717006.rom in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
