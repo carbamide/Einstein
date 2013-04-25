@@ -355,10 +355,6 @@ TIOSScreenManager::OpenEinsteinMenu()
     if (!once)
 	[mController performSelectorOnMainThread:@selector(openEinsteinMenu:) withObject:[NSValue valueWithCGRect:newtonRect] waitUntilDone:YES];
     once = 1;
-    
-    //openEinsteinMenu((iEinsteinViewController*)mController);
-
-    //((iEinsteinViewController*)mController)->openEinsteinMenu();
 }
 
 
