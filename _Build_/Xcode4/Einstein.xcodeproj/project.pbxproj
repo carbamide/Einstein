@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2912FB1F172ACCF1009227F1 /* libXADMaster.ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2912FB07172ACB29009227F1 /* libXADMaster.ios.a */; };
 		291EC69B1723475400D40B90 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 291EC6981723475400D40B90 /* SVProgressHUD.bundle */; };
 		291EC69C1723475400D40B90 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 291EC69A1723475400D40B90 /* SVProgressHUD.m */; };
 		291EC69E1723479B00D40B90 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 291EC69D1723479B00D40B90 /* QuartzCore.framework */; };
@@ -130,9 +131,111 @@
 		F8B76BC6169CAE7100660943 /* newt_string.cp in Sources */ = {isa = PBXBuildFile; fileRef = F8B76BC4169CAE7100660943 /* newt_string.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2912FB00172ACB29009227F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2912FAED172ACB28009227F1 /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = XADMaster;
+		};
+		2912FB02172ACB29009227F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2912FAED172ACB28009227F1 /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B34A97511C2FD0500396C26;
+			remoteInfo = libXADMaster.a;
+		};
+		2912FB04172ACB29009227F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2912FAED172ACB28009227F1 /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B91CD5E11D97E7C0081E40A;
+			remoteInfo = libXADMaster.win.a;
+		};
+		2912FB06172ACB29009227F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2912FAED172ACB28009227F1 /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B467B0115CD9A73001AB1DD;
+			remoteInfo = libXADMaster.ios.a;
+		};
+		2912FB08172ACB29009227F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2912FAED172ACB28009227F1 /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B5A7BA30A24F9B400B189EB;
+			remoteInfo = XADTest;
+		};
+		2912FB0A172ACB29009227F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2912FAED172ACB28009227F1 /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1BBAB68B0EC274A3007FE6A2;
+			remoteInfo = XADTest2;
+		};
+		2912FB0C172ACB29009227F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2912FAED172ACB28009227F1 /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1BC8931A0ED6F283006B47FE;
+			remoteInfo = XADTest3;
+		};
+		2912FB0E172ACB29009227F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2912FAED172ACB28009227F1 /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B3A68A2101BA12C00AE25A8;
+			remoteInfo = XADTest4;
+		};
+		2912FB10172ACB29009227F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2912FAED172ACB28009227F1 /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B342390131D8B5B00CCDF77;
+			remoteInfo = XADTest5;
+		};
+		2912FB12172ACB29009227F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2912FAED172ACB28009227F1 /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B31CB9213C6423600ED119E;
+			remoteInfo = XADTest6;
+		};
+		2912FB14172ACB29009227F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2912FAED172ACB28009227F1 /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B23DDC01185EBA300620319;
+			remoteInfo = unar;
+		};
+		2912FB16172ACB29009227F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2912FAED172ACB28009227F1 /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B91D18F11E1677B0081E40A;
+			remoteInfo = lsar;
+		};
+		2912FB18172ACB29009227F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2912FAED172ACB28009227F1 /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B91CDAC11D981E20081E40A;
+			remoteInfo = unar.exe;
+		};
+		2912FB1A172ACB29009227F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2912FAED172ACB28009227F1 /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B91D2EE11E694860081E40A;
+			remoteInfo = lsar.exe;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		2912FAED172ACB28009227F1 /* XADMaster.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XADMaster.xcodeproj; path = XADMaster/XADMaster.xcodeproj; sourceTree = "<group>"; };
 		291EC6981723475400D40B90 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		291EC6991723475400D40B90 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		291EC69A1723475400D40B90 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
@@ -587,6 +690,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2912FB1F172ACCF1009227F1 /* libXADMaster.ios.a in Frameworks */,
 				29CD9D4C172A0FB0006B08CB /* libz.dylib in Frameworks */,
 				291EC69E1723479B00D40B90 /* QuartzCore.framework in Frameworks */,
 				298BCB92171BAE1E00BB11E4 /* MessageUI.framework in Frameworks */,
@@ -628,6 +732,34 @@
 			isa = PBXGroup;
 			children = (
 				C9B4AA24123D471D00D8D2C7 /* iOSEinstein.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2912FA03172AC971009227F1 /* The Unarchiver */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "The Unarchiver";
+			sourceTree = "<group>";
+		};
+		2912FAEE172ACB28009227F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2912FB01172ACB29009227F1 /* XADMaster.framework */,
+				2912FB03172ACB29009227F1 /* libXADMaster.a */,
+				2912FB05172ACB29009227F1 /* libXADMaster.win.a */,
+				2912FB07172ACB29009227F1 /* libXADMaster.ios.a */,
+				2912FB09172ACB29009227F1 /* XADTest */,
+				2912FB0B172ACB29009227F1 /* XADTest2 */,
+				2912FB0D172ACB29009227F1 /* XADTest3 */,
+				2912FB0F172ACB29009227F1 /* XADTest4 */,
+				2912FB11172ACB29009227F1 /* XADTest5 */,
+				2912FB13172ACB29009227F1 /* XADTest6 */,
+				2912FB15172ACB29009227F1 /* unar */,
+				2912FB17172ACB29009227F1 /* lsar */,
+				2912FB19172ACB29009227F1 /* unar.exe */,
+				2912FB1B172ACB29009227F1 /* lsar.exe */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -749,6 +881,7 @@
 		29B97314FDCFA39411CA2CEA /* Einstein */ = {
 			isa = PBXGroup;
 			children = (
+				2912FAED172ACB28009227F1 /* XADMaster.xcodeproj */,
 				C99E3154111B72C0002165EC /* Sources */,
 				2968BF6C1728697A00848D91 /* Emulator */,
 				C99E3156111B72CC002165EC /* Vendor */,
@@ -843,6 +976,7 @@
 		C99E3156111B72CC002165EC /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				2912FA03172AC971009227F1 /* The Unarchiver */,
 				29CD9D3A172A0E78006B08CB /* minizip */,
 				29CD9D44172A0E78006B08CB /* SSZipArchive.h */,
 				29CD9D45172A0E78006B08CB /* SSZipArchive.m */,
@@ -1675,12 +1809,119 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Einstein */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2912FAEE172ACB28009227F1 /* Products */;
+					ProjectRef = 2912FAED172ACB28009227F1 /* XADMaster.xcodeproj */;
+				},
+			);
 			projectRoot = ../../..;
 			targets = (
 				C9B4AA23123D471D00D8D2C7 /* iOSEinstein */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2912FB01172ACB29009227F1 /* XADMaster.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XADMaster.framework;
+			remoteRef = 2912FB00172ACB29009227F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2912FB03172ACB29009227F1 /* libXADMaster.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libXADMaster.a;
+			remoteRef = 2912FB02172ACB29009227F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2912FB05172ACB29009227F1 /* libXADMaster.win.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libXADMaster.win.a;
+			remoteRef = 2912FB04172ACB29009227F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2912FB07172ACB29009227F1 /* libXADMaster.ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libXADMaster.ios.a;
+			remoteRef = 2912FB06172ACB29009227F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2912FB09172ACB29009227F1 /* XADTest */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = XADTest;
+			remoteRef = 2912FB08172ACB29009227F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2912FB0B172ACB29009227F1 /* XADTest2 */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = XADTest2;
+			remoteRef = 2912FB0A172ACB29009227F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2912FB0D172ACB29009227F1 /* XADTest3 */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = XADTest3;
+			remoteRef = 2912FB0C172ACB29009227F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2912FB0F172ACB29009227F1 /* XADTest4 */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = XADTest4;
+			remoteRef = 2912FB0E172ACB29009227F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2912FB11172ACB29009227F1 /* XADTest5 */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = XADTest5;
+			remoteRef = 2912FB10172ACB29009227F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2912FB13172ACB29009227F1 /* XADTest6 */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = XADTest6;
+			remoteRef = 2912FB12172ACB29009227F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2912FB15172ACB29009227F1 /* unar */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = unar;
+			remoteRef = 2912FB14172ACB29009227F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2912FB17172ACB29009227F1 /* lsar */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = lsar;
+			remoteRef = 2912FB16172ACB29009227F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2912FB19172ACB29009227F1 /* unar.exe */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = unar.exe;
+			remoteRef = 2912FB18172ACB29009227F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2912FB1B172ACB29009227F1 /* lsar.exe */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = lsar.exe;
+			remoteRef = 2912FB1A172ACB29009227F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C9B4AA20123D471D00D8D2C7 /* Resources */ = {
