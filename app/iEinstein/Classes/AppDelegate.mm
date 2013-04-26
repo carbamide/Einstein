@@ -5,6 +5,8 @@
 #include "Emulator/JIT/TJITPerformance.h"
 
 #import "SVProgressHUD.h"
+#import <XADMaster/XADPlatform.h>
+#import <XADMaster/XADSimpleUnarchiver.h>
 
 @implementation AppDelegate
 
@@ -21,33 +23,19 @@
     if (url != nil && [url isFileURL]) {
 		NSString *docdir = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
 		
-		if ([[url pathExtension] isEqualToString:@"zip"] || [[url pathExtension] isEqualToString:@"ZIP"]) {
-			[SSZipArchive unzipFileAtPath:[url absoluteString] toDestination:[docdir stringByAppendingPathComponent:[url lastPathComponent]]];
-		}
-		
-		NSError *error = nil;
-		
-		[[NSFileManager defaultManager] copyItemAtURL:url toURL:[NSURL fileURLWithPath:[docdir stringByAppendingPathComponent:[url lastPathComponent]]] error:&error];
-		
-		if (!error) {
-			UIAlertView *success = [[UIAlertView alloc] initWithTitle:@"Success"
-															  message:[NSString stringWithFormat:@"The file, %@, has been transferred to the package list.", [url lastPathComponent]]
-															 delegate:nil
-													cancelButtonTitle:@"OK"
-													otherButtonTitles:nil, nil];
+		if ([[url lastPathComponent] rangeOfString:@"pkg"].location == NSNotFound) {
+			XADSimpleUnarchiver *unarchiver = [XADSimpleUnarchiver simpleUnarchiverForPath:[url path] error:NULL];
+			[unarchiver setRemovesEnclosingDirectoryForSoloItems:YES];
 			
-			[success show];
-		}
-		else {
-			UIAlertView *success = [[UIAlertView alloc] initWithTitle:@"Error"
-															  message:[NSString stringWithFormat:@"The file, %@, has not been transferred to the package list.", [url lastPathComponent]]
-															 delegate:nil
-													cancelButtonTitle:@"OK"
-													otherButtonTitles:nil, nil];
+			NSString *tmpdir = [NSString stringWithFormat:@".Temp"];
+			NSString *tmpdest = [docdir stringByAppendingPathComponent:tmpdir];
 			
-			[success show];
+			[unarchiver unarchive];
+			
+			[[NSFileManager defaultManager] removeItemAtPath:tmpdest error:nil];
 		}
 	}
+	
     return YES;
 }
 

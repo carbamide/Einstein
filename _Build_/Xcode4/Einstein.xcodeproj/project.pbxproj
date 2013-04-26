@@ -11,6 +11,8 @@
 		291EC69B1723475400D40B90 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 291EC6981723475400D40B90 /* SVProgressHUD.bundle */; };
 		291EC69C1723475400D40B90 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 291EC69A1723475400D40B90 /* SVProgressHUD.m */; };
 		291EC69E1723479B00D40B90 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 291EC69D1723479B00D40B90 /* QuartzCore.framework */; };
+		2933DD02172AF972001253CF /* libUniversalDetector.ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2933DD01172AF972001253CF /* libUniversalDetector.ios.a */; };
+		2933DD04172AF982001253CF /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2933DD03172AF982001253CF /* libbz2.dylib */; };
 		294FA21C171A22AC00304730 /* Glue.cp in Sources */ = {isa = PBXBuildFile; fileRef = C9EF94D5160E48E5009E89C3 /* Glue.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		294FA21D171A22E900304730 /* TFibre.cp in Sources */ = {isa = PBXBuildFile; fileRef = C9D54E1315FA23E700D91131 /* TFibre.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		294FA21F171A23FE00304730 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 294FA21E171A23FE00304730 /* Default.png */; };
@@ -240,6 +242,8 @@
 		291EC6991723475400D40B90 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		291EC69A1723475400D40B90 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		291EC69D1723479B00D40B90 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		2933DD01172AF972001253CF /* libUniversalDetector.ios.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libUniversalDetector.ios.a; path = "UniversalDetector/build/Release-iphoneos/libUniversalDetector.ios.a"; sourceTree = "<group>"; };
+		2933DD03172AF982001253CF /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libbz2.dylib; sourceTree = DEVELOPER_DIR; };
 		294FA21E171A23FE00304730 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../_Build_/Xcode4/Default.png; sourceTree = "<group>"; };
 		294FA220171A240100304730 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../_Build_/Xcode4/Default@2x.png"; sourceTree = "<group>"; };
 		294FA222171A240700304730 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../_Build_/Xcode4/Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -690,6 +694,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2933DD04172AF982001253CF /* libbz2.dylib in Frameworks */,
+				2933DD02172AF972001253CF /* libUniversalDetector.ios.a in Frameworks */,
 				2912FB1F172ACCF1009227F1 /* libXADMaster.ios.a in Frameworks */,
 				29CD9D4C172A0FB0006B08CB /* libz.dylib in Frameworks */,
 				291EC69E1723479B00D40B90 /* QuartzCore.framework in Frameworks */,
@@ -736,20 +742,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2912FA03172AC971009227F1 /* The Unarchiver */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "The Unarchiver";
-			sourceTree = "<group>";
-		};
 		2912FAEE172ACB28009227F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				2912FB01172ACB29009227F1 /* XADMaster.framework */,
+				2912FB07172ACB29009227F1 /* libXADMaster.ios.a */,
 				2912FB03172ACB29009227F1 /* libXADMaster.a */,
 				2912FB05172ACB29009227F1 /* libXADMaster.win.a */,
-				2912FB07172ACB29009227F1 /* libXADMaster.ios.a */,
 				2912FB09172ACB29009227F1 /* XADTest */,
 				2912FB0B172ACB29009227F1 /* XADTest2 */,
 				2912FB0D172ACB29009227F1 /* XADTest3 */,
@@ -881,7 +880,8 @@
 		29B97314FDCFA39411CA2CEA /* Einstein */ = {
 			isa = PBXGroup;
 			children = (
-				2912FAED172ACB28009227F1 /* XADMaster.xcodeproj */,
+				2933DD03172AF982001253CF /* libbz2.dylib */,
+				2933DD01172AF972001253CF /* libUniversalDetector.ios.a */,
 				C99E3154111B72C0002165EC /* Sources */,
 				2968BF6C1728697A00848D91 /* Emulator */,
 				C99E3156111B72CC002165EC /* Vendor */,
@@ -976,7 +976,7 @@
 		C99E3156111B72CC002165EC /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				2912FA03172AC971009227F1 /* The Unarchiver */,
+				2912FAED172ACB28009227F1 /* XADMaster.xcodeproj */,
 				29CD9D3A172A0E78006B08CB /* minizip */,
 				29CD9D44172A0E78006B08CB /* SSZipArchive.h */,
 				29CD9D45172A0E78006B08CB /* SSZipArchive.m */,
@@ -2113,6 +2113,7 @@
 					../../,
 					../../portaudio/pa_common/,
 					"../../libffi-osx",
+					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = "iEinstein-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
@@ -2124,6 +2125,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "armv6 armv7 i386";
 			};
 			name = Debug;
@@ -2153,6 +2155,7 @@
 					../../,
 					../../portaudio/pa_common/,
 					"../../libffi-osx",
+					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = "iEinstein-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
@@ -2164,6 +2167,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = NO;
 				VALID_ARCHS = "armv6 armv7 i386";
 				ZERO_LINK = NO;
@@ -2208,6 +2212,7 @@
 					../../,
 					../../portaudio/pa_common/,
 					"../../libffi-osx",
+					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = "iEinstein-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
@@ -2219,6 +2224,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = NO;
 				VALID_ARCHS = "armv6 armv7 i386";
 				ZERO_LINK = NO;
