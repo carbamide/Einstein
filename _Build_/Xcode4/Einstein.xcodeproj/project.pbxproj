@@ -34,6 +34,12 @@
 		298BCB90171BADBA00BB11E4 /* IASKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 298BCB82171BADBA00BB11E4 /* IASKTextField.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		298BCB92171BAE1E00BB11E4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 298BCB91171BAE1E00BB11E4 /* MessageUI.framework */; };
 		29CD9D391729FAED006B08CB /* Einstein.rex in Resources */ = {isa = PBXBuildFile; fileRef = 29CD9D381729FAED006B08CB /* Einstein.rex */; };
+		29CD9D46172A0E78006B08CB /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 29CD9D3C172A0E78006B08CB /* ioapi.c */; };
+		29CD9D47172A0E78006B08CB /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 29CD9D3E172A0E78006B08CB /* mztools.c */; };
+		29CD9D48172A0E78006B08CB /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 29CD9D40172A0E78006B08CB /* unzip.c */; };
+		29CD9D49172A0E78006B08CB /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 29CD9D42172A0E78006B08CB /* zip.c */; };
+		29CD9D4A172A0E78006B08CB /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CD9D45172A0E78006B08CB /* SSZipArchive.m */; };
+		29CD9D4C172A0FB0006B08CB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 29CD9D4B172A0FB0006B08CB /* libz.dylib */; };
 		29CF1EF01728D42C00FCCA9D /* 114.png in Resources */ = {isa = PBXBuildFile; fileRef = 29CF1EEF1728D42C00FCCA9D /* 114.png */; };
 		29CF1EF21728D43300FCCA9D /* 72.png in Resources */ = {isa = PBXBuildFile; fileRef = 29CF1EF11728D43300FCCA9D /* 72.png */; };
 		29CF1EF41728D43800FCCA9D /* 57.png in Resources */ = {isa = PBXBuildFile; fileRef = 29CF1EF31728D43800FCCA9D /* 57.png */; };
@@ -169,6 +175,18 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		29CD9D381729FAED006B08CB /* Einstein.rex */ = {isa = PBXFileReference; lastKnownFileType = file; path = Einstein.rex; sourceTree = "<group>"; };
+		29CD9D3B172A0E78006B08CB /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		29CD9D3C172A0E78006B08CB /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		29CD9D3D172A0E78006B08CB /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		29CD9D3E172A0E78006B08CB /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		29CD9D3F172A0E78006B08CB /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		29CD9D40172A0E78006B08CB /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		29CD9D41172A0E78006B08CB /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		29CD9D42172A0E78006B08CB /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		29CD9D43172A0E78006B08CB /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		29CD9D44172A0E78006B08CB /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		29CD9D45172A0E78006B08CB /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		29CD9D4B172A0FB0006B08CB /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
 		29CF1EEF1728D42C00FCCA9D /* 114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 114.png; sourceTree = "<group>"; };
 		29CF1EF11728D43300FCCA9D /* 72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 72.png; sourceTree = "<group>"; };
 		29CF1EF31728D43800FCCA9D /* 57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57.png; sourceTree = "<group>"; };
@@ -569,6 +587,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29CD9D4C172A0FB0006B08CB /* libz.dylib in Frameworks */,
 				291EC69E1723479B00D40B90 /* QuartzCore.framework in Frameworks */,
 				298BCB92171BAE1E00BB11E4 /* MessageUI.framework in Frameworks */,
 				F1CAFBE41241F7C200A0382E /* CoreAudio.framework in Frameworks */,
@@ -760,6 +779,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				29CD9D4B172A0FB0006B08CB /* libz.dylib */,
 				291EC69D1723479B00D40B90 /* QuartzCore.framework */,
 				298BCB91171BAE1E00BB11E4 /* MessageUI.framework */,
 				C97C7CB81242827600CDCD05 /* iOS Frameworks */,
@@ -767,6 +787,22 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		29CD9D3A172A0E78006B08CB /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				29CD9D3B172A0E78006B08CB /* crypt.h */,
+				29CD9D3C172A0E78006B08CB /* ioapi.c */,
+				29CD9D3D172A0E78006B08CB /* ioapi.h */,
+				29CD9D3E172A0E78006B08CB /* mztools.c */,
+				29CD9D3F172A0E78006B08CB /* mztools.h */,
+				29CD9D40172A0E78006B08CB /* unzip.c */,
+				29CD9D41172A0E78006B08CB /* unzip.h */,
+				29CD9D42172A0E78006B08CB /* zip.c */,
+				29CD9D43172A0E78006B08CB /* zip.h */,
+			);
+			path = minizip;
 			sourceTree = "<group>";
 		};
 		C962429411B69A6E00EE66F3 /* Network */ = {
@@ -807,6 +843,9 @@
 		C99E3156111B72CC002165EC /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				29CD9D3A172A0E78006B08CB /* minizip */,
+				29CD9D44172A0E78006B08CB /* SSZipArchive.h */,
+				29CD9D45172A0E78006B08CB /* SSZipArchive.m */,
 				2968BF6D1728698B00848D91 /* SVProgressHUD */,
 				298BCB62171BADBA00BB11E4 /* InAppSettingsKit */,
 				C99E354E111C111D002165EC /* libffi-osx */,
@@ -1766,6 +1805,11 @@
 				298BCB8F171BADBA00BB11E4 /* IASKSwitch.m in Sources */,
 				298BCB90171BADBA00BB11E4 /* IASKTextField.m in Sources */,
 				291EC69C1723475400D40B90 /* SVProgressHUD.m in Sources */,
+				29CD9D46172A0E78006B08CB /* ioapi.c in Sources */,
+				29CD9D47172A0E78006B08CB /* mztools.c in Sources */,
+				29CD9D48172A0E78006B08CB /* unzip.c in Sources */,
+				29CD9D49172A0E78006B08CB /* zip.c in Sources */,
+				29CD9D4A172A0E78006B08CB /* SSZipArchive.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
