@@ -260,8 +260,8 @@
 	
     _mSoundManager = new TCoreAudioSoundManager(_mLog);
 	
-    static int widthLUT[]  = { 320, 640, 384,  786 };
-    static int heightLUT[] = { 480, 960, 512, 1024 };
+    static int widthLUT[]  = { 320, 320, 640, 640, 384,  786 };
+    static int heightLUT[] = { 480, 568, 960, 1136, 512, 1024 };
 	
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	

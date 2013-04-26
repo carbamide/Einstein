@@ -26,7 +26,9 @@
 			<key>Titles</key>
 			<array>
 				<string>MP 2x00 (320x480)</string>
+				<string>iPhone 5 (half size)</string>
 				<string>iPhone 4 (640x960)</string>
+				<string>iPhone 5 (full size)</string>
 				<string>Quarter iPad (384x512)</string>
 				<string>iPad (768x1024)</string>
 			</array>
@@ -36,6 +38,8 @@
 				<string>1</string>
 				<string>2</string>
 				<string>3</string>
+				<string>4</string>
+				<string>5</string>
 			</array>
 		</dict>
 		<dict>
