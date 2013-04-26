@@ -880,8 +880,6 @@
 		29B97314FDCFA39411CA2CEA /* Einstein */ = {
 			isa = PBXGroup;
 			children = (
-				2933DD03172AF982001253CF /* libbz2.dylib */,
-				2933DD01172AF972001253CF /* libUniversalDetector.ios.a */,
 				C99E3154111B72C0002165EC /* Sources */,
 				2968BF6C1728697A00848D91 /* Emulator */,
 				C99E3156111B72CC002165EC /* Vendor */,
@@ -912,6 +910,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2933DD03172AF982001253CF /* libbz2.dylib */,
+				2933DD01172AF972001253CF /* libUniversalDetector.ios.a */,
 				29CD9D4B172A0FB0006B08CB /* libz.dylib */,
 				291EC69D1723479B00D40B90 /* QuartzCore.framework */,
 				298BCB91171BAE1E00BB11E4 /* MessageUI.framework */,

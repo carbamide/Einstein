@@ -10,7 +10,7 @@
 
 @implementation AppDelegate
 
-+ (void)initialize
++(void)initialize
 {
     NSDictionary *defaults = @{@"screen_resolution": @0,
 							   @"clear_flash_ram": @NO};
@@ -24,19 +24,51 @@
 		NSString *docdir = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
 		
 		if ([[url lastPathComponent] rangeOfString:@"pkg"].location == NSNotFound) {
+			NSLog(@"%@", [url filePathURL]);
+			
 			XADSimpleUnarchiver *unarchiver = [XADSimpleUnarchiver simpleUnarchiverForPath:[url path] error:NULL];
 			[unarchiver setRemovesEnclosingDirectoryForSoloItems:YES];
 			
 			NSString *tmpdir = [NSString stringWithFormat:@".Temp"];
 			NSString *tmpdest = [docdir stringByAppendingPathComponent:tmpdir];
 			
-			[unarchiver unarchive];
+			[unarchiver setDestination:tmpdest];
+			[unarchiver setDelegate:self];
+			[unarchiver setPropagatesRelevantMetadata:YES];
+			[unarchiver setAlwaysRenamesFiles:YES];
 			
-			[[NSFileManager defaultManager] removeItemAtPath:tmpdest error:nil];
+			[unarchiver parse];
+			
+			[unarchiver unarchive];
 		}
+		else {
+			NSError *error = nil;
+			
+			[[NSFileManager defaultManager] copyItemAtURL:url toURL:[NSURL fileURLWithPath:[docdir stringByAppendingPathComponent:[url lastPathComponent]]] error:&error];
+			
+			if (!error) {
+				UIAlertView *success = [[UIAlertView alloc] initWithTitle:@"Success"
+																  message:[NSString stringWithFormat:@"The file, %@, has been transferred to the package list.", [url lastPathComponent]]
+																 delegate:nil
+														cancelButtonTitle:@"OK"
+														otherButtonTitles:nil, nil];
+				
+				[success show];
+			}
+			else {
+				UIAlertView *success = [[UIAlertView alloc] initWithTitle:@"Error"
+																  message:[NSString stringWithFormat:@"The file, %@, has not been transferred to the package list.", [url lastPathComponent]]
+																 delegate:nil
+														cancelButtonTitle:@"OK"
+														otherButtonTitles:nil, nil];
+				
+				[success show];
+			}
+		}
+		return YES;
 	}
 	
-    return YES;
+	return YES;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -94,4 +126,37 @@
     }
 }
 
-@end
+-(NSString *)describeXADError:(XADError)error
+{
+	switch(error)
+	{
+		case XADNoError:			return nil;
+		case XADUnknownError:		return @"Unknown error";
+		case XADInputError:			return @"Attempted to read more data than was available";
+		case XADOutputError:		return @"Failed to write to file";
+		case XADBadParametersError:	return @"Function called with illegal parameters";
+		case XADOutOfMemoryError:	return @"Not enough memory available";
+		case XADIllegalDataError:	return @"Data is corrupted";
+		case XADNotSupportedError:	return @"File is not fully supported";
+		case XADResourceError:		return @"Required resource missing";
+		case XADDecrunchError:		return @"Error on decrunching";
+		case XADFiletypeError:		return @"Unknown file type";
+		case XADOpenFileError:		return @"Opening file failed";
+		case XADSkipError:			return @"File, disk has been skipped";
+		case XADBreakError:			return @"User cancelled extraction";
+		case XADFileExistsError:	return @"File already exists";
+		case XADPasswordError:		return @"Missing or wrong password";
+		case XADMakeDirectoryError:	return @"Could not create directory";
+		case XADChecksumError:		return @"Wrong checksum";
+		case XADVerifyError:		return @"Verify failed (disk hook)";
+		case XADGeometryError:		return @"Wrong drive geometry";
+		case XADDataFormatError:	return @"Unknown data format";
+		case XADEmptyError:			return @"Source contains no files";
+		case XADFileSystemError:	return @"Unknown filesystem";
+		case XADFileDirectoryError:	return @"Name of file exists as directory";
+		case XADShortBufferError:	return @"Buffer was too short";
+		case XADEncodingError:		return @"Text encoding was defective";
+		case XADLinkError:			return @"Could not create symlink";
+		default:					return [NSString stringWithFormat:@"Error %d",error];
+	}
+}@end
