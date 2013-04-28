@@ -1,9 +1,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
 @class iEinsteinViewController;
 
-@interface InsertDiskView : UIView <UITableViewDelegate, UITableViewDataSource>
+@interface InsertDiskView : UIView <UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) iEinsteinViewController *delegate;
 @property (strong, nonatomic) NSArray *diskFiles;

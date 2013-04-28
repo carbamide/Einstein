@@ -3,6 +3,7 @@
 
 @interface InsertDiskView ()
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
+@property (strong, nonatomic) UITableViewCell *tempCell;
 @end
 
 @implementation InsertDiskView
@@ -24,9 +25,7 @@
         
         UINavigationItem *navItem = [[UINavigationItem alloc] initWithTitle:nil];
         
-        UIBarButtonItem *button = nil;
-        
-        button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(hide)];
+        UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(hide)];
         
         [navItem setRightBarButtonItem:button animated:NO];
         
@@ -35,9 +34,26 @@
         [self addSubview:_navBar];
         
 		[[self layer] setShadowColor:[[UIColor blackColor] CGColor]];
-		[[self layer] setShadowOffset:CGSizeMake(-10, 0)];
-		[[self layer] setShadowRadius:5];
+		[[self layer] setShadowOffset:CGSizeMake(0, 0)];
+		[[self layer] setShadowRadius:15];
 		[[self layer] setShadowOpacity:0.8];
+        
+        UIBezierPath *navBarMaskPath = [UIBezierPath bezierPathWithRoundedRect:[_navBar bounds] byRoundingCorners:(UIRectCornerTopLeft | UIRectCornerTopRight) cornerRadii:CGSizeMake(8.0, 8.0)];
+        UIBezierPath *tableMaskPath = [UIBezierPath bezierPathWithRoundedRect:[_table bounds] byRoundingCorners:(UIRectCornerBottomLeft | UIRectCornerBottomRight) cornerRadii:CGSizeMake(8.0, 8.0)];
+		
+        CAShapeLayer *navBarMaskLayer = [[CAShapeLayer alloc] init];
+        CAShapeLayer *tableMaskLayer = [[CAShapeLayer alloc] init];
+		
+        [navBarMaskLayer setFrame:[_navBar bounds]];
+        [navBarMaskLayer setPath:[navBarMaskPath CGPath]];
+        [tableMaskLayer setFrame:[_table bounds]];
+        [tableMaskLayer setPath:[tableMaskPath CGPath]];
+        
+        [[_navBar layer] setMask:navBarMaskLayer];
+        [[_table layer] setMask:tableMaskLayer];
+        
+        [self setBackgroundColor:[UIColor clearColor]];
+        [self setOpaque:NO];
 		
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didInsertDisk:) name:@"diskInserted" object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEjectDisk:) name:@"diskEjected" object:nil];
@@ -87,7 +103,7 @@
     
     [UIView animateWithDuration:0.3
                      animations:^{
-												              [self setFrame:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? CGRectMake(788 - 260.0, 0.0, 240.0, 1024) : CGRectMake(340 - 260, 0.0, 240.0, 480)];
+						 [self setFrame:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? CGRectMake(788 - 260.0, 0.0, 240.0, 1024) : CGRectMake(340 - 260, 0.0, 240.0, 480)];
                      }
      
                      completion:^(BOOL finished) {
@@ -185,6 +201,10 @@
 	
 	[[cell textLabel] setTextColor:[UIColor blackColor]];
     
+	UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(emailPackage:)];
+	
+	[cell addGestureRecognizer:longPressGesture];
+	
     return cell;
 }
 
@@ -250,6 +270,66 @@
     @catch (NSException *e) {
         NSLog(@"An exception has occured in InsertDiskView when a row was about to enter the selected state");
     }
+}
+
+-(void)emailPackage:(UILongPressGestureRecognizer *)gesture
+{
+	if ([gesture state] == UIGestureRecognizerStateBegan) {
+		UIActionSheet *emailSheet = [[UIActionSheet alloc] initWithTitle:@"Package Actions"
+																delegate:self
+													   cancelButtonTitle:@"Cancel"
+												  destructiveButtonTitle:nil
+													   otherButtonTitles:@"Email Package...", nil];
+		
+		[self setTempCell:(UITableViewCell *)[gesture view]];
+		
+		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+			[emailSheet showFromRect:[[gesture view] frame] inView:[self table] animated:YES];
+		}
+		else {
+			[emailSheet showInView:self];
+		}
+	}
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	NSString *title = [actionSheet buttonTitleAtIndex:buttonIndex];
+	
+	if ([title isEqualToString:@"Email Package..."]) {
+		NSLog(@"Email...");
+		
+		MFMailComposeViewController *controller = [[MFMailComposeViewController alloc] init];
+		
+		[controller setMailComposeDelegate:self];
+		[controller setSubject:@"Newton Package"];
+		[controller setModalPresentationStyle:UIModalPresentationFormSheet];
+
+		NSIndexPath *indexPath = [[self table] indexPathForCell:[self tempCell]];
+		
+		NSString *diskPath = _diskFiles[[indexPath row]];
+		
+		NSData *data = [NSData dataWithContentsOfFile:diskPath];
+		
+		if (data) {
+			[controller addAttachmentData:data mimeType:@"application/pkg" fileName:[diskPath lastPathComponent]];
+		}
+		
+		[(UIViewController *)_delegate presentViewController:controller animated:YES completion:nil];
+		
+	}
+	else {
+		return;
+	}
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error;
+{
+	if (result == MFMailComposeResultSent) {
+		NSLog(@"It's away!");
+	}
+	
+	[controller dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

@@ -242,7 +242,7 @@
 		291EC6991723475400D40B90 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		291EC69A1723475400D40B90 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		291EC69D1723479B00D40B90 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		2933DD01172AF972001253CF /* libUniversalDetector.ios.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libUniversalDetector.ios.a; path = "UniversalDetector/build/Release-iphoneos/libUniversalDetector.ios.a"; sourceTree = "<group>"; };
+		2933DD01172AF972001253CF /* libUniversalDetector.ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUniversalDetector.ios.a; path = "UniversalDetector/build/Release-iphoneos/libUniversalDetector.ios.a"; sourceTree = "<group>"; };
 		2933DD03172AF982001253CF /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libbz2.dylib; sourceTree = DEVELOPER_DIR; };
 		294FA21E171A23FE00304730 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../_Build_/Xcode4/Default.png; sourceTree = "<group>"; };
 		294FA220171A240100304730 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../_Build_/Xcode4/Default@2x.png"; sourceTree = "<group>"; };
@@ -694,12 +694,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				298BCB92171BAE1E00BB11E4 /* MessageUI.framework in Frameworks */,
 				2933DD04172AF982001253CF /* libbz2.dylib in Frameworks */,
 				2933DD02172AF972001253CF /* libUniversalDetector.ios.a in Frameworks */,
 				2912FB1F172ACCF1009227F1 /* libXADMaster.ios.a in Frameworks */,
 				29CD9D4C172A0FB0006B08CB /* libz.dylib in Frameworks */,
 				291EC69E1723479B00D40B90 /* QuartzCore.framework in Frameworks */,
-				298BCB92171BAE1E00BB11E4 /* MessageUI.framework in Frameworks */,
 				F1CAFBE41241F7C200A0382E /* CoreAudio.framework in Frameworks */,
 				F1CAFBF51241F7E600A0382E /* AudioToolbox.framework in Frameworks */,
 				F1CAFCF9124200C100A0382E /* CoreGraphics.framework in Frameworks */,

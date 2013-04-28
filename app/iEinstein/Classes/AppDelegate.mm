@@ -13,7 +13,8 @@
 +(void)initialize
 {
     NSDictionary *defaults = @{@"screen_resolution": @0,
-							   @"clear_flash_ram": @NO};
+							   @"clear_flash_ram": @NO,
+							   @"sleep_screen": @NO};
 	
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
     [[NSUserDefaults standardUserDefaults] synchronize];
@@ -23,7 +24,7 @@
     if (url != nil && [url isFileURL]) {
 		NSString *docdir = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
 		
-		if ([[url lastPathComponent] rangeOfString:@"pkg"].location == NSNotFound) {
+		if ([[url lastPathComponent] rangeOfString:@"pkg" options:NSCaseInsensitiveSearch].location == NSNotFound) {
 			NSLog(@"%@", [url filePathURL]);
 			
 			XADSimpleUnarchiver *unarchiver = [XADSimpleUnarchiver simpleUnarchiverForPath:[url path] error:NULL];
@@ -76,6 +77,10 @@
     [_window addSubview:[_viewController view]];
     [_window makeKeyAndVisible];
 	
+	[[UIApplication sharedApplication] setIdleTimerDisabled:![[NSUserDefaults standardUserDefaults] boolForKey:@"sleep_screen"]];
+
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didChangePreferences:) name:NSUserDefaultsDidChangeNotification object:nil];
+
 	NSString *docdir = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"717006.rom" ofType:nil];
 	NSString *filePath2 = [docdir stringByAppendingPathComponent:@"717006.rom"];
@@ -124,6 +129,11 @@
     else {
         [_viewController startEmulator];
     }
+}
+
+- (void)didChangePreferences:(NSNotification *)aNotification
+{
+	[[UIApplication sharedApplication] setIdleTimerDisabled:![[NSUserDefaults standardUserDefaults] boolForKey:@"sleep_screen"]];
 }
 
 -(NSString *)describeXADError:(XADError)error

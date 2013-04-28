@@ -6,6 +6,7 @@
 #include "TInterruptManager.h"
 #include "TPlatformManager.h"
 #include "TEmulator.h"
+#import "AppDelegate.h"
 
 @implementation iEinsteinView
 
@@ -19,7 +20,13 @@
 {
 	_insertDiskView = [[InsertDiskView alloc] initWithFrame:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? CGRectMake(788, 0.0, 240.0, 1024) : CGRectMake(340, 0.0, 240.0, [[UIScreen mainScreen] bounds].size.height)];
 	
-	[_insertDiskView setDelegate:(iEinsteinViewController *)[self superview]];
+	NSLog(@"%@", (NSString *) [[self superview] class]);
+	
+	[self setMultipleTouchEnabled:YES];
+	
+	AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+		
+	[_insertDiskView setDelegate:(iEinsteinViewController *)[appDelegate viewController]];
 	
 	[self addSubview:_insertDiskView];
 	
@@ -162,33 +169,37 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    UITouch *t = [touches anyObject];
-	
-	if (!_mEmulator->GetPlatformManager()->IsPowerOn()) {
-		_mEmulator->GetPlatformManager()->SendPowerSwitchEvent();
+{	
+    if ([[event touchesForView:self] count] == 1) {
+ 		UITouch *t = [touches anyObject];
+		
+		if (!_mEmulator->GetPlatformManager()->IsPowerOn()) {
+			_mEmulator->GetPlatformManager()->SendPowerSwitchEvent();
+		}
+		
+		CGPoint p = [t locationInView:self];
+		CGRect r = _screenImageRect;
+		
+		int x = (1.0 - ((p.y - r.origin.y) / r.size.height)) * _newtonScreenHeight;
+		int y = ((p.x - r.origin.x) / r.size.width) * _newtonScreenWidth;
+		
+		_mScreenManager->PenDown(x, y);
 	}
-	
-	CGPoint p = [t locationInView:self];
-	CGRect r = _screenImageRect;
-	
-	int x = (1.0 - ((p.y - r.origin.y) / r.size.height)) * _newtonScreenHeight;
-	int y = ((p.x - r.origin.x) / r.size.width) * _newtonScreenWidth;
-	
-	_mScreenManager->PenDown(x, y);
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-	UITouch *t = [touches anyObject];
-	
-	CGPoint p = [t locationInView:self];
-	CGRect r = _screenImageRect;
-	
-	int x = (1.0 - ((p.y - r.origin.y) / r.size.height)) * _newtonScreenHeight;
-	int y = ((p.x - r.origin.x) / r.size.width) * _newtonScreenWidth;
-	
-	_mScreenManager->PenDown(x, y);
+    if ([[event touchesForView:self] count] == 1) {
+		UITouch *t = [touches anyObject];
+		
+		CGPoint p = [t locationInView:self];
+		CGRect r = _screenImageRect;
+		
+		int x = (1.0 - ((p.y - r.origin.y) / r.size.height)) * _newtonScreenHeight;
+		int y = ((p.x - r.origin.x) / r.size.width) * _newtonScreenWidth;
+		
+		_mScreenManager->PenDown(x, y);
+	}
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
