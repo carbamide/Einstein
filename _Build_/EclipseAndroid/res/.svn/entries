@@ -1,55 +1,0 @@
-10
-
-dir
-492
-http://einstein.googlecode.com/svn/trunk/Einstein/_Build_/EclipseAndroid/res
-http://einstein.googlecode.com/svn
-
-
-
-2013-01-05T13:12:40.899099Z
-461
-melcher.matthias
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-cf912e74-8634-0410-bfb3-0d1bd821ab26
-
-values
-dir
-
-xml
-dir
-
-drawable-hdpi
-dir
-
-menu
-dir
-
-values-de
-dir
-
-drawable-ldpi
-dir
-
-drawable-mdpi
-dir
-
-drawable-xhdpi
-dir
-
-layout
-dir
-
