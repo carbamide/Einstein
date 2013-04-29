@@ -4,6 +4,9 @@
 @interface InsertDiskView ()
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) UITableViewCell *tempCell;
+@property (strong, nonatomic) DirectoryWatcher *docWatcher;
+@property (strong, nonatomic) NSArray *previousDocDirListing;
+
 @end
 
 @implementation InsertDiskView
@@ -11,6 +14,8 @@
 - (id)initWithFrame:(CGRect)rect
 {
     if ((self = [super initWithFrame:rect]) != nil) {
+		[self getDocDirListing];
+		
         _diskFiles = @[];
         
         CGRect tableRect = CGRectMake(0.0, 32, rect.size.width, rect.size.height - 32);
@@ -65,6 +70,12 @@
 		[_refreshControl addTarget:self action:@selector(updateTable) forControlEvents:UIControlEventValueChanged];
 		
 		[[self table] addSubview:_refreshControl];
+		
+		NSString *docdir = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+
+		[self setDocWatcher:[DirectoryWatcher watchFolderWithPath:docdir delegate:self]];
+						
+		[self directoryDidChange:[self docWatcher]];
     }
     
     return self;
@@ -330,6 +341,61 @@
 	}
 	
 	[controller dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)directoryDidChange:(DirectoryWatcher *)folderWatcher
+{    
+	NSString *documentsDirectoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    
+    NSArray *documentsDirectoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsDirectoryPath error:NULL];
+    
+	NSMutableArray *newListing = [[NSMutableArray alloc] init];
+	
+    for (NSString *curFileName in [documentsDirectoryContents objectEnumerator]) {
+        NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:curFileName];
+        
+        BOOL isDirectory;
+		
+        [[NSFileManager defaultManager] fileExistsAtPath:filePath isDirectory:&isDirectory];
+        
+        if (!(isDirectory && [curFileName isEqualToString:@"Inbox"])) {
+			[newListing addObject:filePath];
+        }
+    }
+    
+	[newListing removeObjectsInArray:[self previousDocDirListing]];
+	
+	for (NSString *tempString in newListing) {
+		if ([[NSUserDefaults standardUserDefaults] boolForKey:@"auto_install"]) {
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"install_file" object:nil userInfo:@{@"file": tempString}];
+		}
+		NSLog(@"%@", tempString);
+	}
+	
+    [self getDocDirListing];
+}
+
+-(void)getDocDirListing
+{
+	NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+	
+	NSString *documentsDirectoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+
+	NSArray *documentsDirectoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsDirectoryPath error:NULL];
+
+    for (NSString *curFileName in [documentsDirectoryContents objectEnumerator]) {
+        NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:curFileName];
+        
+        BOOL isDirectory;
+		
+        [[NSFileManager defaultManager] fileExistsAtPath:filePath isDirectory:&isDirectory];
+        
+        if (!(isDirectory && [curFileName isEqualToString:@"Inbox"])) {
+            [tempArray addObject:filePath];
+        }
+	}
+	
+	[self setPreviousDocDirListing:tempArray];
 }
 
 @end

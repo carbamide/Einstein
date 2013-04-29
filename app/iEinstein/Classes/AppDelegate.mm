@@ -16,7 +16,7 @@
 		screenChoice = @1;
 	}
 	else if ([[UIScreen mainScreen] bounds].size.height == 480) {
-		screenChoice = @1;
+		screenChoice = @0;
 	}
 	else if ([[UIScreen mainScreen] bounds].size.height == 1024) {
 		screenChoice = @4;
@@ -24,7 +24,9 @@
 	
     NSDictionary *defaults = @{@"screen_resolution": screenChoice,
 							   @"clear_flash_ram": @NO,
-							   @"sleep_screen": @NO};
+							   @"sleep_screen": @NO,
+							   @"auto_install": @NO,
+							   @"delete_after_install": @NO};
 	
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
     [[NSUserDefaults standardUserDefaults] synchronize];
