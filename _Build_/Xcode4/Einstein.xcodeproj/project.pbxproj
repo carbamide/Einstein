@@ -10,6 +10,7 @@
 		291EC69B1723475400D40B90 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 291EC6981723475400D40B90 /* SVProgressHUD.bundle */; };
 		291EC69C1723475400D40B90 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 291EC69A1723475400D40B90 /* SVProgressHUD.m */; };
 		291EC69E1723479B00D40B90 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 291EC69D1723479B00D40B90 /* QuartzCore.framework */; };
+		29328A2717316D01007F5C34 /* folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 29328A2617316D01007F5C34 /* folder.png */; };
 		2933DD04172AF982001253CF /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2933DD03172AF982001253CF /* libbz2.dylib */; };
 		294FA21C171A22AC00304730 /* Glue.cp in Sources */ = {isa = PBXBuildFile; fileRef = C9EF94D5160E48E5009E89C3 /* Glue.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		294FA21D171A22E900304730 /* TFibre.cp in Sources */ = {isa = PBXBuildFile; fileRef = C9D54E1315FA23E700D91131 /* TFibre.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -19,6 +20,7 @@
 		294FA225171A285400304730 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 294FA224171A285400304730 /* Default-Portrait~ipad.png */; };
 		294FA227171A285600304730 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 294FA226171A285600304730 /* Default-Portrait@2x~ipad.png */; };
 		294FA228171A460900304730 /* TSymbolList.cp in Sources */ = {isa = PBXBuildFile; fileRef = C99E3177111B73A1002165EC /* TSymbolList.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		297DDE7F172EB632000FCBFB /* DirectoryWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 297DDE7E172EB632000FCBFB /* DirectoryWatcher.m */; };
 		298BCB83171BADBA00BB11E4 /* IASKAppSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 298BCB65171BADBA00BB11E4 /* IASKAppSettingsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		298BCB84171BADBA00BB11E4 /* IASKAppSettingsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 298BCB67171BADBA00BB11E4 /* IASKAppSettingsWebViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		298BCB85171BADBA00BB11E4 /* IASKSpecifierValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 298BCB69171BADBA00BB11E4 /* IASKSpecifierValuesViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -48,6 +50,8 @@
 		29CF1EF81728D49600FCCA9D /* 717006.rom in Resources */ = {isa = PBXBuildFile; fileRef = 29CF1EF71728D49600FCCA9D /* 717006.rom */; };
 		29D313AD171B52560043E060 /* TNullSoundManager.cp in Sources */ = {isa = PBXBuildFile; fileRef = C99E34AE111B7C08002165EC /* TNullSoundManager.cp */; };
 		29D313B0171B54080043E060 /* InsertDiskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D313AF171B54080043E060 /* InsertDiskView.m */; };
+		29E9D9A617317E8800B55254 /* PackageIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29E9D9A417317E8800B55254 /* PackageIcon.png */; };
+		29E9D9A717317E8800B55254 /* PackageIcon - Zip.png in Resources */ = {isa = PBXBuildFile; fileRef = 29E9D9A517317E8800B55254 /* PackageIcon - Zip.png */; };
 		C901E551132659120074513E /* TCircleBuffer.cp in Sources */ = {isa = PBXBuildFile; fileRef = C99E3321111B7570002165EC /* TCircleBuffer.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C901E552132659140074513E /* TMappedFile.cp in Sources */ = {isa = PBXBuildFile; fileRef = C99E3324111B7570002165EC /* TMappedFile.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C94ADB3A123E9ADD00406839 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = C94ADB37123E9ADD00406839 /* AppDelegate.mm */; };
@@ -101,7 +105,7 @@
 		C9B4AB8B123D675300D8D2C7 /* TLog.cp in Sources */ = {isa = PBXBuildFile; fileRef = C99E3464111B7C07002165EC /* TLog.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9B4AB8C123D675400D8D2C7 /* TStdOutLog.cp in Sources */ = {isa = PBXBuildFile; fileRef = C99E3466111B7C07002165EC /* TStdOutLog.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9B4AB8D123D678300D8D2C7 /* THostInfo.cp in Sources */ = {isa = PBXBuildFile; fileRef = C99E33F0111B7C07002165EC /* THostInfo.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		C9B4AB8E123D678D00D8D2C7 /* TPlatformManager.cp in Sources */ = {isa = PBXBuildFile; fileRef = C99E347B111B7C07002165EC /* TPlatformManager.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9B4AB8E123D678D00D8D2C7 /* TPlatformManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = C99E347B111B7C07002165EC /* TPlatformManager.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9B4AB8F123D679600D8D2C7 /* TROMImage.cp in Sources */ = {isa = PBXBuildFile; fileRef = C99E3486111B7C08002165EC /* TROMImage.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9B4AB90123D67A000D8D2C7 /* TFlatROMImageWithREX.cp in Sources */ = {isa = PBXBuildFile; fileRef = C99E3484111B7C08002165EC /* TFlatROMImageWithREX.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9B4AB91123D67A100D8D2C7 /* TFlatROMImage.cp in Sources */ = {isa = PBXBuildFile; fileRef = C99E3482111B7C08002165EC /* TFlatROMImage.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -138,6 +142,7 @@
 		291EC6991723475400D40B90 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		291EC69A1723475400D40B90 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		291EC69D1723479B00D40B90 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		29328A2617316D01007F5C34 /* folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = folder.png; path = ../../app/iEinstein/folder.png; sourceTree = "<group>"; };
 		2933DD01172AF972001253CF /* libUniversalDetector.ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUniversalDetector.ios.a; path = "UniversalDetector/build/Release-iphoneos/libUniversalDetector.ios.a"; sourceTree = "<group>"; };
 		2933DD03172AF982001253CF /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libbz2.dylib; sourceTree = DEVELOPER_DIR; };
 		294FA21E171A23FE00304730 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../_Build_/Xcode4/Default.png; sourceTree = "<group>"; };
@@ -145,6 +150,8 @@
 		294FA222171A240700304730 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../_Build_/Xcode4/Default-568h@2x.png"; sourceTree = "<group>"; };
 		294FA224171A285400304730 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../../_Build_/Xcode4/Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		294FA226171A285600304730 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x~ipad.png"; path = "../../_Build_/Xcode4/Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		297DDE7D172EB632000FCBFB /* DirectoryWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryWatcher.h; sourceTree = "<group>"; };
+		297DDE7E172EB632000FCBFB /* DirectoryWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryWatcher.m; sourceTree = "<group>"; };
 		298BCB64171BADBA00BB11E4 /* IASKAppSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKAppSettingsViewController.h; sourceTree = "<group>"; };
 		298BCB65171BADBA00BB11E4 /* IASKAppSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKAppSettingsViewController.m; sourceTree = "<group>"; };
 		298BCB66171BADBA00BB11E4 /* IASKAppSettingsWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKAppSettingsWebViewController.h; sourceTree = "<group>"; };
@@ -197,6 +204,8 @@
 		29CF1EF71728D49600FCCA9D /* 717006.rom */ = {isa = PBXFileReference; lastKnownFileType = file; path = 717006.rom; sourceTree = "<group>"; };
 		29D313AE171B54080043E060 /* InsertDiskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertDiskView.h; sourceTree = "<group>"; };
 		29D313AF171B54080043E060 /* InsertDiskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertDiskView.m; sourceTree = "<group>"; };
+		29E9D9A417317E8800B55254 /* PackageIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PackageIcon.png; path = ../../app/iEinstein/PackageIcon.png; sourceTree = "<group>"; };
+		29E9D9A517317E8800B55254 /* PackageIcon - Zip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PackageIcon - Zip.png"; path = "../../app/iEinstein/PackageIcon - Zip.png"; sourceTree = "<group>"; };
 		C901968613282E1500C3342F /* TAndroidScreenManager.cp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TAndroidScreenManager.cp; sourceTree = "<group>"; tabWidth = 4; usesTabs = 1; };
 		C901968713282E1500C3342F /* TAndroidScreenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = TAndroidScreenManager.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 1; };
 		C932C4C011A1AB5D00F6A7E4 /* TNE2000Card.cp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TNE2000Card.cp; sourceTree = "<group>"; tabWidth = 4; usesTabs = 1; };
@@ -475,7 +484,7 @@
 		C99E3477111B7C07002165EC /* TPCMCIAController.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = TPCMCIAController.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 1; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		C99E3479111B7C07002165EC /* PlatformEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PlatformEvents.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 1; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		C99E347A111B7C07002165EC /* PlatformGestalt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PlatformGestalt.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		C99E347B111B7C07002165EC /* TPlatformManager.cp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = TPlatformManager.cp; sourceTree = "<group>"; tabWidth = 4; usesTabs = 1; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		C99E347B111B7C07002165EC /* TPlatformManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = TPlatformManager.mm; sourceTree = "<group>"; tabWidth = 4; usesTabs = 1; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		C99E347C111B7C07002165EC /* TPlatformManager.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = TPlatformManager.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 1; wrapsLines = 0; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		C99E347E111B7C08002165EC /* TAIFFile.cp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = TAIFFile.cp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		C99E347F111B7C08002165EC /* TAIFFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = TAIFFile.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -769,6 +778,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				29E9D9A417317E8800B55254 /* PackageIcon.png */,
+				29E9D9A517317E8800B55254 /* PackageIcon - Zip.png */,
+				29328A2617316D01007F5C34 /* folder.png */,
 				29CD9D381729FAED006B08CB /* Einstein.rex */,
 				29CF1EF71728D49600FCCA9D /* 717006.rom */,
 				29CF1EF51728D45300FCCA9D /* 144.png */,
@@ -842,6 +854,8 @@
 				2968BF70172870DD00848D91 /* Views */,
 				2968BF71172870E300848D91 /* View Controllers */,
 				2968BF6E17286A6A00848D91 /* Supporting Files */,
+				297DDE7D172EB632000FCBFB /* DirectoryWatcher.h */,
+				297DDE7E172EB632000FCBFB /* DirectoryWatcher.m */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -1422,7 +1436,7 @@
 			children = (
 				C99E3479111B7C07002165EC /* PlatformEvents.h */,
 				C99E347A111B7C07002165EC /* PlatformGestalt.h */,
-				C99E347B111B7C07002165EC /* TPlatformManager.cp */,
+				C99E347B111B7C07002165EC /* TPlatformManager.mm */,
 				C99E347C111B7C07002165EC /* TPlatformManager.h */,
 			);
 			path = Platform;
@@ -1709,6 +1723,9 @@
 				29CF1EF61728D45300FCCA9D /* 144.png in Resources */,
 				29CF1EF81728D49600FCCA9D /* 717006.rom in Resources */,
 				29CD9D391729FAED006B08CB /* Einstein.rex in Resources */,
+				29328A2717316D01007F5C34 /* folder.png in Resources */,
+				29E9D9A617317E8800B55254 /* PackageIcon.png in Resources */,
+				29E9D9A717317E8800B55254 /* PackageIcon - Zip.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1763,7 +1780,7 @@
 				C9B4AB8B123D675300D8D2C7 /* TLog.cp in Sources */,
 				C9B4AB8C123D675400D8D2C7 /* TStdOutLog.cp in Sources */,
 				C9B4AB8D123D678300D8D2C7 /* THostInfo.cp in Sources */,
-				C9B4AB8E123D678D00D8D2C7 /* TPlatformManager.cp in Sources */,
+				C9B4AB8E123D678D00D8D2C7 /* TPlatformManager.mm in Sources */,
 				C9B4AB8F123D679600D8D2C7 /* TROMImage.cp in Sources */,
 				C9B4AB90123D67A000D8D2C7 /* TFlatROMImageWithREX.cp in Sources */,
 				C9B4AB91123D67A100D8D2C7 /* TFlatROMImage.cp in Sources */,
@@ -1816,6 +1833,7 @@
 				29CD9D48172A0E78006B08CB /* unzip.c in Sources */,
 				29CD9D49172A0E78006B08CB /* zip.c in Sources */,
 				29CD9D4A172A0E78006B08CB /* SSZipArchive.m in Sources */,
+				297DDE7F172EB632000FCBFB /* DirectoryWatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,6 +4,9 @@
 @interface InsertDiskView ()
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) UITableViewCell *tempCell;
+@property (strong, nonatomic) DirectoryWatcher *docWatcher;
+@property (strong, nonatomic) NSArray *previousDocDirListing;
+
 @end
 
 @implementation InsertDiskView
@@ -11,6 +14,8 @@
 - (id)initWithFrame:(CGRect)rect
 {
     if ((self = [super initWithFrame:rect]) != nil) {
+		[self getDocDirListing];
+		
         _diskFiles = @[];
         
         CGRect tableRect = CGRectMake(0.0, 32, rect.size.width, rect.size.height - 32);
@@ -65,6 +70,12 @@
 		[_refreshControl addTarget:self action:@selector(updateTable) forControlEvents:UIControlEventValueChanged];
 		
 		[[self table] addSubview:_refreshControl];
+		
+		NSString *docdir = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+
+		[self setDocWatcher:[DirectoryWatcher watchFolderWithPath:docdir delegate:self]];
+						
+		[self directoryDidChange:[self docWatcher]];
     }
     
     return self;
@@ -140,21 +151,35 @@
 
 - (NSArray *)availableDiskImages
 {
-    NSMutableArray *myDiskFiles = [NSMutableArray arrayWithCapacity:10];
-    NSFileManager *fm = [NSFileManager defaultManager];
-    NSArray *sources = @[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]];
+	NSMutableArray *tempArray = [[NSMutableArray alloc] init];
 	
-    NSArray *extensions = @[@"pkg", @"PKG"];
-    
-    for (NSString *srcDir in sources) {
-        NSArray *dirFiles = [[fm contentsOfDirectoryAtPath:srcDir error:NULL] pathsMatchingExtensions:extensions];
+	NSString *documentsDirectoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+	
+	NSArray *documentsDirectoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsDirectoryPath error:NULL];
+	
+    for (NSString *curFileName in [documentsDirectoryContents objectEnumerator]) {
+        NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:curFileName];
         
-        for (NSString *filename in dirFiles) {
-            [myDiskFiles addObject:[srcDir stringByAppendingPathComponent:filename]];
+        if (!([curFileName isEqualToString:@"Inbox"])) {
+			if ([[curFileName lastPathComponent] rangeOfString:@"pkg" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+				[tempArray addObject:filePath];
+			}
+			
+			if ([[curFileName lastPathComponent] rangeOfString:@"zip" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+				[tempArray addObject:filePath];
+			}
+			
+			BOOL isDirectory = NO;
+			
+			[[NSFileManager defaultManager] fileExistsAtPath:filePath isDirectory:&isDirectory];
+			
+			if (isDirectory) {
+				[tempArray addObject:filePath];
+			}
         }
-    }
-    
-    return myDiskFiles;
+	}
+	
+	return tempArray;
 }
 
 - (UIImage *)iconForDiskImageAtPath:(NSString *)path
@@ -197,6 +222,21 @@
 	
 	if ([[[diskPath lastPathComponent] pathExtension] isEqualToString:@".rom"] | [[[diskPath lastPathComponent] pathExtension] isEqualToString:@".ROM"] | [[[diskPath lastPathComponent] pathExtension] isEqualToString:@".img"] | [[[diskPath lastPathComponent] pathExtension] isEqualToString:@".IMG"] ) {
 		[[cell textLabel] setTextColor:[UIColor redColor]];
+	}
+	
+	BOOL isDirectory = FALSE;
+	
+	[[NSFileManager defaultManager] fileExistsAtPath:diskPath isDirectory:&isDirectory];
+		
+	if (isDirectory) {
+		[[cell imageView] setImage:[UIImage imageNamed:@"folder"]];
+	}
+	
+	if ([[diskPath lastPathComponent] rangeOfString:@"pkg" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+		[[cell imageView] setImage:[UIImage imageNamed:@"PackageIcon"]];
+	}
+	else if ([[diskPath lastPathComponent] rangeOfString:@"zip" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+		[[cell imageView] setImage:[UIImage imageNamed:@"PackageIcon - Zip"]];
 	}
 	
 	[[cell textLabel] setTextColor:[UIColor blackColor]];
@@ -253,6 +293,14 @@
 		
 		if ([[[diskPath lastPathComponent] pathExtension] isEqualToString:@"pkg"] | [[[diskPath lastPathComponent] pathExtension] isEqualToString:@"PKG"]) {
 			[[NSNotificationCenter defaultCenter] postNotificationName:@"install_file" object:nil userInfo:@{@"file": diskPath}];
+		}
+		
+		BOOL isDirectory = FALSE;
+		
+		[[NSFileManager defaultManager] fileExistsAtPath:diskPath isDirectory:&isDirectory];
+		
+		if (isDirectory) {
+			NSLog(@"This is a directory.");
 		}
 		
         [self hide];
@@ -330,6 +378,81 @@
 	}
 	
 	[controller dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)directoryDidChange:(DirectoryWatcher *)folderWatcher
+{    
+	NSMutableArray *newListing = [[NSMutableArray alloc] init];
+	
+	NSString *documentsDirectoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+	
+	NSArray *documentsDirectoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsDirectoryPath error:NULL];
+	
+    for (NSString *curFileName in [documentsDirectoryContents objectEnumerator]) {
+        NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:curFileName];
+        
+        if (!([curFileName isEqualToString:@"Inbox"])) {
+			if ([[curFileName lastPathComponent] rangeOfString:@"pkg" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+				[newListing addObject:filePath];
+			}
+			
+			if ([[curFileName lastPathComponent] rangeOfString:@"zip" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+				[newListing addObject:filePath];
+			}
+			
+			BOOL isDirectory = NO;
+			
+			[[NSFileManager defaultManager] fileExistsAtPath:filePath isDirectory:&isDirectory];
+			
+			if (isDirectory) {
+				[newListing addObject:filePath];
+			}
+        }
+	}
+    
+	[newListing removeObjectsInArray:[self previousDocDirListing]];
+	
+	for (NSString *tempString in newListing) {
+		if ([[NSUserDefaults standardUserDefaults] boolForKey:@"auto_install"]) {
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"install_file" object:nil userInfo:@{@"file": tempString}];
+		}
+		NSLog(@"%@", tempString);
+	}
+	
+    [self getDocDirListing];
+}
+
+-(void)getDocDirListing
+{
+	NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+	
+	NSString *documentsDirectoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+	
+	NSArray *documentsDirectoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsDirectoryPath error:NULL];
+	
+    for (NSString *curFileName in [documentsDirectoryContents objectEnumerator]) {
+        NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:curFileName];
+        
+        if (!([curFileName isEqualToString:@"Inbox"])) {
+			if ([[curFileName lastPathComponent] rangeOfString:@"pkg" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+				[tempArray addObject:filePath];
+			}
+			
+			if ([[curFileName lastPathComponent] rangeOfString:@"zip" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+				[tempArray addObject:filePath];
+			}
+			
+			BOOL isDirectory = NO;
+			
+			[[NSFileManager defaultManager] fileExistsAtPath:filePath isDirectory:&isDirectory];
+			
+			if (isDirectory) {
+				[tempArray addObject:filePath];
+			}
+        }
+	}
+	
+	[self setPreviousDocDirListing:tempArray];
 }
 
 @end

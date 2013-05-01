@@ -21,6 +21,7 @@
 // $Id$
 // ==============================
 
+#import <Foundation/Foundation.h>
 #include <K/Defines/KDefinitions.h>
 #include "TPlatformManager.h"
 
@@ -573,6 +574,10 @@ TPlatformManager::InstallPackage( const char* inPackagePath )
 				kPackageInstallData,
 				(KUInt32) theSize,
 				theBuffer );
+			
+			if ([[NSUserDefaults standardUserDefaults] boolForKey:@"delete_after_install"]) {
+				remove(inPackagePath);
+			}
 		}
 		
 		(void) ::fclose( thePackageFile );

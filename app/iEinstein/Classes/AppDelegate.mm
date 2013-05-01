@@ -16,7 +16,7 @@
 		screenChoice = @1;
 	}
 	else if ([[UIScreen mainScreen] bounds].size.height == 480) {
-		screenChoice = @1;
+		screenChoice = @0;
 	}
 	else if ([[UIScreen mainScreen] bounds].size.height == 1024) {
 		screenChoice = @4;
@@ -24,7 +24,9 @@
 	
     NSDictionary *defaults = @{@"screen_resolution": screenChoice,
 							   @"clear_flash_ram": @NO,
-							   @"sleep_screen": @NO};
+							   @"sleep_screen": @NO,
+							   @"auto_install": @NO,
+							   @"delete_after_install": @NO};
 	
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
     [[NSUserDefaults standardUserDefaults] synchronize];
@@ -38,7 +40,7 @@
 		if ([[url lastPathComponent] rangeOfString:@"pkg" options:NSCaseInsensitiveSearch].location != NSNotFound) {
 			NSError *error = nil;
 			
-			[[NSFileManager defaultManager] copyItemAtURL:url toURL:[NSURL fileURLWithPath:[docdir stringByAppendingPathComponent:[url lastPathComponent]]] error:&error];
+			[[NSFileManager defaultManager] moveItemAtURL:url toURL:[NSURL fileURLWithPath:[docdir stringByAppendingPathComponent:[url lastPathComponent]]] error:&error];
 			
 			if (!error) {
 				[self alertWithTitle:@"Success" message:[NSString stringWithFormat:@"The file, %@, has been transferred to the package list.", [url lastPathComponent]]];
@@ -51,6 +53,14 @@
 		else if ([[url lastPathComponent] rangeOfString:@"zip" options:NSCaseInsensitiveSearch].location != NSNotFound) {
 			if ([SSZipArchive unzipFileAtPath:[url path] toDestination:docdir]) {
 				[self alertWithTitle:@"Success" message:[NSString stringWithFormat:@"The file, %@, has been unzipped and transferred to the package list.", [url lastPathComponent]]];
+				
+				NSError *error = nil;
+				
+				[[NSFileManager defaultManager] removeItemAtPath:[url path] error:&error];
+				
+				if (error) {
+					[self alertWithTitle:@"Error" message:@"Although the package was successfully unzipped, there was an error removing the zip file."];
+				}
 			}
 			else {
 				[self alertWithTitle:@"Error" message:[NSString stringWithFormat:@"The file, %@, has not been transferred to the package list.", [url lastPathComponent]]];
