@@ -69,6 +69,10 @@
 					[viewController setShowDoneButton:YES];
 					[viewController setDelegate:self];
 					
+					if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+						[viewController setModalPresentationStyle:UIModalPresentationFormSheet];
+					}
+					
 					[self presentViewController:aNavController animated:YES completion:nil];
 					
 			  		break;

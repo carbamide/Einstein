@@ -145,7 +145,8 @@ CGRect IASKCGRectSwap(CGRect rect);
 	return _viewList;
 }
 
-- (void) viewDidLoad {
+- (void) viewDidLoad
+{
   [super viewDidLoad];
   if ([self isPad]) {
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
@@ -156,20 +157,21 @@ CGRect IASKCGRectSwap(CGRect rect);
     [tapGesture release];
 }
 
-- (void)viewDidUnload {
+- (void)viewDidUnload
+{
   [super viewDidUnload];
 
 	self.view = nil;
 	self.viewList = nil;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated
+{
 	// if there's something selected, the value might have changed
 	// so reload that row
 	NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
 	if(selectedIndexPath) {
-		[self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:selectedIndexPath] 
-							  withRowAnimation:UITableViewRowAnimationNone];
+		[self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:selectedIndexPath] withRowAnimation:UITableViewRowAnimationNone];
 		// and reselect it, so we get the nice default deselect animation from UITableViewController
 		[self.tableView selectRowAtIndexPath:selectedIndexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
 	}

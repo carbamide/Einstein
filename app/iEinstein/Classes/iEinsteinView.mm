@@ -8,16 +8,19 @@
 #include "TEmulator.h"
 #import "AppDelegate.h"
 
-@implementation iEinsteinView
+@interface iEinsteinView ()
 
-#if !(defined kCGBitmapByteOrder32Host) && TARGET_RT_BIG_ENDIAN
-#define kAlphaNoneSkipFirstPlusHostByteOrder (kCGImageAlphaNoneSkipFirst)
-#else
-#define kAlphaNoneSkipFirstPlusHostByteOrder (kCGImageAlphaNoneSkipFirst | kCGBitmapByteOrder32Host)
-#endif
+@property (nonatomic) CGColorSpaceRef rgbColorSpace;
+@property (nonatomic) CGColorSpaceRef theColorSpace;
+
+
+@end
+@implementation iEinsteinView
 
 - (void)awakeFromNib
 {
+	_theColorSpace = CGColorSpaceCreateDeviceGray();
+		
 	_insertDiskView = [[InsertDiskView alloc] initWithFrame:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? CGRectMake(788, 0.0, 240.0, 1024) : CGRectMake(340, 0.0, 240.0, [[UIScreen mainScreen] bounds].size.height)];
 	
 	NSLog(@"%@", (NSString *) [[self superview] class]);
@@ -25,7 +28,7 @@
 	[self setMultipleTouchEnabled:YES];
 	
 	AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-		
+	
 	[_insertDiskView setDelegate:(iEinsteinViewController *)[appDelegate viewController]];
 	
 	[self addSubview:_insertDiskView];
@@ -79,51 +82,47 @@
     }
     else {
         if (_mScreenImage == NULL) {
-            CGColorSpaceRef theColorSpace = CGColorSpaceCreateDeviceRGB();
+			if (!_newtonScreenWidth) {
+				_newtonScreenWidth = _mScreenManager->GetScreenWidth();
+				_newtonScreenHeight = _mScreenManager->GetScreenHeight();
+			}
 			
-            _newtonScreenWidth = _mScreenManager->GetScreenWidth();
-            _newtonScreenHeight = _mScreenManager->GetScreenHeight();
 			
             _mScreenImage = CGImageCreate(
-										  _newtonScreenWidth, _newtonScreenHeight,
-										  8, 32, _newtonScreenWidth * sizeof(KUInt32),
-										  theColorSpace,
-										  kAlphaNoneSkipFirstPlusHostByteOrder,
+										  _newtonScreenWidth,
+										  _newtonScreenHeight,
+										  8,
+										  32,
+										  _newtonScreenWidth * sizeof(KUInt32),
+										  _theColorSpace,
+										  0,
 										  ((TIOSScreenManager *)_mScreenManager)->GetDataProvider(),
-										  NULL, false,
+										  NULL,
+										  false,
 										  kCGRenderingIntentDefault);
 			
-            CGColorSpaceRelease(theColorSpace);
+            CGColorSpaceRelease(_theColorSpace);
 			
             CGRect screenBounds = [[UIScreen mainScreen] bounds];
             CGRect r = [self frame];
 			
             if (screenBounds.size.width > _newtonScreenWidth && screenBounds.size.height > _newtonScreenHeight) {
-                if (_newtonScreenWidth == _newtonScreenHeight) {
-                    // Newton screen resolution is square (like 320x320)
+				// Newton screen resolution is rectangular (like 320x480)
+				
+				int wmod = (int)r.size.width % _newtonScreenWidth;
+				int hmod = (int)r.size.height % _newtonScreenHeight;
+				
+				if (wmod > hmod) {
+					r.size.width -= wmod;
 					
-                    int mod = (int)screenBounds.size.width % _newtonScreenWidth;
-                    r.size.width -= mod;
-                    r.size.height = r.size.width;
-                }
-                else {
-                    // Newton screen resolution is rectangular (like 320x480)
+					int scale = (int)r.size.width / _newtonScreenWidth;
+					r.size.height = _newtonScreenHeight * scale;
+				}
+				else {
+					r.size.height -= hmod;
 					
-                    int wmod = (int)r.size.width % _newtonScreenWidth;
-                    int hmod = (int)r.size.height % _newtonScreenHeight;
-					
-                    if (wmod > hmod) {
-                        r.size.width -= wmod;
-						
-                        int scale = (int)r.size.width / _newtonScreenWidth;
-                        r.size.height = _newtonScreenHeight * scale;
-                    }
-                    else {
-                        r.size.height -= hmod;
-						
-                        int scale = (int)r.size.height / _newtonScreenHeight;
-                        r.size.width = _newtonScreenWidth * scale;
-                    }
+					int scale = (int)r.size.height / _newtonScreenHeight;
+					r.size.width = _newtonScreenWidth * scale;
                 }
 				
                 // Center image on screen
@@ -169,7 +168,7 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{	
+{
     if ([[event touchesForView:self] count] == 1) {
  		UITouch *t = [touches anyObject];
 		
