@@ -10,6 +10,7 @@
 		291EC69B1723475400D40B90 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 291EC6981723475400D40B90 /* SVProgressHUD.bundle */; };
 		291EC69C1723475400D40B90 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 291EC69A1723475400D40B90 /* SVProgressHUD.m */; };
 		291EC69E1723479B00D40B90 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 291EC69D1723479B00D40B90 /* QuartzCore.framework */; };
+		29328A2717316D01007F5C34 /* folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 29328A2617316D01007F5C34 /* folder.png */; };
 		2933DD04172AF982001253CF /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2933DD03172AF982001253CF /* libbz2.dylib */; };
 		294FA21C171A22AC00304730 /* Glue.cp in Sources */ = {isa = PBXBuildFile; fileRef = C9EF94D5160E48E5009E89C3 /* Glue.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		294FA21D171A22E900304730 /* TFibre.cp in Sources */ = {isa = PBXBuildFile; fileRef = C9D54E1315FA23E700D91131 /* TFibre.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -49,6 +50,8 @@
 		29CF1EF81728D49600FCCA9D /* 717006.rom in Resources */ = {isa = PBXBuildFile; fileRef = 29CF1EF71728D49600FCCA9D /* 717006.rom */; };
 		29D313AD171B52560043E060 /* TNullSoundManager.cp in Sources */ = {isa = PBXBuildFile; fileRef = C99E34AE111B7C08002165EC /* TNullSoundManager.cp */; };
 		29D313B0171B54080043E060 /* InsertDiskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D313AF171B54080043E060 /* InsertDiskView.m */; };
+		29E9D9A617317E8800B55254 /* PackageIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29E9D9A417317E8800B55254 /* PackageIcon.png */; };
+		29E9D9A717317E8800B55254 /* PackageIcon - Zip.png in Resources */ = {isa = PBXBuildFile; fileRef = 29E9D9A517317E8800B55254 /* PackageIcon - Zip.png */; };
 		C901E551132659120074513E /* TCircleBuffer.cp in Sources */ = {isa = PBXBuildFile; fileRef = C99E3321111B7570002165EC /* TCircleBuffer.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C901E552132659140074513E /* TMappedFile.cp in Sources */ = {isa = PBXBuildFile; fileRef = C99E3324111B7570002165EC /* TMappedFile.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C94ADB3A123E9ADD00406839 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = C94ADB37123E9ADD00406839 /* AppDelegate.mm */; };
@@ -139,6 +142,7 @@
 		291EC6991723475400D40B90 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		291EC69A1723475400D40B90 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		291EC69D1723479B00D40B90 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		29328A2617316D01007F5C34 /* folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = folder.png; path = ../../app/iEinstein/folder.png; sourceTree = "<group>"; };
 		2933DD01172AF972001253CF /* libUniversalDetector.ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUniversalDetector.ios.a; path = "UniversalDetector/build/Release-iphoneos/libUniversalDetector.ios.a"; sourceTree = "<group>"; };
 		2933DD03172AF982001253CF /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libbz2.dylib; sourceTree = DEVELOPER_DIR; };
 		294FA21E171A23FE00304730 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../_Build_/Xcode4/Default.png; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 		29CF1EF71728D49600FCCA9D /* 717006.rom */ = {isa = PBXFileReference; lastKnownFileType = file; path = 717006.rom; sourceTree = "<group>"; };
 		29D313AE171B54080043E060 /* InsertDiskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertDiskView.h; sourceTree = "<group>"; };
 		29D313AF171B54080043E060 /* InsertDiskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertDiskView.m; sourceTree = "<group>"; };
+		29E9D9A417317E8800B55254 /* PackageIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PackageIcon.png; path = ../../app/iEinstein/PackageIcon.png; sourceTree = "<group>"; };
+		29E9D9A517317E8800B55254 /* PackageIcon - Zip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PackageIcon - Zip.png"; path = "../../app/iEinstein/PackageIcon - Zip.png"; sourceTree = "<group>"; };
 		C901968613282E1500C3342F /* TAndroidScreenManager.cp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TAndroidScreenManager.cp; sourceTree = "<group>"; tabWidth = 4; usesTabs = 1; };
 		C901968713282E1500C3342F /* TAndroidScreenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = TAndroidScreenManager.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 1; };
 		C932C4C011A1AB5D00F6A7E4 /* TNE2000Card.cp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TNE2000Card.cp; sourceTree = "<group>"; tabWidth = 4; usesTabs = 1; };
@@ -772,6 +778,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				29E9D9A417317E8800B55254 /* PackageIcon.png */,
+				29E9D9A517317E8800B55254 /* PackageIcon - Zip.png */,
+				29328A2617316D01007F5C34 /* folder.png */,
 				29CD9D381729FAED006B08CB /* Einstein.rex */,
 				29CF1EF71728D49600FCCA9D /* 717006.rom */,
 				29CF1EF51728D45300FCCA9D /* 144.png */,
@@ -1714,6 +1723,9 @@
 				29CF1EF61728D45300FCCA9D /* 144.png in Resources */,
 				29CF1EF81728D49600FCCA9D /* 717006.rom in Resources */,
 				29CD9D391729FAED006B08CB /* Einstein.rex in Resources */,
+				29328A2717316D01007F5C34 /* folder.png in Resources */,
+				29E9D9A617317E8800B55254 /* PackageIcon.png in Resources */,
+				29E9D9A717317E8800B55254 /* PackageIcon - Zip.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

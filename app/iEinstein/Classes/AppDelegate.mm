@@ -40,7 +40,7 @@
 		if ([[url lastPathComponent] rangeOfString:@"pkg" options:NSCaseInsensitiveSearch].location != NSNotFound) {
 			NSError *error = nil;
 			
-			[[NSFileManager defaultManager] copyItemAtURL:url toURL:[NSURL fileURLWithPath:[docdir stringByAppendingPathComponent:[url lastPathComponent]]] error:&error];
+			[[NSFileManager defaultManager] moveItemAtURL:url toURL:[NSURL fileURLWithPath:[docdir stringByAppendingPathComponent:[url lastPathComponent]]] error:&error];
 			
 			if (!error) {
 				[self alertWithTitle:@"Success" message:[NSString stringWithFormat:@"The file, %@, has been transferred to the package list.", [url lastPathComponent]]];
@@ -53,6 +53,14 @@
 		else if ([[url lastPathComponent] rangeOfString:@"zip" options:NSCaseInsensitiveSearch].location != NSNotFound) {
 			if ([SSZipArchive unzipFileAtPath:[url path] toDestination:docdir]) {
 				[self alertWithTitle:@"Success" message:[NSString stringWithFormat:@"The file, %@, has been unzipped and transferred to the package list.", [url lastPathComponent]]];
+				
+				NSError *error = nil;
+				
+				[[NSFileManager defaultManager] removeItemAtPath:[url path] error:&error];
+				
+				if (error) {
+					[self alertWithTitle:@"Error" message:@"Although the package was successfully unzipped, there was an error removing the zip file."];
+				}
 			}
 			else {
 				[self alertWithTitle:@"Error" message:[NSString stringWithFormat:@"The file, %@, has not been transferred to the package list.", [url lastPathComponent]]];
