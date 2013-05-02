@@ -225,7 +225,7 @@
 	
     // Create a log if possible
     //#ifdef _DEBUG
-    _mLog = new TStdOutLog();
+    //_mLog = new TStdOutLog();
     //#endif
 	
     NSString *docdir = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
