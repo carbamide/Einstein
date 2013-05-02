@@ -1,15 +1,16 @@
-#import "InsertDiskView.h"
+#import "ChoosePackageView.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface InsertDiskView ()
+@interface ChoosePackageView ()
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) UITableViewCell *tempCell;
 @property (strong, nonatomic) DirectoryWatcher *docWatcher;
 @property (strong, nonatomic) NSArray *previousDocDirListing;
-
+@property (strong, nonatomic) NSString *currentDirectory;
+@property (strong, nonatomic) UINavigationItem *navItem;
 @end
 
-@implementation InsertDiskView
+@implementation ChoosePackageView
 
 - (id)initWithFrame:(CGRect)rect
 {
@@ -28,13 +29,13 @@
         
         _navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0.0, 0.0, rect.size.width, 32)];
         
-        UINavigationItem *navItem = [[UINavigationItem alloc] initWithTitle:nil];
+        _navItem = [[UINavigationItem alloc] initWithTitle:nil];
         
         UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(hide)];
         
-        [navItem setRightBarButtonItem:button animated:NO];
+        [_navItem setRightBarButtonItem:button animated:NO];
         
-        [_navBar pushNavigationItem:navItem animated:NO];
+        [_navBar pushNavigationItem:_navItem animated:NO];
         
         [self addSubview:_navBar];
         
@@ -155,11 +156,15 @@
 	
 	NSString *documentsDirectoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
 	
+	if ([self currentDirectory]) {
+		documentsDirectoryPath = [documentsDirectoryPath stringByAppendingPathComponent:[self currentDirectory]];
+	}
+	
 	NSArray *documentsDirectoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsDirectoryPath error:NULL];
 	
     for (NSString *curFileName in [documentsDirectoryContents objectEnumerator]) {
         NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:curFileName];
-        
+				
         if (!([curFileName isEqualToString:@"Inbox"])) {
 			if ([[curFileName lastPathComponent] rangeOfString:@"pkg" options:NSCaseInsensitiveSearch].location != NSNotFound) {
 				[tempArray addObject:filePath];
@@ -280,6 +285,8 @@
 {
 	NSString *diskPath = _diskFiles[[indexPath row]];
 	
+	NSLog(@"%@", diskPath);
+	
 	UITableViewCell *tempCell = [tableView cellForRowAtIndexPath:indexPath];
 	
 	[tempCell setSelected:NO animated:YES];
@@ -301,12 +308,26 @@
 		
 		if (isDirectory) {
 			NSLog(@"This is a directory.");
+			
+			[self setCurrentDirectory:[diskPath lastPathComponent]];
+			
+			_diskFiles = [self availableDiskImages];
+			
+			[[self table] reloadData];
+			
+			NSLog(@"%@", [self currentDirectory]);
+			
+			[[self navItem] setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"<" style:UIBarButtonItemStyleBordered target:self action:@selector(returnToPreviousDir:)]];
+			
 		}
 		
-        [self hide];
+		if (!isDirectory) {
+			[self hide];
+		}
+    
     }
     @catch (NSException *e) {
-        NSLog(@"An exception has occured in InsertDiskView while selecting the row");
+        NSLog(@"An exception has occured in ChoosePackageView while selecting the row");
     }
 }
 
@@ -316,7 +337,7 @@
         return indexPath;
     }
     @catch (NSException *e) {
-        NSLog(@"An exception has occured in InsertDiskView when a row was about to enter the selected state");
+        NSLog(@"An exception has occured in ChoosePackageView when a row was about to enter the selected state");
     }
 }
 
@@ -386,11 +407,15 @@
 	
 	NSString *documentsDirectoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
 	
+	if ([self currentDirectory]) {
+		documentsDirectoryPath = [documentsDirectoryPath stringByAppendingPathComponent:[self currentDirectory]];
+	}
+	
 	NSArray *documentsDirectoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsDirectoryPath error:NULL];
 	
     for (NSString *curFileName in [documentsDirectoryContents objectEnumerator]) {
         NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:curFileName];
-        
+		
         if (!([curFileName isEqualToString:@"Inbox"])) {
 			if ([[curFileName lastPathComponent] rangeOfString:@"pkg" options:NSCaseInsensitiveSearch].location != NSNotFound) {
 				[newListing addObject:filePath];
@@ -428,11 +453,15 @@
 	
 	NSString *documentsDirectoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
 	
+	if ([self currentDirectory]) {
+		documentsDirectoryPath = [documentsDirectoryPath stringByAppendingPathComponent:[self currentDirectory]];
+	}
+	
 	NSArray *documentsDirectoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsDirectoryPath error:NULL];
 	
     for (NSString *curFileName in [documentsDirectoryContents objectEnumerator]) {
         NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:curFileName];
-        
+		
         if (!([curFileName isEqualToString:@"Inbox"])) {
 			if ([[curFileName lastPathComponent] rangeOfString:@"pkg" options:NSCaseInsensitiveSearch].location != NSNotFound) {
 				[tempArray addObject:filePath];
@@ -455,4 +484,14 @@
 	[self setPreviousDocDirListing:tempArray];
 }
 
+-(void)returnToPreviousDir:(UIBarButtonItem *)sender
+{
+	[[self navItem] setLeftBarButtonItem:nil];
+	
+	[self setCurrentDirectory:nil];
+	
+	_diskFiles = [self availableDiskImages];
+	
+	[[self table] reloadData];
+}
 @end

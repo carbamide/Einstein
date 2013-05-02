@@ -1,6 +1,6 @@
 #import <UIKit/UIKit.h>
 #include <K/Defines/KDefinitions.h>
-#import "InsertDiskView.h"
+#import "ChoosePackageView.h"
 
 class TScreenManager;
 class TEmulator;
@@ -14,7 +14,7 @@ class TEmulator;
 @property (nonatomic) KUInt32 newtonScreenHeight;
 @property (nonatomic) KUInt32 newtonScreenWidth;
 
-@property (strong, nonatomic) InsertDiskView *insertDiskView;
+@property (strong, nonatomic) ChoosePackageView *choosePackageView;
 
 - (void)reset;
 - (void)setScreenManager:(TScreenManager *)sm;

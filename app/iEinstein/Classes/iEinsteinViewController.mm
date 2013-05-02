@@ -69,6 +69,10 @@
 					[viewController setShowDoneButton:YES];
 					[viewController setDelegate:self];
 					
+					if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+						[viewController setModalPresentationStyle:UIModalPresentationFormSheet];
+					}
+					
 					[self presentViewController:aNavController animated:YES completion:nil];
 					
 			  		break;
@@ -221,7 +225,7 @@
 	
     // Create a log if possible
     //#ifdef _DEBUG
-    _mLog = new TStdOutLog();
+    //_mLog = new TStdOutLog();
     //#endif
 	
     NSString *docdir = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
