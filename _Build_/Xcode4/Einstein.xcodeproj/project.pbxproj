@@ -49,7 +49,7 @@
 		29CF1EF61728D45300FCCA9D /* 144.png in Resources */ = {isa = PBXBuildFile; fileRef = 29CF1EF51728D45300FCCA9D /* 144.png */; };
 		29CF1EF81728D49600FCCA9D /* 717006.rom in Resources */ = {isa = PBXBuildFile; fileRef = 29CF1EF71728D49600FCCA9D /* 717006.rom */; };
 		29D313AD171B52560043E060 /* TNullSoundManager.cp in Sources */ = {isa = PBXBuildFile; fileRef = C99E34AE111B7C08002165EC /* TNullSoundManager.cp */; };
-		29D313B0171B54080043E060 /* InsertDiskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D313AF171B54080043E060 /* InsertDiskView.m */; };
+		29D313B0171B54080043E060 /* ChoosePackageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D313AF171B54080043E060 /* ChoosePackageView.m */; };
 		29E9D9A617317E8800B55254 /* PackageIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 29E9D9A417317E8800B55254 /* PackageIcon.png */; };
 		29E9D9A717317E8800B55254 /* PackageIcon - Zip.png in Resources */ = {isa = PBXBuildFile; fileRef = 29E9D9A517317E8800B55254 /* PackageIcon - Zip.png */; };
 		C901E551132659120074513E /* TCircleBuffer.cp in Sources */ = {isa = PBXBuildFile; fileRef = C99E3321111B7570002165EC /* TCircleBuffer.cp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -202,8 +202,8 @@
 		29CF1EF31728D43800FCCA9D /* 57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57.png; sourceTree = "<group>"; };
 		29CF1EF51728D45300FCCA9D /* 144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 144.png; sourceTree = "<group>"; };
 		29CF1EF71728D49600FCCA9D /* 717006.rom */ = {isa = PBXFileReference; lastKnownFileType = file; path = 717006.rom; sourceTree = "<group>"; };
-		29D313AE171B54080043E060 /* InsertDiskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertDiskView.h; sourceTree = "<group>"; };
-		29D313AF171B54080043E060 /* InsertDiskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertDiskView.m; sourceTree = "<group>"; };
+		29D313AE171B54080043E060 /* ChoosePackageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoosePackageView.h; sourceTree = "<group>"; };
+		29D313AF171B54080043E060 /* ChoosePackageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoosePackageView.m; sourceTree = "<group>"; };
 		29E9D9A417317E8800B55254 /* PackageIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PackageIcon.png; path = ../../app/iEinstein/PackageIcon.png; sourceTree = "<group>"; };
 		29E9D9A517317E8800B55254 /* PackageIcon - Zip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PackageIcon - Zip.png"; path = "../../app/iEinstein/PackageIcon - Zip.png"; sourceTree = "<group>"; };
 		C901968613282E1500C3342F /* TAndroidScreenManager.cp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TAndroidScreenManager.cp; sourceTree = "<group>"; tabWidth = 4; usesTabs = 1; };
@@ -679,8 +679,8 @@
 		2968BF70172870DD00848D91 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				29D313AE171B54080043E060 /* InsertDiskView.h */,
-				29D313AF171B54080043E060 /* InsertDiskView.m */,
+				29D313AE171B54080043E060 /* ChoosePackageView.h */,
+				29D313AF171B54080043E060 /* ChoosePackageView.m */,
 				C9B4AA49123D480900D8D2C7 /* iEinsteinView.h */,
 				C94ADB38123E9ADD00406839 /* iEinsteinView.mm */,
 			);
@@ -1812,7 +1812,7 @@
 				C901E552132659140074513E /* TMappedFile.cp in Sources */,
 				C9BE33D1133E64F60052EA2F /* TJITPerformance.cp in Sources */,
 				F8B76BC6169CAE7100660943 /* newt_string.cp in Sources */,
-				29D313B0171B54080043E060 /* InsertDiskView.m in Sources */,
+				29D313B0171B54080043E060 /* ChoosePackageView.m in Sources */,
 				298BCB83171BADBA00BB11E4 /* IASKAppSettingsViewController.m in Sources */,
 				298BCB84171BADBA00BB11E4 /* IASKAppSettingsWebViewController.m in Sources */,
 				298BCB85171BADBA00BB11E4 /* IASKSpecifierValuesViewController.m in Sources */,

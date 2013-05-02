@@ -6,7 +6,7 @@
 
 @class iEinsteinViewController;
 
-@interface InsertDiskView : UIView <UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate, MFMailComposeViewControllerDelegate, DirectoryWatcherDelegate>
+@interface ChoosePackageView : UIView <UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate, MFMailComposeViewControllerDelegate, DirectoryWatcherDelegate>
 
 @property (weak, nonatomic) iEinsteinViewController *delegate;
 @property (strong, nonatomic) NSArray *diskFiles;

@@ -1,7 +1,7 @@
-#import "InsertDiskView.h"
+#import "ChoosePackageView.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface InsertDiskView ()
+@interface ChoosePackageView ()
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) UITableViewCell *tempCell;
 @property (strong, nonatomic) DirectoryWatcher *docWatcher;
@@ -9,7 +9,7 @@
 
 @end
 
-@implementation InsertDiskView
+@implementation ChoosePackageView
 
 - (id)initWithFrame:(CGRect)rect
 {
@@ -306,7 +306,7 @@
         [self hide];
     }
     @catch (NSException *e) {
-        NSLog(@"An exception has occured in InsertDiskView while selecting the row");
+        NSLog(@"An exception has occured in ChoosePackageView while selecting the row");
     }
 }
 
@@ -316,7 +316,7 @@
         return indexPath;
     }
     @catch (NSException *e) {
-        NSLog(@"An exception has occured in InsertDiskView when a row was about to enter the selected state");
+        NSLog(@"An exception has occured in ChoosePackageView when a row was about to enter the selected state");
     }
 }
 

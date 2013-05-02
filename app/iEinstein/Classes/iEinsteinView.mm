@@ -1,6 +1,6 @@
 #import "iEinsteinView.h"
 #import "TIOSScreenManager.h"
-#import "InsertDiskView.h"
+#import "ChoosePackageView.h"
 #import "SVProgressHUD.h"
 
 #include "TInterruptManager.h"
@@ -21,7 +21,7 @@
 {
 	_theColorSpace = CGColorSpaceCreateDeviceGray();
 		
-	_insertDiskView = [[InsertDiskView alloc] initWithFrame:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? CGRectMake(788, 0.0, 240.0, 1024) : CGRectMake(340, 0.0, 240.0, [[UIScreen mainScreen] bounds].size.height)];
+	_choosePackageView = [[ChoosePackageView alloc] initWithFrame:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? CGRectMake(788, 0.0, 240.0, 1024) : CGRectMake(340, 0.0, 240.0, [[UIScreen mainScreen] bounds].size.height)];
 	
 	NSLog(@"%@", (NSString *) [[self superview] class]);
 	
@@ -29,9 +29,9 @@
 	
 	AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
 	
-	[_insertDiskView setDelegate:(iEinsteinViewController *)[appDelegate viewController]];
+	[_choosePackageView setDelegate:(iEinsteinViewController *)[appDelegate viewController]];
 	
-	[self addSubview:_insertDiskView];
+	[self addSubview:_choosePackageView];
 	
 	UISwipeGestureRecognizer *leftGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(installPackage)];
 	
@@ -55,7 +55,7 @@
 
 -(void)installPackage
 {
-	[_insertDiskView show];
+	[_choosePackageView show];
 }
 
 - (void)setScreenManager:(TScreenManager *)sm
