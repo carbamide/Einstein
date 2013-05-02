@@ -8,18 +8,14 @@
 #include "TEmulator.h"
 #import "AppDelegate.h"
 
-<<<<<<< HEAD
 @interface UITouch (Private)
 -(float)_pathMajorRadius;
 @end
 
-@implementation iEinsteinView
-=======
 @interface iEinsteinView ()
 
 @property (nonatomic) CGColorSpaceRef rgbColorSpace;
 @property (nonatomic) CGColorSpaceRef theColorSpace;
->>>>>>> 225b634c7d5a0396d86e3bf07a4ea957a8e8396a
 
 
 @end
@@ -27,17 +23,10 @@
 
 - (void)awakeFromNib
 {
-<<<<<<< HEAD
-	_insertDiskView = [[InsertDiskView alloc] initWithFrame:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? CGRectMake(788, 0.0, 240.0, 1024) : CGRectMake(340, 0.0, 240.0, [[UIScreen mainScreen] bounds].size.height)];
-		
-=======
 	_theColorSpace = CGColorSpaceCreateDeviceGray();
 		
 	_choosePackageView = [[ChoosePackageView alloc] initWithFrame:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? CGRectMake(788, 0.0, 240.0, 1024) : CGRectMake(340, 0.0, 240.0, [[UIScreen mainScreen] bounds].size.height)];
-	
-	NSLog(@"%@", (NSString *) [[self superview] class]);
-	
->>>>>>> 225b634c7d5a0396d86e3bf07a4ea957a8e8396a
+
 	[self setMultipleTouchEnabled:YES];
 	
 	AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
