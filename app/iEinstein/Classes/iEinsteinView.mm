@@ -8,6 +8,10 @@
 #include "TEmulator.h"
 #import "AppDelegate.h"
 
+@interface UITouch (Private)
+-(float)_pathMajorRadius;
+@end
+
 @implementation iEinsteinView
 
 #if !(defined kCGBitmapByteOrder32Host) && TARGET_RT_BIG_ENDIAN
@@ -19,9 +23,7 @@
 - (void)awakeFromNib
 {
 	_insertDiskView = [[InsertDiskView alloc] initWithFrame:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? CGRectMake(788, 0.0, 240.0, 1024) : CGRectMake(340, 0.0, 240.0, [[UIScreen mainScreen] bounds].size.height)];
-	
-	NSLog(@"%@", (NSString *) [[self superview] class]);
-	
+		
 	[self setMultipleTouchEnabled:YES];
 	
 	AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
@@ -169,7 +171,11 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{	
+{
+	if ([[touches anyObject] _pathMajorRadius] > 10) {
+		return;
+	}
+	
     if ([[event touchesForView:self] count] == 1) {
  		UITouch *t = [touches anyObject];
 		
@@ -189,6 +195,10 @@
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
+	if ([[touches anyObject] _pathMajorRadius] > 10) {
+		return;
+	}
+	
     if ([[event touchesForView:self] count] == 1) {
 		UITouch *t = [touches anyObject];
 		
