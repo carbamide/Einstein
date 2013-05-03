@@ -243,7 +243,7 @@
     NSString *theImagePath = [docdir stringByAppendingPathComponent:@"717006.img"];
 	
     NSFileManager *theFileManager = [NSFileManager defaultManager];
-	
+
     if ([theFileManager fileExistsAtPath:theROMPath]) {
         _mROMImage = new TFlatROMImageWithREX([theROMPath fileSystemRepresentation], [einsteinRExPath fileSystemRepresentation], "717006", false, [theImagePath fileSystemRepresentation]);
     }
@@ -263,7 +263,7 @@
     _mNetworkManager = new TNullNetwork(_mLog);
 	
     _mSoundManager = new TCoreAudioSoundManager(_mLog);
-	
+
     static int widthLUT[]  = { 320, 320, 640, 640, 384,  786 };
     static int heightLUT[] = { 480, 568, 960, 1136, 512, 1024 };
 	
@@ -278,16 +278,16 @@
     Boolean isLandscape = (newtonScreenWidth > newtonScreenHeight);
 	
     _mScreenManager = new TIOSScreenManager(einsteinView, self, _mLog, newtonScreenWidth, newtonScreenHeight, true, isLandscape);
-	
+
     [einsteinView setScreenManager:_mScreenManager];
 	
     NSString *theFlashPath = [docdir stringByAppendingPathComponent:@"flash"];
-		
+
     _mEmulator = new TEmulator(_mLog, _mROMImage, [theFlashPath fileSystemRepresentation], _mSoundManager, _mScreenManager, _mNetworkManager, 0x40 << 16);
 	
     _mPlatformManager = _mEmulator->GetPlatformManager();
     _mPlatformManager->SetDocDir([docdir fileSystemRepresentation]);
-	
+
     [einsteinView setEmulator:_mEmulator];
 	
     ((TIOSScreenManager *)_mScreenManager)->SetPlatformManager(_mPlatformManager);

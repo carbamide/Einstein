@@ -23,7 +23,7 @@
 
 - (void)awakeFromNib
 {
-	_theColorSpace = CGColorSpaceCreateDeviceGray();
+	_theColorSpace = CGColorSpaceCreateDeviceRGB();
 		
 	_choosePackageView = [[ChoosePackageView alloc] initWithFrame:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? CGRectMake(788, 0.0, 240.0, 1024) : CGRectMake(340, 0.0, 240.0, [[UIScreen mainScreen] bounds].size.height)];
 
@@ -97,7 +97,7 @@
 										  32,
 										  _newtonScreenWidth * sizeof(KUInt32),
 										  _theColorSpace,
-										  0,
+										  kCGImageAlphaNoneSkipLast,
 										  ((TIOSScreenManager *)_mScreenManager)->GetDataProvider(),
 										  NULL,
 										  false,
@@ -136,8 +136,15 @@
             _screenImageRect = CGRectIntegral(r);
         }
 		
-        CGContextSetInterpolationQuality(theContext, kCGInterpolationNone);
-        CGContextDrawImage(theContext, _screenImageRect, _mScreenImage);
+		CGLayerRef shapeLayer = CGLayerCreateWithContext(theContext, _screenImageRect.size, NULL);
+		
+		CGContextRef newContext = CGLayerGetContext(shapeLayer);
+		
+        CGContextSetInterpolationQuality(newContext, kCGInterpolationNone);
+        CGContextDrawImage(newContext, _screenImageRect, _mScreenImage);
+				
+		CGContextDrawLayerAtPoint(theContext, _screenImageRect.origin, shapeLayer);
+		CGLayerRelease(shapeLayer);
     }
 }
 
@@ -145,7 +152,8 @@
 {
     _mEmulator = NULL;
     _mScreenManager = NULL;
-    CGImageRelease(_mScreenImage);
+	CGImageRelease(_mScreenImage);
+
     _mScreenImage = NULL;
 }
 
