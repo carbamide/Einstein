@@ -302,21 +302,17 @@
 			[[NSNotificationCenter defaultCenter] postNotificationName:@"install_file" object:nil userInfo:@{@"file": diskPath}];
 		}
 		
-		BOOL isDirectory = FALSE;
+		BOOL isDirectory = NO;
 		
 		[[NSFileManager defaultManager] fileExistsAtPath:diskPath isDirectory:&isDirectory];
 		
-		if (isDirectory) {
-			NSLog(@"This is a directory.");
-			
+		if (isDirectory) {			
 			[self setCurrentDirectory:[diskPath lastPathComponent]];
 			
 			_diskFiles = [self availableDiskImages];
 			
 			[[self table] reloadData];
-			
-			NSLog(@"%@", [self currentDirectory]);
-			
+						
 			[[self navItem] setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"<" style:UIBarButtonItemStyleBordered target:self action:@selector(returnToPreviousDir:)]];
 			
 		}
