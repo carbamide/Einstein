@@ -493,6 +493,9 @@ TMMU::TranslateR( KUInt32 inVAddress, KUInt32& outPAddress )
 		}
 	}
 
+	if (!outPAddress) {
+		return false;
+	}
 	// Add the value to the cache.
 	AddToCache(
 		pageAddress,

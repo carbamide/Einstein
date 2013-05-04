@@ -27,7 +27,7 @@ void* newt_memcpy(void* s1, const void* s2, unsigned int n)
     char *a = (char *) s1;
     char *b = (char *) s2;
     char *buffer = (char *) malloc(n);
-    char *x;
+    char *x = NULL;
     unsigned int m = n;
 
     x = buffer;

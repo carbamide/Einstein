@@ -32,8 +32,8 @@
 #include <errno.h>
 
 #if !TARGET_OS_WIN32
-	#include <sys/time.h>
-	#include <unistd.h>
+#include <sys/time.h>
+#include <unistd.h>
 #endif
 
 // K
@@ -60,40 +60,40 @@
 #define debugFlash 0
 
 const int TMemory::kSerialNumberCRC[256] =
-	{
-		0x00, 0x8C, 0x46, 0xCA, 0x23, 0xAF, 0x65, 0xE9,
-		0x9D, 0x11, 0xDB, 0x57, 0xBE, 0x32, 0xF8, 0x74,
-		0xC2, 0x4E, 0x84, 0x08, 0xE1, 0x6D, 0xA7, 0x2B,
-		0x5F, 0xD3, 0x19, 0x95, 0x7C, 0xF0, 0x3A, 0xB6,
-		0x61, 0xED, 0x27, 0xAB, 0x42, 0xCE, 0x04, 0x88,
-		0xFC, 0x70, 0xBA, 0x36, 0xDF, 0x53, 0x99, 0x15,
-		0xA3, 0x2F, 0xE5, 0x69, 0x80, 0x0C, 0xC6, 0x4A,
-		0x3E, 0xB2, 0x78, 0xF4, 0x1D, 0x91, 0x5B, 0xD7,
-		0xBC, 0x30, 0xFA, 0x76, 0x9F, 0x13, 0xD9, 0x55,
-		0x21, 0xAD, 0x67, 0xEB, 0x02, 0x8E, 0x44, 0xC8,
-		0x7E, 0xF2, 0x38, 0xB4, 0x5D, 0xD1, 0x1B, 0x97,
-		0xE3, 0x6F, 0xA5, 0x29, 0xC0, 0x4C, 0x86, 0x0A,
-		0xDD, 0x51, 0x9B, 0x17, 0xFE, 0x72, 0xB8, 0x34,
-		0x40, 0xCC, 0x06, 0x8A, 0x63, 0xEF, 0x25, 0xA9,
-		0x1F, 0x93, 0x59, 0xD5, 0x3C, 0xB0, 0x7A, 0xF6,
-		0x82, 0x0E, 0xC4, 0x48, 0xA1, 0x2D, 0xE7, 0x6B,
-		0x5E, 0xD2, 0x18, 0x94, 0x7D, 0xF1, 0x3B, 0xB7,
-		0xC3, 0x4F, 0x85, 0x09, 0xE0, 0x6C, 0xA6, 0x2A,
-		0x9C, 0x10, 0xDA, 0x56, 0xBF, 0x33, 0xF9, 0x75,
-		0x01, 0x8D, 0x47, 0xCB, 0x22, 0xAE, 0x64, 0xE8,
-		0x3F, 0xB3, 0x79, 0xF5, 0x1C, 0x90, 0x5A, 0xD6,
-		0xA2, 0x2E, 0xE4, 0x68, 0x81, 0x0D, 0xC7, 0x4B,
-		0xFD, 0x71, 0xBB, 0x37, 0xDE, 0x52, 0x98, 0x14,
-		0x60, 0xEC, 0x26, 0xAA, 0x43, 0xCF, 0x05, 0x89,
-		0xE2, 0x6E, 0xA4, 0x28, 0xC1, 0x4D, 0x87, 0x0B,
-		0x7F, 0xF3, 0x39, 0xB5, 0x5C, 0xD0, 0x1A, 0x96,
-		0x20, 0xAC, 0x66, 0xEA, 0x03, 0x8F, 0x45, 0xC9,
-		0xBD, 0x31, 0xFB, 0x77, 0x9E, 0x12, 0xD8, 0x54,
-		0x83, 0x0F, 0xC5, 0x49, 0xA0, 0x2C, 0xE6, 0x6A,
-		0x1E, 0x92, 0x58, 0xD4, 0x3D, 0xB1, 0x7B, 0xF7,
-		0x41, 0xCD, 0x07, 0x8B, 0x62, 0xEE, 0x24, 0xA8,
-		0xDC, 0x50, 0x9A, 0x16, 0xFF, 0x73, 0xB9, 0x35
-	};
+{
+	0x00, 0x8C, 0x46, 0xCA, 0x23, 0xAF, 0x65, 0xE9,
+	0x9D, 0x11, 0xDB, 0x57, 0xBE, 0x32, 0xF8, 0x74,
+	0xC2, 0x4E, 0x84, 0x08, 0xE1, 0x6D, 0xA7, 0x2B,
+	0x5F, 0xD3, 0x19, 0x95, 0x7C, 0xF0, 0x3A, 0xB6,
+	0x61, 0xED, 0x27, 0xAB, 0x42, 0xCE, 0x04, 0x88,
+	0xFC, 0x70, 0xBA, 0x36, 0xDF, 0x53, 0x99, 0x15,
+	0xA3, 0x2F, 0xE5, 0x69, 0x80, 0x0C, 0xC6, 0x4A,
+	0x3E, 0xB2, 0x78, 0xF4, 0x1D, 0x91, 0x5B, 0xD7,
+	0xBC, 0x30, 0xFA, 0x76, 0x9F, 0x13, 0xD9, 0x55,
+	0x21, 0xAD, 0x67, 0xEB, 0x02, 0x8E, 0x44, 0xC8,
+	0x7E, 0xF2, 0x38, 0xB4, 0x5D, 0xD1, 0x1B, 0x97,
+	0xE3, 0x6F, 0xA5, 0x29, 0xC0, 0x4C, 0x86, 0x0A,
+	0xDD, 0x51, 0x9B, 0x17, 0xFE, 0x72, 0xB8, 0x34,
+	0x40, 0xCC, 0x06, 0x8A, 0x63, 0xEF, 0x25, 0xA9,
+	0x1F, 0x93, 0x59, 0xD5, 0x3C, 0xB0, 0x7A, 0xF6,
+	0x82, 0x0E, 0xC4, 0x48, 0xA1, 0x2D, 0xE7, 0x6B,
+	0x5E, 0xD2, 0x18, 0x94, 0x7D, 0xF1, 0x3B, 0xB7,
+	0xC3, 0x4F, 0x85, 0x09, 0xE0, 0x6C, 0xA6, 0x2A,
+	0x9C, 0x10, 0xDA, 0x56, 0xBF, 0x33, 0xF9, 0x75,
+	0x01, 0x8D, 0x47, 0xCB, 0x22, 0xAE, 0x64, 0xE8,
+	0x3F, 0xB3, 0x79, 0xF5, 0x1C, 0x90, 0x5A, 0xD6,
+	0xA2, 0x2E, 0xE4, 0x68, 0x81, 0x0D, 0xC7, 0x4B,
+	0xFD, 0x71, 0xBB, 0x37, 0xDE, 0x52, 0x98, 0x14,
+	0x60, 0xEC, 0x26, 0xAA, 0x43, 0xCF, 0x05, 0x89,
+	0xE2, 0x6E, 0xA4, 0x28, 0xC1, 0x4D, 0x87, 0x0B,
+	0x7F, 0xF3, 0x39, 0xB5, 0x5C, 0xD0, 0x1A, 0x96,
+	0x20, 0xAC, 0x66, 0xEA, 0x03, 0x8F, 0x45, 0xC9,
+	0xBD, 0x31, 0xFB, 0x77, 0x9E, 0x12, 0xD8, 0x54,
+	0x83, 0x0F, 0xC5, 0x49, 0xA0, 0x2C, 0xE6, 0x6A,
+	0x1E, 0x92, 0x58, 0xD4, 0x3D, 0xB1, 0x7B, 0xF7,
+	0x41, 0xCD, 0x07, 0x8B, 0x62, 0xEE, 0x24, 0xA8,
+	0xDC, 0x50, 0x9A, 0x16, 0xFF, 0x73, 0xB9, 0x35
+};
 
 #define min(a,b) (a) < (b) ? (a) : (b)
 
@@ -101,29 +101,29 @@ const int TMemory::kSerialNumberCRC[256] =
 //  * TMemory( TLog*, KUInt8*, const char*, KUInt32 )
 // -------------------------------------------------------------------------- //
 TMemory::TMemory(
-			TLog* inLog,
-			KUInt8* inROMImageBuffer,
-			const char* inFlashPath,
-			KUInt32 inRAMSize /* = 4194304 */ )
-	:
-		mProcessor( nil ),
-		mLog( inLog ),
-		mFlash( inLog, inFlashPath, NULL ),
-		mROMImagePtr( inROMImageBuffer ),
-		mRAM( nil ),
-		mRAMSize( inRAMSize ),
-		mRAMEnd( TMemoryConsts::kRAMStart + inRAMSize ),
-		mMMU( this ),
-		mJIT( this, &mMMU ),
-		mBankCtrlRegister( 0 ),
-		mInterruptManager( 0 ),
-		mDMAManager( 0 ),
-		mExternalPort( 0 ),
-		mInfraredPort( 0 ),
-		mBuiltInExtraPort( 0 ),
-		mModemPort( 0 ),
-		mSerialNumberIx( 64 ),
-		mBPCount( 0 )
+				 TLog* inLog,
+				 KUInt8* inROMImageBuffer,
+				 const char* inFlashPath,
+				 KUInt32 inRAMSize /* = 4194304 */ )
+:
+mProcessor( nil ),
+mLog( inLog ),
+mFlash( inLog, inFlashPath, NULL ),
+mROMImagePtr( inROMImageBuffer ),
+mRAM( nil ),
+mRAMSize( inRAMSize ),
+mRAMEnd( TMemoryConsts::kRAMStart + inRAMSize ),
+mMMU( this ),
+mJIT( this, &mMMU ),
+mBankCtrlRegister( 0 ),
+mInterruptManager( 0 ),
+mDMAManager( 0 ),
+mExternalPort( 0 ),
+mInfraredPort( 0 ),
+mBuiltInExtraPort( 0 ),
+mModemPort( 0 ),
+mSerialNumberIx( 64 ),
+mBPCount( 0 )
 {
 	Init();
 }
@@ -132,29 +132,29 @@ TMemory::TMemory(
 //  * TMemory( TLog*, TROMImage*, const char*, KUInt32 )
 // -------------------------------------------------------------------------- //
 TMemory::TMemory(
-			TLog* inLog,
-			TROMImage* inROMImage,
-			const char* inFlashPath,
-			KUInt32 inRAMSize /* = 4194304 */ )
-	:
-		mProcessor( nil ),
-		mLog( inLog ),
-		mFlash( inLog, inFlashPath, inROMImage ),
-		mROMImagePtr( inROMImage->GetPointer() ),
-		mRAM( nil ),
-		mRAMSize( inRAMSize ),
-		mRAMEnd( TMemoryConsts::kRAMStart + inRAMSize ),
-		mMMU( this ),
-		mJIT( this, &mMMU ),
-		mBankCtrlRegister( 0 ),
-		mInterruptManager( 0 ),
-		mDMAManager( 0 ),
-		mExternalPort( 0 ),
-		mInfraredPort( 0 ),
-		mBuiltInExtraPort( 0 ),
-		mModemPort( 0 ),
-		mSerialNumberIx( 64 ),
-		mBPCount( 0 )
+				 TLog* inLog,
+				 TROMImage* inROMImage,
+				 const char* inFlashPath,
+				 KUInt32 inRAMSize /* = 4194304 */ )
+:
+mProcessor( nil ),
+mLog( inLog ),
+mFlash( inLog, inFlashPath, inROMImage ),
+mROMImagePtr( inROMImage->GetPointer() ),
+mRAM( nil ),
+mRAMSize( inRAMSize ),
+mRAMEnd( TMemoryConsts::kRAMStart + inRAMSize ),
+mMMU( this ),
+mJIT( this, &mMMU ),
+mBankCtrlRegister( 0 ),
+mInterruptManager( 0 ),
+mDMAManager( 0 ),
+mExternalPort( 0 ),
+mInfraredPort( 0 ),
+mBuiltInExtraPort( 0 ),
+mModemPort( 0 ),
+mSerialNumberIx( 64 ),
+mBPCount( 0 )
 {
 	Init();
 }
@@ -194,12 +194,12 @@ TMemory::SetEmulator( TEmulator* inEmulator )
 		mBuiltInExtraPort = inEmulator->GetBuiltInExtraSerialPort();
 		mModemPort = inEmulator->GetModemSerialPort();
 		mEmulator = inEmulator;
-
+		
 		int socketIx;
 		for (socketIx = 0; socketIx < kNbSockets; socketIx++)
 		{
 			mPCMCIACtrls[socketIx] =
-				new TPCMCIAController( mLog, mEmulator, socketIx );
+			new TPCMCIAController( mLog, mEmulator, socketIx );
 		}
 		
 		ComputeSerialNumber( inEmulator->GetNewtonID() );
@@ -211,7 +211,7 @@ TMemory::SetEmulator( TEmulator* inEmulator )
 		mBuiltInExtraPort = nil;
 		mModemPort = nil;
 		mEmulator = nil;
-
+		
 		int socketIx;
 		for (socketIx = 0; socketIx < kNbSockets; socketIx++)
 		{
@@ -228,7 +228,7 @@ TMemory::SetEmulator( TEmulator* inEmulator )
 //  * GetDirectPointerToRAM( VAddr, KUInt8** )
 // -------------------------------------------------------------------------- //
 Boolean
-TMemory::GetDirectPointerToRAM( VAddr inAddress, KUInt8** outPTR ) 
+TMemory::GetDirectPointerToRAM( VAddr inAddress, KUInt8** outPTR )
 {
 	PAddr theAddress;
 	
@@ -260,7 +260,7 @@ TMemory::GetDirectPointerToRAM( VAddr inAddress, KUInt8** outPTR )
 //  * GetDirectPointerToROMRAM( VAddr, const KUInt8** )
 // -------------------------------------------------------------------------- //
 Boolean
-TMemory::GetDirectPointerToROMRAM( VAddr inAddress, const KUInt8** outPTR ) 
+TMemory::GetDirectPointerToROMRAM( VAddr inAddress, const KUInt8** outPTR )
 {
 	PAddr theAddress;
 	
@@ -274,7 +274,7 @@ TMemory::GetDirectPointerToROMRAM( VAddr inAddress, const KUInt8** outPTR )
 	} else {
 		theAddress = inAddress;
 	}
-
+	
 	if (!(inAddress & TMemoryConsts::kROMEndMask))
 	{
 		*outPTR = ((KUInt8*) (mROMImagePtr + theAddress));
@@ -300,7 +300,7 @@ TMemory::FastReadBuffer( VAddr inAddress, KUInt32 inAmount, KUInt8* outBuffer )
 	KUInt8* dst = outBuffer;
 	KUInt32 len = inAmount;
 	KUInt32 addr = inAddress;
-
+	
 	if (addr & 0x3)
 	{
 		int bytes = min(addr & 0x3, len);
@@ -330,7 +330,7 @@ TMemory::FastReadBuffer( VAddr inAddress, KUInt32 inAmount, KUInt8* outBuffer )
 		KUInt32 base = inAddress & TMemoryConsts::kMMUSmallestPageMask;
 		KUInt32 maxCopy = base - addr + TMemoryConsts::kMMUSmallestPageSize;
 		KUInt32 alignedLen = len &~ 0x3;
-
+		
 		do {
 			KUInt32 amount = min(alignedLen, maxCopy);
 #if TARGET_RT_LITTLE_ENDIAN
@@ -363,7 +363,7 @@ TMemory::FastReadBuffer( VAddr inAddress, KUInt32 inAmount, KUInt8* outBuffer )
 			}
 		} while (true);
 	}
-
+	
 	// Copy unaligned bits at the end.
 	while (len-- > 0)
 	{
@@ -386,7 +386,7 @@ TMemory::FastReadString( VAddr inAddress, char** outString )
 	KUInt32 len = result_len;
 	char* dst = result;
 	KUInt32 addr = inAddress;
-
+	
 #if TARGET_RT_BIG_ENDIAN
 	const KUInt8* pointer;
 	if ((addr & 0x3) || GetDirectPointerToROMRAM(addr, &pointer))
@@ -398,7 +398,12 @@ TMemory::FastReadString( VAddr inAddress, char** outString )
 			// Slower.
 			while (len-- > 0)
 			{
-				if (ReadB(addr++, byte)) return true;
+				if (ReadB(addr++, byte)) {
+					//FIXME this might crash
+					
+					free(dst);
+					return true;
+				}
 				*dst++ = (char) byte;
 				if (byte == 0)
 				{
@@ -422,7 +427,7 @@ TMemory::FastReadString( VAddr inAddress, char** outString )
 	} else {
 		KUInt32 base = inAddress & TMemoryConsts::kMMUSmallestPageMask;
 		KUInt32 maxCopy = base - addr + TMemoryConsts::kMMUSmallestPageSize;
-
+		
 		do {
 			KUInt32 amount = min(len, maxCopy);
 			char* last = ::strncpy(dst, (char*) pointer, amount);
@@ -452,7 +457,7 @@ TMemory::FastReadString( VAddr inAddress, char** outString )
 		} while (true);
 	}
 #endif
-
+	
 	*outString = result;
 	
 	return false;
@@ -468,7 +473,7 @@ TMemory::FastReadString( VAddr inAddress, KUInt32* ioAmount, char* outString )
 	KUInt32 orglen = *ioAmount;
 	KUInt32 len = orglen;
 	KUInt32 addr = inAddress;
-
+	
 #if TARGET_RT_BIG_ENDIAN
 	const KUInt8* pointer;
 	if ((addr & 0x3) || GetDirectPointerToROMRAM(addr, &pointer))
@@ -489,7 +494,7 @@ TMemory::FastReadString( VAddr inAddress, KUInt32* ioAmount, char* outString )
 	} else {
 		KUInt32 base = inAddress & TMemoryConsts::kMMUSmallestPageMask;
 		KUInt32 maxCopy = base - addr + TMemoryConsts::kMMUSmallestPageSize;
-
+		
 		do {
 			KUInt32 amount = min(len, maxCopy);
 			char* last = ::strncpy(dst, (char*) pointer, amount);
@@ -514,9 +519,9 @@ TMemory::FastReadString( VAddr inAddress, KUInt32* ioAmount, char* outString )
 		} while (true);
 	}
 #endif
-
+	
 	*ioAmount = orglen - len;
-
+	
 	return false;
 }
 
@@ -530,7 +535,7 @@ TMemory::FastWriteBuffer( VAddr inAddress, KUInt32 inAmount, const KUInt8* inBuf
 	const KUInt8* src = inBuffer;
 	KUInt32 len = inAmount;
 	KUInt32 addr = inAddress;
-
+	
 	if (addr & 0x3)
 	{
 		// Quickly skip to aligned accesses
@@ -541,7 +546,7 @@ TMemory::FastWriteBuffer( VAddr inAddress, KUInt32 inAmount, const KUInt8* inBuf
 			if (WriteB(addr++, byte)) return true;
 			len--;
 		}
-	}	
+	}
 	if (GetDirectPointerToRAM(addr, &pointer))
 	{
 		// Slower.
@@ -557,7 +562,7 @@ TMemory::FastWriteBuffer( VAddr inAddress, KUInt32 inAmount, const KUInt8* inBuf
 		KUInt32 base = inAddress & TMemoryConsts::kMMUSmallestPageMask;
 		KUInt32 maxCopy = base - addr + TMemoryConsts::kMMUSmallestPageSize;
 		KUInt32 alignedLen = len &~ 0x3;
-
+		
 		do {
 			KUInt32 amount = min(alignedLen, maxCopy);
 #if TARGET_RT_LITTLE_ENDIAN
@@ -590,7 +595,7 @@ TMemory::FastWriteBuffer( VAddr inAddress, KUInt32 inAmount, const KUInt8* inBuf
 			}
 		} while (true);
 	}
-
+	
 	// Copy unaligned bits at the end.
 	while (len-- > 0)
 	{
@@ -611,7 +616,7 @@ TMemory::FastWriteString( VAddr inAddress, KUInt32* ioAmount, const char* inStri
 	KUInt32 orglen = *ioAmount;
 	KUInt32 len = orglen;
 	KUInt32 addr = inAddress;
-
+	
 #if TARGET_RT_BIG_ENDIAN
 	KUInt8* pointer;
 	if ((addr & 0x3) || GetDirectPointerToRAM(addr, &pointer))
@@ -631,7 +636,7 @@ TMemory::FastWriteString( VAddr inAddress, KUInt32* ioAmount, const char* inStri
 	} else {
 		KUInt32 base = inAddress & TMemoryConsts::kMMUSmallestPageMask;
 		KUInt32 maxCopy = base - addr + TMemoryConsts::kMMUSmallestPageSize;
-
+		
 		do {
 			KUInt32 amount = min(len, maxCopy);
 			char* last = ::strncpy((char*) pointer, src, amount);
@@ -658,7 +663,7 @@ TMemory::FastWriteString( VAddr inAddress, KUInt32* ioAmount, const char* inStri
 #endif
 	
 	*ioAmount = orglen - len;
-
+	
 	return false;
 }
 
@@ -697,7 +702,7 @@ Boolean
 TMemory::Read( VAddr inAddress, KUInt32& outWord )
 {
 	PAddr theAddress;
-
+	
 	// Optimization: avoid translation when reading unprotected ROM
 	if (IsMMUEnabled() && !IsPageInROM(inAddress))
 	{
@@ -727,7 +732,7 @@ Boolean
 TMemory::ReadAligned( VAddr inAddress, KUInt32& outWord )
 {
 	PAddr theAddress;
-
+	
 	// Optimization: avoid translation when reading unprotected ROM
 	if (IsMMUEnabled() && !IsPageInROM(inAddress))
 	{
@@ -756,12 +761,12 @@ TMemory::ReadAligned( VAddr inAddress, KUInt32& outWord )
 inline Boolean
 TMemory::ReadROMRAM( VAddr inAddress, KUInt32& outWord )
 {
-//	if (inAddress == 0x0C100AB4)
-//	{
-//		mEmulator->BreakInMonitor();
-//	}
+	//	if (inAddress == 0x0C100AB4)
+	//	{
+	//		mEmulator->BreakInMonitor();
+	//	}
 	PAddr theAddress;
-
+	
 	// Optimization: avoid translation when reading unprotected ROM
 	if (IsMMUEnabled() && ((inAddress < 0x00002000) || (inAddress & TMemoryConsts::kROMEndMask)))
 	{
@@ -796,11 +801,11 @@ TMemory::ReadP( PAddr inAddress, Boolean& outFault )
 		{
 			// UNALIGNED ACCESS
 			KUInt32 theValue =
-				*((KUInt32*)
-					((KUIntPtr) mROMImagePtr + (inAddress & 0xFFFFFFFC)));
+			*((KUInt32*)
+			  ((KUIntPtr) mROMImagePtr + (inAddress & 0xFFFFFFFC)));
 			KUInt32 rotAmount = (inAddress & 0x3) * 8;
 			return (theValue << rotAmount)
-				| (theValue >> (32 - rotAmount));
+			| (theValue >> (32 - rotAmount));
 		} else {
 			return *((KUInt32*) ((KUIntPtr) mROMImagePtr + inAddress));
 		}
@@ -809,23 +814,23 @@ TMemory::ReadP( PAddr inAddress, Boolean& outFault )
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Read word: Bus error at P0x%.8X",
-					(unsigned int) inAddress );
+							   "Read word: Bus error at P0x%.8X",
+							   (unsigned int) inAddress );
 				// mEmulator->BreakInMonitor();
 			}
 			outFault = true;
 			return false;
 		} else if (inAddress < TMemoryConsts::kFlashBank1End) {
 			KUInt32 theResult = mFlash.Read(
-									inAddress - TMemoryConsts::kFlashBank1,
-									0 );
+											inAddress - TMemoryConsts::kFlashBank1,
+											0 );
 #if debugFlash
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Read flash (bank#1) at P0x%.8X = %.8X",
-					(unsigned int) inAddress,
-					(unsigned int) theResult );
+							   "Read flash (bank#1) at P0x%.8X = %.8X",
+							   (unsigned int) inAddress,
+							   (unsigned int) theResult );
 			}
 #endif
 			return theResult;
@@ -833,8 +838,8 @@ TMemory::ReadP( PAddr inAddress, Boolean& outFault )
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Read word access to unknown bank #1 at P0x%.8X",
-					(unsigned int) inAddress );
+							   "Read word access to unknown bank #1 at P0x%.8X",
+							   (unsigned int) inAddress );
 			}
 			// mEmulator->BreakInMonitor();
 			return 0;
@@ -845,11 +850,11 @@ TMemory::ReadP( PAddr inAddress, Boolean& outFault )
 		{
 			// UNALIGNED ACCESS
 			KUInt32 theValue =
-				*((KUInt32*)
-					((KUIntPtr) mRAMOffset + (inAddress & 0xFFFFFFFC)));
+			*((KUInt32*)
+			  ((KUIntPtr) mRAMOffset + (inAddress & 0xFFFFFFFC)));
 			KUInt32 rotAmount = (inAddress & 0x3) * 8;
 			return (theValue << rotAmount)
-				| (theValue >> (32 - rotAmount));
+			| (theValue >> (32 - rotAmount));
 		} else {
 			return *((KUInt32*) ((KUIntPtr) mRAMOffset + inAddress));
 		}
@@ -858,8 +863,8 @@ TMemory::ReadP( PAddr inAddress, Boolean& outFault )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Read word access to unknown bank #2 at P0x%.8X",
-				(unsigned int) inAddress );
+						   "Read word access to unknown bank #2 at P0x%.8X",
+						   (unsigned int) inAddress );
 		}
 		// mEmulator->BreakInMonitor();
 		return 0;
@@ -868,18 +873,18 @@ TMemory::ReadP( PAddr inAddress, Boolean& outFault )
 		if (inAddress == TMemoryConsts::kHdWr_04RAMSize) {
 			KUInt32 thePageCount = (mRAMSize >> 16) & 0xFF;
 			return
-				(thePageCount << 24)
-				| (thePageCount << 16)
-				| thePageCount;
+			(thePageCount << 24)
+			| (thePageCount << 16)
+			| thePageCount;
 		} else if (inAddress == TMemoryConsts::kHdWr_08RAMSize) {
 			return 0;
 		} else if ((inAddress >= TMemoryConsts::kHdWr_DMAChan1Base)
-			&& (inAddress < TMemoryConsts::kHdWr_DMAChan1End)) {
+				   && (inAddress < TMemoryConsts::kHdWr_DMAChan1End)) {
 			KUInt32 channel = (inAddress - TMemoryConsts::kHdWr_DMAChan1Base) >> 13;
 			KUInt32 reg = (inAddress & 0x1C00) >> 10;
 			return mDMAManager->ReadChannel1Register( channel, reg );
 		} else if ((inAddress >= TMemoryConsts::kHdWr_DMAChan2Base)
-			&& (inAddress < TMemoryConsts::kHdWr_DMAChan2End)) {
+				   && (inAddress < TMemoryConsts::kHdWr_DMAChan2End)) {
 			KUInt32 channel = (inAddress - TMemoryConsts::kHdWr_DMAChan2Base) >> 12;
 			KUInt32 reg = (inAddress & 0x0C00) >> 10;
 			return mDMAManager->ReadChannel2Register( channel, reg );
@@ -919,8 +924,8 @@ TMemory::ReadP( PAddr inAddress, Boolean& outFault )
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Read word access to unknown bank #3 at P0x%.8X",
-					(unsigned int) inAddress );
+							   "Read word access to unknown bank #3 at P0x%.8X",
+							   (unsigned int) inAddress );
 			}
 			// mEmulator->BreakInMonitor();
 			return 0;
@@ -930,8 +935,8 @@ TMemory::ReadP( PAddr inAddress, Boolean& outFault )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Read word access to serial bank at P0x%.8X",
-				(unsigned int) inAddress );
+						   "Read word access to serial bank at P0x%.8X",
+						   (unsigned int) inAddress );
 		}
 		// mEmulator->BreakInMonitor();
 		return 0;
@@ -960,23 +965,23 @@ TMemory::ReadP( PAddr inAddress, Boolean& outFault )
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Read word access to unknown bank #4 at P0x%.8X",
-					(unsigned int) inAddress );
+							   "Read word access to unknown bank #4 at P0x%.8X",
+							   (unsigned int) inAddress );
 			}
 			// mEmulator->BreakInMonitor();
 			return 0;
 		}
 	} else if (inAddress < TMemoryConsts::kFlashBank2End) {
 		KUInt32 theResult = mFlash.Read(
-								inAddress - TMemoryConsts::kFlashBank2,
-								1 );
+										inAddress - TMemoryConsts::kFlashBank2,
+										1 );
 #if debugFlash
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Read flash (bank#2) at P0x%.8X = %.8X",
-				(unsigned int) inAddress,
-				(unsigned int) theResult );
+						   "Read flash (bank#2) at P0x%.8X = %.8X",
+						   (unsigned int) inAddress,
+						   (unsigned int) theResult );
 		}
 #endif
 		return theResult;
@@ -984,8 +989,8 @@ TMemory::ReadP( PAddr inAddress, Boolean& outFault )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Read word access to unknown bank #5 at P0x%.8X",
-				(unsigned int) inAddress );
+						   "Read word access to unknown bank #5 at P0x%.8X",
+						   (unsigned int) inAddress );
 		}
 		return 0;
 	} else if (inAddress < TMemoryConsts::kPCMCIA1Base) {
@@ -1016,8 +1021,8 @@ TMemory::ReadP( PAddr inAddress, Boolean& outFault )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Read word: Bus error at P0x%.8X",
-				(unsigned int) inAddress );
+						   "Read word: Bus error at P0x%.8X",
+						   (unsigned int) inAddress );
 			// mEmulator->BreakInMonitor();
 		}
 		outFault = true;
@@ -1039,23 +1044,23 @@ TMemory::ReadPAligned( PAddr inAddress, Boolean& outFault )
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Read word: Bus error at P0x%.8X",
-					(unsigned int) inAddress );
+							   "Read word: Bus error at P0x%.8X",
+							   (unsigned int) inAddress );
 				// mEmulator->BreakInMonitor();
 			}
 			outFault = true;
 			return false;
 		} else if (inAddress < TMemoryConsts::kFlashBank1End) {
 			KUInt32 theResult = mFlash.Read(
-									inAddress - TMemoryConsts::kFlashBank1,
-									0 );
+											inAddress - TMemoryConsts::kFlashBank1,
+											0 );
 #if debugFlash
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Read flash (bank#1) at P0x%.8X = %.8X",
-					(unsigned int) inAddress,
-					(unsigned int) theResult );
+							   "Read flash (bank#1) at P0x%.8X = %.8X",
+							   (unsigned int) inAddress,
+							   (unsigned int) theResult );
 			}
 #endif
 			return theResult;
@@ -1063,8 +1068,8 @@ TMemory::ReadPAligned( PAddr inAddress, Boolean& outFault )
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Read word access to unknown bank #1 at P0x%.8X",
-					(unsigned int) inAddress );
+							   "Read word access to unknown bank #1 at P0x%.8X",
+							   (unsigned int) inAddress );
 			}
 			// mEmulator->BreakInMonitor();
 			return 0;
@@ -1077,8 +1082,8 @@ TMemory::ReadPAligned( PAddr inAddress, Boolean& outFault )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Read word access to unknown bank #2 at P0x%.8X",
-				(unsigned int) inAddress );
+						   "Read word access to unknown bank #2 at P0x%.8X",
+						   (unsigned int) inAddress );
 		}
 		// mEmulator->BreakInMonitor();
 		return 0;
@@ -1087,18 +1092,18 @@ TMemory::ReadPAligned( PAddr inAddress, Boolean& outFault )
 		if (inAddress == TMemoryConsts::kHdWr_04RAMSize) {
 			KUInt32 thePageCount = (mRAMSize >> 16) & 0xFF;
 			return
-				(thePageCount << 24)
-				| (thePageCount << 16)
-				| thePageCount;
+			(thePageCount << 24)
+			| (thePageCount << 16)
+			| thePageCount;
 		} else if (inAddress == TMemoryConsts::kHdWr_08RAMSize) {
 			return 0;
 		} else if ((inAddress >= TMemoryConsts::kHdWr_DMAChan1Base)
-			&& (inAddress < TMemoryConsts::kHdWr_DMAChan1End)) {
+				   && (inAddress < TMemoryConsts::kHdWr_DMAChan1End)) {
 			KUInt32 channel = (inAddress - TMemoryConsts::kHdWr_DMAChan1Base) >> 13;
 			KUInt32 reg = (inAddress & 0x1C00) >> 10;
 			return mDMAManager->ReadChannel1Register( channel, reg );
 		} else if ((inAddress >= TMemoryConsts::kHdWr_DMAChan2Base)
-			&& (inAddress < TMemoryConsts::kHdWr_DMAChan2End)) {
+				   && (inAddress < TMemoryConsts::kHdWr_DMAChan2End)) {
 			KUInt32 channel = (inAddress - TMemoryConsts::kHdWr_DMAChan2Base) >> 12;
 			KUInt32 reg = (inAddress & 0x0C00) >> 10;
 			return mDMAManager->ReadChannel2Register( channel, reg );
@@ -1136,8 +1141,8 @@ TMemory::ReadPAligned( PAddr inAddress, Boolean& outFault )
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Read word access to unknown bank #3 at P0x%.8X",
-					(unsigned int) inAddress );
+							   "Read word access to unknown bank #3 at P0x%.8X",
+							   (unsigned int) inAddress );
 			}
 			// mEmulator->BreakInMonitor();
 			return 0;
@@ -1147,8 +1152,8 @@ TMemory::ReadPAligned( PAddr inAddress, Boolean& outFault )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Read word access to serial bank at P0x%.8X",
-				(unsigned int) inAddress );
+						   "Read word access to serial bank at P0x%.8X",
+						   (unsigned int) inAddress );
 		}
 		// mEmulator->BreakInMonitor();
 		return 0;
@@ -1177,23 +1182,23 @@ TMemory::ReadPAligned( PAddr inAddress, Boolean& outFault )
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Read word access to unknown bank #4 at P0x%.8X",
-					(unsigned int) inAddress );
+							   "Read word access to unknown bank #4 at P0x%.8X",
+							   (unsigned int) inAddress );
 			}
 			// mEmulator->BreakInMonitor();
 			return 0;
 		}
 	} else if (inAddress < TMemoryConsts::kFlashBank2End) {
 		KUInt32 theResult = mFlash.Read(
-								inAddress - TMemoryConsts::kFlashBank2,
-								1 );
+										inAddress - TMemoryConsts::kFlashBank2,
+										1 );
 #if debugFlash
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Read flash (bank#2) at P0x%.8X = %.8X",
-				(unsigned int) inAddress,
-				(unsigned int) theResult );
+						   "Read flash (bank#2) at P0x%.8X = %.8X",
+						   (unsigned int) inAddress,
+						   (unsigned int) theResult );
 		}
 #endif
 		return theResult;
@@ -1201,8 +1206,8 @@ TMemory::ReadPAligned( PAddr inAddress, Boolean& outFault )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Read word access to unknown bank #5 at P0x%.8X",
-				(unsigned int) inAddress );
+						   "Read word access to unknown bank #5 at P0x%.8X",
+						   (unsigned int) inAddress );
 		}
 		return 0;
 	} else if (inAddress < TMemoryConsts::kPCMCIA1Base) {
@@ -1233,8 +1238,8 @@ TMemory::ReadPAligned( PAddr inAddress, Boolean& outFault )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Read word: Bus error at P0x%.8X",
-				(unsigned int) inAddress );
+						   "Read word: Bus error at P0x%.8X",
+						   (unsigned int) inAddress );
 			// mEmulator->BreakInMonitor();
 		}
 		outFault = true;
@@ -1264,11 +1269,11 @@ TMemory::DoReadROMRAMP( PAddr inAddress, Boolean& outFault )
 		{
 			// UNALIGNED ACCESS
 			KUInt32 theValue =
-				*((KUInt32*)
-					((KUIntPtr) mROMImagePtr + (inAddress & 0xFFFFFFFC)));
+			*((KUInt32*)
+			  ((KUIntPtr) mROMImagePtr + (inAddress & 0xFFFFFFFC)));
 			KUInt32 rotAmount = (inAddress & 0x3) * 8;
 			return (theValue << rotAmount)
-				| (theValue >> (32 - rotAmount));
+			| (theValue >> (32 - rotAmount));
 		} else {
 			return *((KUInt32*) ((KUIntPtr) mROMImagePtr + inAddress));
 		}
@@ -1276,8 +1281,8 @@ TMemory::DoReadROMRAMP( PAddr inAddress, Boolean& outFault )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"ReadROMRAM between ROM & RAM at P0x%.8X",
-				(unsigned int) inAddress );
+						   "ReadROMRAM between ROM & RAM at P0x%.8X",
+						   (unsigned int) inAddress );
 		}
 		mMMU.SetHardwareFault( inAddress );
 		outFault = true;
@@ -1288,11 +1293,11 @@ TMemory::DoReadROMRAMP( PAddr inAddress, Boolean& outFault )
 		{
 			// UNALIGNED ACCESS
 			KUInt32 theValue =
-				*((KUInt32*)
-					((KUIntPtr) mRAMOffset + (inAddress & 0xFFFFFFFC)));
+			*((KUInt32*)
+			  ((KUIntPtr) mRAMOffset + (inAddress & 0xFFFFFFFC)));
 			KUInt32 rotAmount = (inAddress & 0x3) * 8;
 			return (theValue << rotAmount)
-				| (theValue >> (32 - rotAmount));
+			| (theValue >> (32 - rotAmount));
 		} else {
 			return *((KUInt32*) ((KUIntPtr) mRAMOffset + inAddress));
 		}
@@ -1300,8 +1305,8 @@ TMemory::DoReadROMRAMP( PAddr inAddress, Boolean& outFault )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"ReadROMRAM after mRAMEnd at P0x%.8X",
-				(unsigned int) inAddress );
+						   "ReadROMRAM after mRAMEnd at P0x%.8X",
+						   (unsigned int) inAddress );
 		}
 		mMMU.SetHardwareFault( inAddress );
 		outFault = true;
@@ -1315,12 +1320,12 @@ TMemory::DoReadROMRAMP( PAddr inAddress, Boolean& outFault )
 Boolean
 TMemory::ReadB( VAddr inAddress, KUInt8& outByte )
 {
-//	if (inAddress == 0x0C100AB7)
-//	{
-//		mEmulator->BreakInMonitor();
-//	}
+	//	if (inAddress == 0x0C100AB7)
+	//	{
+	//		mEmulator->BreakInMonitor();
+	//	}
 	PAddr theAddress;
-
+	
 	if (IsMMUEnabled())
 	{
 		if (TranslateR( inAddress, theAddress ))
@@ -1346,10 +1351,10 @@ TMemory::ReadB( VAddr inAddress, KUInt8& outByte )
 Boolean
 TMemory::ReadBP( PAddr inAddress, KUInt8& outByte )
 {
-//	if (inAddress == 0x020237EA)
-//	{
-//		mEmulator->BreakInMonitor();
-//	}
+	//	if (inAddress == 0x020237EA)
+	//	{
+	//		mEmulator->BreakInMonitor();
+	//	}
 	if (!(inAddress & TMemoryConsts::kROMEndMask))
 	{
 #if TARGET_RT_LITTLE_ENDIAN
@@ -1362,8 +1367,8 @@ TMemory::ReadBP( PAddr inAddress, KUInt8& outByte )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Read byte: Bus error at P0x%.8X",
-				(unsigned int) inAddress );
+						   "Read byte: Bus error at P0x%.8X",
+						   (unsigned int) inAddress );
 		}
 		return true;
 	} else if (inAddress < TMemoryConsts::kFlashBank1End) {
@@ -1372,17 +1377,17 @@ TMemory::ReadBP( PAddr inAddress, KUInt8& outByte )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Read flash (bank#1) at P0x%.8X = %.2X",
-				(unsigned int) inAddress,
-				(unsigned int) outByte );
+						   "Read flash (bank#1) at P0x%.8X = %.2X",
+						   (unsigned int) inAddress,
+						   (unsigned int) outByte );
 		}
 #endif
 	} else if (inAddress < TMemoryConsts::kRAMStart) {
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Read byte access to unknown bank #1 at P0x%.8X",
-				(unsigned int) inAddress );
+						   "Read byte access to unknown bank #1 at P0x%.8X",
+						   (unsigned int) inAddress );
 		}
 		// mEmulator->BreakInMonitor();
 		outByte = 0;
@@ -1398,8 +1403,8 @@ TMemory::ReadBP( PAddr inAddress, KUInt8& outByte )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Read byte access to unknown bank #2 at P0x%.8X",
-				(unsigned int) inAddress );
+						   "Read byte access to unknown bank #2 at P0x%.8X",
+						   (unsigned int) inAddress );
 		}
 		// mEmulator->BreakInMonitor();
 		outByte = 0;
@@ -1407,8 +1412,8 @@ TMemory::ReadBP( PAddr inAddress, KUInt8& outByte )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Read byte access to unknown bank #3 at P0x%.8X",
-				(unsigned int) inAddress );
+						   "Read byte access to unknown bank #3 at P0x%.8X",
+						   (unsigned int) inAddress );
 		}
 		// mEmulator->BreakInMonitor();
 		outByte = 0;
@@ -1416,23 +1421,23 @@ TMemory::ReadBP( PAddr inAddress, KUInt8& outByte )
 		if (inAddress < TMemoryConsts::kInfraredSerialBase)
 		{
 			outByte = mExternalPort->ReadRegister(
-				inAddress - TMemoryConsts::kExternalSerialBase );
+												  inAddress - TMemoryConsts::kExternalSerialBase );
 		} else if (inAddress < TMemoryConsts::kBuiltInSerialBase) {
 			outByte = mInfraredPort->ReadRegister(
-				inAddress - TMemoryConsts::kInfraredSerialBase );
+												  inAddress - TMemoryConsts::kInfraredSerialBase );
 		} else if (inAddress < TMemoryConsts::kModemSerialBase) {
 			outByte = mBuiltInExtraPort->ReadRegister(
-				inAddress - TMemoryConsts::kBuiltInSerialBase );
+													  inAddress - TMemoryConsts::kBuiltInSerialBase );
 		} else {
 			outByte = mModemPort->ReadRegister(
-				inAddress - TMemoryConsts::kModemSerialBase );
+											   inAddress - TMemoryConsts::kModemSerialBase );
 		}
 	} else if (inAddress < TMemoryConsts::kFlashBank2) {
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Read byte access to unknown bank #4 at P0x%.8X",
-				(unsigned int) inAddress );
+						   "Read byte access to unknown bank #4 at P0x%.8X",
+						   (unsigned int) inAddress );
 		}
 		// mEmulator->BreakInMonitor();
 		outByte = 0;
@@ -1442,17 +1447,17 @@ TMemory::ReadBP( PAddr inAddress, KUInt8& outByte )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Read flash (bank#2) at P0x%.8X = %.2X",
-				(unsigned int) inAddress,
-				(unsigned int) outByte );
+						   "Read flash (bank#2) at P0x%.8X = %.2X",
+						   (unsigned int) inAddress,
+						   (unsigned int) outByte );
 		}
 #endif
 	} else if (inAddress < TMemoryConsts::kPCMCIA0Base) {
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Read byte access to unknown bank #5 at P0x%.8X",
-				(unsigned int) inAddress );
+						   "Read byte access to unknown bank #5 at P0x%.8X",
+						   (unsigned int) inAddress );
 		}
 		// mEmulator->BreakInMonitor();
 		outByte = 0;
@@ -1484,17 +1489,17 @@ TMemory::ReadBP( PAddr inAddress, KUInt8& outByte )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Read byte: Bus error at P0x%.8X",
-				(unsigned int) inAddress );
+						   "Read byte: Bus error at P0x%.8X",
+						   (unsigned int) inAddress );
 		}
 		return true;
 	}
-		
-//	if (inAddress == 0x0F1C4400)
-//	{
-//		mEmulator->BreakInMonitor();
-//	}
-
+	
+	//	if (inAddress == 0x0F1C4400)
+	//	{
+	//		mEmulator->BreakInMonitor();
+	//	}
+	
 	return false;
 }
 
@@ -1505,7 +1510,7 @@ Boolean
 TMemory::Write( VAddr inAddress, KUInt32 inWord )
 {
 	PAddr theAddress;
-
+	
 	if (IsMMUEnabled())
 	{
 		if (TranslateW( inAddress, theAddress ))
@@ -1532,7 +1537,7 @@ Boolean
 TMemory::WriteAligned( VAddr inAddress, KUInt32 inWord )
 {
 	PAddr theAddress;
-
+	
 	if (IsMMUEnabled())
 	{
 		if (TranslateW( inAddress &~ 0x03, theAddress ))
@@ -1558,12 +1563,12 @@ TMemory::WriteAligned( VAddr inAddress, KUInt32 inWord )
 inline Boolean
 TMemory::WriteRAM( VAddr inAddress, KUInt32 inWord )
 {
-//	if (inAddress == 0x0C100AB4)
-//	{
-//		mEmulator->BreakInMonitor();
-//	}
+	//	if (inAddress == 0x0C100AB4)
+	//	{
+	//		mEmulator->BreakInMonitor();
+	//	}
 	PAddr theAddress;
-
+	
 	if (IsMMUEnabled())
 	{
 		if (TranslateW( inAddress, theAddress ))
@@ -1589,11 +1594,11 @@ TMemory::WriteRAM( VAddr inAddress, KUInt32 inWord )
 Boolean
 TMemory::WriteP( PAddr inAddress, KUInt32 inWord )
 {
-//	if (((inAddress &~ 0x3) == 0x043AF01C)
-//		&& ((inWord == 0x00010000) || (inWord == 0x00020000)))
-//	{
-//		mEmulator->BreakInMonitor();
-//	}
+	//	if (((inAddress &~ 0x3) == 0x043AF01C)
+	//		&& ((inWord == 0x00010000) || (inWord == 0x00020000)))
+	//	{
+	//		mEmulator->BreakInMonitor();
+	//	}
 	
 	if (inAddress < TMemoryConsts::kRAMStart)
 	{
@@ -1602,18 +1607,18 @@ TMemory::WriteP( PAddr inAddress, KUInt32 inWord )
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Ignored write word access to ROM at P0x%.8X (%.8X)",
-					(unsigned int) inAddress,
-					(unsigned int) inWord );
+							   "Ignored write word access to ROM at P0x%.8X (%.8X)",
+							   (unsigned int) inAddress,
+							   (unsigned int) inWord );
 				//mEmulator->BreakInMonitor();
 			}
 		} else if (inAddress < TMemoryConsts::kFlashBank1) {
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Write word: Bus error at P0x%.8X (%.8X)",
-					(unsigned int) inAddress,
-					(unsigned int) inWord );
+							   "Write word: Bus error at P0x%.8X (%.8X)",
+							   (unsigned int) inAddress,
+							   (unsigned int) inWord );
 			}
 			return true;
 		} else if (inAddress < TMemoryConsts::kFlashBank1End) {
@@ -1621,33 +1626,33 @@ TMemory::WriteP( PAddr inAddress, KUInt32 inWord )
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Write word to flash (bank#1) (ignored) at P0x%.8X = %.8X",
-					(unsigned int) inAddress,
-					(unsigned int) inWord );
+							   "Write word to flash (bank#1) (ignored) at P0x%.8X = %.8X",
+							   (unsigned int) inAddress,
+							   (unsigned int) inWord );
 			}
 #endif
 		} else {
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Write word access to unknown bank #1 at P0x%.8X (%.8X)",
-					(unsigned int) inAddress,
-					(unsigned int) inWord );
+							   "Write word access to unknown bank #1 at P0x%.8X (%.8X)",
+							   (unsigned int) inAddress,
+							   (unsigned int) inWord );
 			}
 			// mEmulator->BreakInMonitor();
 		}
 	} else if (inAddress < mRAMEnd) {
-//        if (inAddress == 0x04098490)
-//        {
-//                mEmulator->BreakInMonitor();
-//        }
+		//        if (inAddress == 0x04098490)
+		//        {
+		//                mEmulator->BreakInMonitor();
+		//        }
 		// RAM.
 		if (inAddress & 0x3)
 		{
 			// UNALIGNED ACCESS
 			KUInt32 rotAmount = (inAddress & 0x3) * 8;
 			KUInt32 theValue = (inWord >> rotAmount)
-				| (inWord << (32 - rotAmount));
+			| (inWord << (32 - rotAmount));
 			*((KUInt32*) (mRAMOffset + inAddress)) = theValue;
 		} else {
 			*((KUInt32*) (mRAMOffset + inAddress)) = inWord;
@@ -1659,12 +1664,12 @@ TMemory::WriteP( PAddr inAddress, KUInt32 inWord )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Write word access to unknown bank #2 at P0x%.8X (%.8X)",
-				(unsigned int) inAddress,
-				(unsigned int) inWord );
+						   "Write word access to unknown bank #2 at P0x%.8X (%.8X)",
+						   (unsigned int) inAddress,
+						   (unsigned int) inWord );
 		}
-//		if (inWord == 0x00000411)
-//			mEmulator->BreakInMonitor();
+		//		if (inWord == 0x00000411)
+		//			mEmulator->BreakInMonitor();
 	} else if (inAddress < TMemoryConsts::kExternalSerialBase) {
 		if ((inAddress >= TMemoryConsts::kHdWr_DMAChan1Base)
 			&& (inAddress < TMemoryConsts::kHdWr_DMAChan1End)) {
@@ -1672,7 +1677,7 @@ TMemory::WriteP( PAddr inAddress, KUInt32 inWord )
 			KUInt32 reg = (inAddress & 0x1C00) >> 10;
 			mDMAManager->WriteChannel1Register( channel, reg, inWord );
 		} else if ((inAddress >= TMemoryConsts::kHdWr_DMAChan2Base)
-			&& (inAddress < TMemoryConsts::kHdWr_DMAChan2End)) {
+				   && (inAddress < TMemoryConsts::kHdWr_DMAChan2End)) {
 			KUInt32 channel = (inAddress - TMemoryConsts::kHdWr_DMAChan2Base) >> 12;
 			KUInt32 reg = (inAddress & 0x0C00) >> 10;
 			mDMAManager->WriteChannel2Register( channel, reg, inWord );
@@ -1694,13 +1699,13 @@ TMemory::WriteP( PAddr inAddress, KUInt32 inWord )
 			mInterruptManager->SetTimerMatchRegister( 2, inWord );
 		} else if (inAddress == TMemoryConsts::kHdWr_MatchReg3) {
 			mInterruptManager->SetTimerMatchRegister( 3, inWord );
-//			if (mLog)
-//			{
-//				mLog->FLogLine(
-//					"Set scheduler timer to %.8X (now = %.8X)",
-//					(unsigned int) inWord,
-//					(unsigned int) mInterruptManager->GetTimer() );
-//			}
+			//			if (mLog)
+			//			{
+			//				mLog->FLogLine(
+			//					"Set scheduler timer to %.8X (now = %.8X)",
+			//					(unsigned int) inWord,
+			//					(unsigned int) mInterruptManager->GetTimer() );
+			//			}
 		} else if (inAddress == TMemoryConsts::kHdWr_IntCtrlReg) {
 			mInterruptManager->SetIntCtrlReg( inWord );
 		} else if (inAddress == TMemoryConsts::kHdWr_IntClear) {
@@ -1721,9 +1726,9 @@ TMemory::WriteP( PAddr inAddress, KUInt32 inWord )
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Write word access to unknown bank #3 at P0x%.8X (%.8X)",
-					(unsigned int) inAddress,
-					(unsigned int) inWord );
+							   "Write word access to unknown bank #3 at P0x%.8X (%.8X)",
+							   (unsigned int) inAddress,
+							   (unsigned int) inWord );
 			}
 			// mEmulator->BreakInMonitor();
 		}
@@ -1732,9 +1737,9 @@ TMemory::WriteP( PAddr inAddress, KUInt32 inWord )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Write word access to serial bank at P0x%.8X (%.8X)",
-				(unsigned int) inAddress,
-				(unsigned int) inWord);
+						   "Write word access to serial bank at P0x%.8X (%.8X)",
+						   (unsigned int) inAddress,
+						   (unsigned int) inWord);
 		}
 		// mEmulator->BreakInMonitor();
 	} else if (inAddress < TMemoryConsts::kFlashBank2) {
@@ -1742,22 +1747,22 @@ TMemory::WriteP( PAddr inAddress, KUInt32 inWord )
 			// Ignore it.
 		} else if (inAddress == TMemoryConsts::kHdWr_BankCtrlReg) {
 			mBankCtrlRegister = inWord;
-//			if (mLog)
-//			{
-//				mLog->FLogLine(
-//					"Changed bank control register to %.8X",
-//					(unsigned int) inWord );
-//				mEmulator->BreakInMonitor();
-//			}
+			//			if (mLog)
+			//			{
+			//				mLog->FLogLine(
+			//					"Changed bank control register to %.8X",
+			//					(unsigned int) inWord );
+			//				mEmulator->BreakInMonitor();
+			//			}
 		} else if (inAddress == TMemoryConsts::kROMSerialChip) {
 			// Ignore it.
 		} else {
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Write word access to unknown bank #4 at P0x%.8X (%.8X)",
-					(unsigned int) inAddress,
-					(unsigned int) inWord );
+							   "Write word access to unknown bank #4 at P0x%.8X (%.8X)",
+							   (unsigned int) inAddress,
+							   (unsigned int) inWord );
 			}
 			// mEmulator->BreakInMonitor();
 		}
@@ -1766,18 +1771,18 @@ TMemory::WriteP( PAddr inAddress, KUInt32 inWord )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Write word to flash (bank#2) (ignored) at P0x%.8X = %.8X",
-				(unsigned int) inAddress,
-				(unsigned int) inWord );
+						   "Write word to flash (bank#2) (ignored) at P0x%.8X = %.8X",
+						   (unsigned int) inAddress,
+						   (unsigned int) inWord );
 		}
 #endif
 	} else if (inAddress < TMemoryConsts::kPCMCIA0Base) {
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Write word access to unknown bank #5 at P0x%.8X (%.8X)",
-				(unsigned int) inAddress,
-				(unsigned int) inWord );
+						   "Write word access to unknown bank #5 at P0x%.8X (%.8X)",
+						   (unsigned int) inAddress,
+						   (unsigned int) inWord );
 		}
 		// mEmulator->BreakInMonitor();
 	} else if (inAddress < TMemoryConsts::kPCMCIA1Base) {
@@ -1800,9 +1805,9 @@ TMemory::WriteP( PAddr inAddress, KUInt32 inWord )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Write word: Bus error at P0x%.8X (%.8X)",
-				(unsigned int) inAddress,
-				(unsigned int) inWord );
+						   "Write word: Bus error at P0x%.8X (%.8X)",
+						   (unsigned int) inAddress,
+						   (unsigned int) inWord );
 		}
 		return true;
 	}
@@ -1816,12 +1821,12 @@ TMemory::WriteP( PAddr inAddress, KUInt32 inWord )
 Boolean
 TMemory::WritePAligned( PAddr inAddress, KUInt32 inWord )
 {
-//	if (((inAddress &~ 0x3) == 0x043AF01C)
-//		&& ((inWord == 0x00010000) || (inWord == 0x00020000)))
-//	{
-//		mEmulator->BreakInMonitor();
-//	}
-
+	//	if (((inAddress &~ 0x3) == 0x043AF01C)
+	//		&& ((inWord == 0x00010000) || (inWord == 0x00020000)))
+	//	{
+	//		mEmulator->BreakInMonitor();
+	//	}
+	
 	if (inAddress < TMemoryConsts::kRAMStart)
 	{
 		if (inAddress < TMemoryConsts::kHighROMEnd)
@@ -1829,18 +1834,18 @@ TMemory::WritePAligned( PAddr inAddress, KUInt32 inWord )
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Ignored write word access to ROM at P0x%.8X (%.8X)",
-					(unsigned int) inAddress,
-					(unsigned int) inWord );
+							   "Ignored write word access to ROM at P0x%.8X (%.8X)",
+							   (unsigned int) inAddress,
+							   (unsigned int) inWord );
 				//mEmulator->BreakInMonitor();
 			}
 		} else if (inAddress < TMemoryConsts::kFlashBank1) {
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Write word: Bus error at P0x%.8X (%.8X)",
-					(unsigned int) inAddress,
-					(unsigned int) inWord );
+							   "Write word: Bus error at P0x%.8X (%.8X)",
+							   (unsigned int) inAddress,
+							   (unsigned int) inWord );
 			}
 			return true;
 		} else if (inAddress < TMemoryConsts::kFlashBank1End) {
@@ -1848,26 +1853,26 @@ TMemory::WritePAligned( PAddr inAddress, KUInt32 inWord )
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Write word to flash (bank#1) (ignored) at P0x%.8X = %.8X",
-					(unsigned int) inAddress,
-					(unsigned int) inWord );
+							   "Write word to flash (bank#1) (ignored) at P0x%.8X = %.8X",
+							   (unsigned int) inAddress,
+							   (unsigned int) inWord );
 			}
 #endif
 		} else {
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Write word access to unknown bank #1 at P0x%.8X (%.8X)",
-					(unsigned int) inAddress,
-					(unsigned int) inWord );
+							   "Write word access to unknown bank #1 at P0x%.8X (%.8X)",
+							   (unsigned int) inAddress,
+							   (unsigned int) inWord );
 			}
 			// mEmulator->BreakInMonitor();
 		}
 	} else if (inAddress < mRAMEnd) {
-//        if (inAddress == 0x04098490)
-//        {
-//                mEmulator->BreakInMonitor();
-//        }
+		//        if (inAddress == 0x04098490)
+		//        {
+		//                mEmulator->BreakInMonitor();
+		//        }
 		// RAM.
 		*((KUInt32*) (mRAMOffset + inAddress)) = inWord;
 		
@@ -1877,12 +1882,12 @@ TMemory::WritePAligned( PAddr inAddress, KUInt32 inWord )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Write word access to unknown bank #2 at P0x%.8X (%.8X)",
-				(unsigned int) inAddress,
-				(unsigned int) inWord );
+						   "Write word access to unknown bank #2 at P0x%.8X (%.8X)",
+						   (unsigned int) inAddress,
+						   (unsigned int) inWord );
 		}
-//		if (inWord == 0x00000411)
-//			mEmulator->BreakInMonitor();
+		//		if (inWord == 0x00000411)
+		//			mEmulator->BreakInMonitor();
 	} else if (inAddress < TMemoryConsts::kExternalSerialBase) {
 		if ((inAddress >= TMemoryConsts::kHdWr_DMAChan1Base)
 			&& (inAddress < TMemoryConsts::kHdWr_DMAChan1End)) {
@@ -1890,7 +1895,7 @@ TMemory::WritePAligned( PAddr inAddress, KUInt32 inWord )
 			KUInt32 reg = (inAddress & 0x1C00) >> 10;
 			mDMAManager->WriteChannel1Register( channel, reg, inWord );
 		} else if ((inAddress >= TMemoryConsts::kHdWr_DMAChan2Base)
-			&& (inAddress < TMemoryConsts::kHdWr_DMAChan2End)) {
+				   && (inAddress < TMemoryConsts::kHdWr_DMAChan2End)) {
 			KUInt32 channel = (inAddress - TMemoryConsts::kHdWr_DMAChan2Base) >> 12;
 			KUInt32 reg = (inAddress & 0x0C00) >> 10;
 			mDMAManager->WriteChannel2Register( channel, reg, inWord );
@@ -1912,13 +1917,13 @@ TMemory::WritePAligned( PAddr inAddress, KUInt32 inWord )
 			mInterruptManager->SetTimerMatchRegister( 2, inWord );
 		} else if (inAddress == TMemoryConsts::kHdWr_MatchReg3) {
 			mInterruptManager->SetTimerMatchRegister( 3, inWord );
-//			if (mLog)
-//			{
-//				mLog->FLogLine(
-//					"Set scheduler timer to %.8X (now = %.8X)",
-//					(unsigned int) inWord,
-//					(unsigned int) mInterruptManager->GetTimer() );
-//			}
+			//			if (mLog)
+			//			{
+			//				mLog->FLogLine(
+			//					"Set scheduler timer to %.8X (now = %.8X)",
+			//					(unsigned int) inWord,
+			//					(unsigned int) mInterruptManager->GetTimer() );
+			//			}
 		} else if (inAddress == TMemoryConsts::kHdWr_IntCtrlReg) {
 			mInterruptManager->SetIntCtrlReg( inWord );
 		} else if (inAddress == TMemoryConsts::kHdWr_IntClear) {
@@ -1939,9 +1944,9 @@ TMemory::WritePAligned( PAddr inAddress, KUInt32 inWord )
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Write word access to unknown bank #3 at P0x%.8X (%.8X)",
-					(unsigned int) inAddress,
-					(unsigned int) inWord );
+							   "Write word access to unknown bank #3 at P0x%.8X (%.8X)",
+							   (unsigned int) inAddress,
+							   (unsigned int) inWord );
 			}
 			// mEmulator->BreakInMonitor();
 		}
@@ -1950,9 +1955,9 @@ TMemory::WritePAligned( PAddr inAddress, KUInt32 inWord )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Write word access to serial bank at P0x%.8X (%.8X)",
-				(unsigned int) inAddress,
-				(unsigned int) inWord);
+						   "Write word access to serial bank at P0x%.8X (%.8X)",
+						   (unsigned int) inAddress,
+						   (unsigned int) inWord);
 		}
 		// mEmulator->BreakInMonitor();
 	} else if (inAddress < TMemoryConsts::kFlashBank2) {
@@ -1960,22 +1965,22 @@ TMemory::WritePAligned( PAddr inAddress, KUInt32 inWord )
 			// Ignore it.
 		} else if (inAddress == TMemoryConsts::kHdWr_BankCtrlReg) {
 			mBankCtrlRegister = inWord;
-//			if (mLog)
-//			{
-//				mLog->FLogLine(
-//					"Changed bank control register to %.8X",
-//					(unsigned int) inWord );
-//				mEmulator->BreakInMonitor();
-//			}
+			//			if (mLog)
+			//			{
+			//				mLog->FLogLine(
+			//					"Changed bank control register to %.8X",
+			//					(unsigned int) inWord );
+			//				mEmulator->BreakInMonitor();
+			//			}
 		} else if (inAddress == TMemoryConsts::kROMSerialChip) {
 			// Ignore it.
 		} else {
 			if (mLog)
 			{
 				mLog->FLogLine(
-					"Write word access to unknown bank #4 at P0x%.8X (%.8X)",
-					(unsigned int) inAddress,
-					(unsigned int) inWord );
+							   "Write word access to unknown bank #4 at P0x%.8X (%.8X)",
+							   (unsigned int) inAddress,
+							   (unsigned int) inWord );
 			}
 			// mEmulator->BreakInMonitor();
 		}
@@ -1984,18 +1989,18 @@ TMemory::WritePAligned( PAddr inAddress, KUInt32 inWord )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Write word to flash (bank#2) (ignored) at P0x%.8X = %.8X",
-				(unsigned int) inAddress,
-				(unsigned int) inWord );
+						   "Write word to flash (bank#2) (ignored) at P0x%.8X = %.8X",
+						   (unsigned int) inAddress,
+						   (unsigned int) inWord );
 		}
 #endif
 	} else if (inAddress < TMemoryConsts::kPCMCIA0Base) {
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Write word access to unknown bank #5 at P0x%.8X (%.8X)",
-				(unsigned int) inAddress,
-				(unsigned int) inWord );
+						   "Write word access to unknown bank #5 at P0x%.8X (%.8X)",
+						   (unsigned int) inAddress,
+						   (unsigned int) inWord );
 		}
 		// mEmulator->BreakInMonitor();
 	} else if (inAddress < TMemoryConsts::kPCMCIA1Base) {
@@ -2018,9 +2023,9 @@ TMemory::WritePAligned( PAddr inAddress, KUInt32 inWord )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Write word: Bus error at P0x%.8X (%.8X)",
-				(unsigned int) inAddress,
-				(unsigned int) inWord );
+						   "Write word: Bus error at P0x%.8X (%.8X)",
+						   (unsigned int) inAddress,
+						   (unsigned int) inWord );
 		}
 		return true;
 	}
@@ -2034,20 +2039,20 @@ TMemory::WritePAligned( PAddr inAddress, KUInt32 inWord )
 inline Boolean
 TMemory::WriteRAMP( PAddr inAddress, KUInt32 inWord )
 {
-//	if (((inAddress &~ 0x3) == 0x0403506C)
-//		&& ((inWord == 0x00) || (inWord == 0xFF)))
-//	{
-//		mEmulator->BreakInMonitor();
-//	}
-
+	//	if (((inAddress &~ 0x3) == 0x0403506C)
+	//		&& ((inWord == 0x00) || (inWord == 0xFF)))
+	//	{
+	//		mEmulator->BreakInMonitor();
+	//	}
+	
 	if (inAddress < TMemoryConsts::kRAMStart)
 	{
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"WriteRAM before TMemoryConsts::kRAMStart at P0x%.8X (%.8X)",
-				(unsigned int) inAddress,
-				(unsigned int) inWord );
+						   "WriteRAM before TMemoryConsts::kRAMStart at P0x%.8X (%.8X)",
+						   (unsigned int) inAddress,
+						   (unsigned int) inWord );
 		}
 		return true;
 	} else if (inAddress < mRAMEnd) {
@@ -2057,7 +2062,7 @@ TMemory::WriteRAMP( PAddr inAddress, KUInt32 inWord )
 			// UNALIGNED ACCESS
 			KUInt32 rotAmount = (inAddress & 0x3) * 8;
 			KUInt32 theValue = (inWord >> rotAmount)
-				| (inWord << (32 - rotAmount));
+			| (inWord << (32 - rotAmount));
 			*((KUInt32*) (mRAMOffset + inAddress)) = theValue;
 		} else {
 			*((KUInt32*) (mRAMOffset + inAddress)) = inWord;
@@ -2070,9 +2075,9 @@ TMemory::WriteRAMP( PAddr inAddress, KUInt32 inWord )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"WriteRAM after mRAMEnd at P0x%.8X (%.8X)",
-				(unsigned int) inAddress,
-				(unsigned int) inWord );
+						   "WriteRAM after mRAMEnd at P0x%.8X (%.8X)",
+						   (unsigned int) inAddress,
+						   (unsigned int) inWord );
 		}
 		return true;
 	}
@@ -2084,10 +2089,10 @@ TMemory::WriteRAMP( PAddr inAddress, KUInt32 inWord )
 Boolean
 TMemory::WriteB( VAddr inAddress, KUInt8 inByte )
 {
-//	if (inAddress == 0x0C100AB7)
-//	{
-//		mEmulator->BreakInMonitor();
-//	}
+	//	if (inAddress == 0x0C100AB7)
+	//	{
+	//		mEmulator->BreakInMonitor();
+	//	}
 	PAddr theAddress;
 	if (IsMMUEnabled())
 	{
@@ -2105,11 +2110,11 @@ TMemory::WriteB( VAddr inAddress, KUInt8 inByte )
 		return true;
 	}
 	
-//	if (inAddress == 0x0C105548)
-//	{
-//		mEmulator->BreakInMonitor();
-//	}
-
+	//	if (inAddress == 0x0C105548)
+	//	{
+	//		mEmulator->BreakInMonitor();
+	//	}
+	
 	return false;
 }
 
@@ -2119,27 +2124,27 @@ TMemory::WriteB( VAddr inAddress, KUInt8 inByte )
 Boolean
 TMemory::WriteBP( PAddr inAddress, KUInt8 inByte )
 {
-//	if ((inAddress == 0x043AF089) && ((inByte == 0x01) || (inByte == 0x02)))
-//	{
-//		mEmulator->BreakInMonitor();
-//	}
-
+	//	if ((inAddress == 0x043AF089) && ((inByte == 0x01) || (inByte == 0x02)))
+	//	{
+	//		mEmulator->BreakInMonitor();
+	//	}
+	
 	if (inAddress < TMemoryConsts::kHighROMEnd)
 	{
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Ignored write byte access to ROM at P0x%.8X (%.2X)",
-				(unsigned int) inAddress,
-				(unsigned int) inByte );
+						   "Ignored write byte access to ROM at P0x%.8X (%.2X)",
+						   (unsigned int) inAddress,
+						   (unsigned int) inByte );
 		}
 	} else if (inAddress < TMemoryConsts::kFlashBank1) {
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Write byte: Bus error at P0x%.8X (%.2X)",
-				(unsigned int) inAddress,
-				(unsigned int) inByte );
+						   "Write byte: Bus error at P0x%.8X (%.2X)",
+						   (unsigned int) inAddress,
+						   (unsigned int) inByte );
 		}
 		return true;
 	} else if (inAddress < TMemoryConsts::kFlashBank1End) {
@@ -2147,76 +2152,76 @@ TMemory::WriteBP( PAddr inAddress, KUInt8 inByte )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Write byte to flash (bank#1) (ignored) at P0x%.8X = %.2X",
-				(unsigned int) inAddress,
-				(unsigned int) inByte );
+						   "Write byte to flash (bank#1) (ignored) at P0x%.8X = %.2X",
+						   (unsigned int) inAddress,
+						   (unsigned int) inByte );
 		}
 #endif
 	} else if (inAddress < TMemoryConsts::kRAMStart) {
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Write byte access to unknown bank #1 at P0x%.8X (%.2X)",
-				(unsigned int) inAddress,
-				(unsigned int) inByte );
+						   "Write byte access to unknown bank #1 at P0x%.8X (%.2X)",
+						   (unsigned int) inAddress,
+						   (unsigned int) inByte );
 		}
 		// mEmulator->BreakInMonitor();
 	} else if (inAddress < mRAMEnd) {
-//        if (inAddress == 0x04098490)
-//        {
-//                mEmulator->BreakInMonitor();
-//        }
-
+		//        if (inAddress == 0x04098490)
+		//        {
+		//                mEmulator->BreakInMonitor();
+		//        }
+		
 		// RAM.
 #if TARGET_RT_LITTLE_ENDIAN
 		// Swap the endianness of the address.
 		*((KUInt8*) (mRAMOffset + (inAddress ^ 0x3))) = inByte;
 #else
 		*((KUInt8*) (mRAMOffset + inAddress)) = inByte;
-#endif		
-
+#endif
+		
 		// Invalidate JIT.
 		mJIT.Invalidate( inAddress );
 	} else if (inAddress < TMemoryConsts::kHardwareBase) {
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Write byte access to unknown bank #2 at P0x%.8X (%.2X)",
-				(unsigned int) inAddress,
-				(unsigned int) inByte );
+						   "Write byte access to unknown bank #2 at P0x%.8X (%.2X)",
+						   (unsigned int) inAddress,
+						   (unsigned int) inByte );
 		}
 		// mEmulator->BreakInMonitor();
 	} else if (inAddress < TMemoryConsts::kExternalSerialBase) {
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Write byte access to unknown bank #3 at P0x%.8X = %.2X",
-				(unsigned int) inAddress,
-				(unsigned int) inByte );
+						   "Write byte access to unknown bank #3 at P0x%.8X = %.2X",
+						   (unsigned int) inAddress,
+						   (unsigned int) inByte );
 		}
 		// mEmulator->BreakInMonitor();
 	} else if (inAddress < TMemoryConsts::kSerialEnd) {
 		if (inAddress < TMemoryConsts::kInfraredSerialBase)
 		{
 			mExternalPort->WriteRegister(
-				inAddress - TMemoryConsts::kExternalSerialBase, inByte );
+										 inAddress - TMemoryConsts::kExternalSerialBase, inByte );
 		} else if (inAddress < TMemoryConsts::kBuiltInSerialBase) {
 			mInfraredPort->WriteRegister(
-				inAddress - TMemoryConsts::kInfraredSerialBase, inByte );
+										 inAddress - TMemoryConsts::kInfraredSerialBase, inByte );
 		} else if (inAddress < TMemoryConsts::kModemSerialBase) {
 			mBuiltInExtraPort->WriteRegister(
-				inAddress - TMemoryConsts::kBuiltInSerialBase, inByte );
+											 inAddress - TMemoryConsts::kBuiltInSerialBase, inByte );
 		} else {
 			mModemPort->WriteRegister(
-				inAddress - TMemoryConsts::kModemSerialBase, inByte );
+									  inAddress - TMemoryConsts::kModemSerialBase, inByte );
 		}
 	} else if (inAddress < TMemoryConsts::kFlashBank2) {
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Write byte access to unknown bank #4 at P0x%.8X = %.2X",
-				(unsigned int) inAddress,
-				(unsigned int) inByte );
+						   "Write byte access to unknown bank #4 at P0x%.8X = %.2X",
+						   (unsigned int) inAddress,
+						   (unsigned int) inByte );
 		}
 		// mEmulator->BreakInMonitor();
 	} else if (inAddress < TMemoryConsts::kFlashBank2End) {
@@ -2224,18 +2229,18 @@ TMemory::WriteBP( PAddr inAddress, KUInt8 inByte )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Write byte to flash (bank#2) (ignored) at P0x%.8X = %.2X",
-				(unsigned int) inAddress,
-				(unsigned int) inByte );
+						   "Write byte to flash (bank#2) (ignored) at P0x%.8X = %.2X",
+						   (unsigned int) inAddress,
+						   (unsigned int) inByte );
 		}
 #endif
 	} else if (inAddress < TMemoryConsts::kPCMCIA0Base) {
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Write byte access to unknown bank #5 at P0x%.8X (%.2X)",
-				(unsigned int) inAddress,
-				(unsigned int) inByte );
+						   "Write byte access to unknown bank #5 at P0x%.8X (%.2X)",
+						   (unsigned int) inAddress,
+						   (unsigned int) inByte );
 		}
 		// mEmulator->BreakInMonitor();
 	} else if (inAddress < TMemoryConsts::kPCMCIA1Base) {
@@ -2258,18 +2263,18 @@ TMemory::WriteBP( PAddr inAddress, KUInt8 inByte )
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Write byte: Bus error at P0x%.8X (%.2X)",
-				(unsigned int) inAddress,
-				(unsigned int) inByte );
+						   "Write byte: Bus error at P0x%.8X (%.2X)",
+						   (unsigned int) inAddress,
+						   (unsigned int) inByte );
 		}
 		return true;
 	}
 	
-//	if ((inAddress == 0x0F240000) || (inAddress == 0x0F240800))
-//	{
-//		mEmulator->BreakInMonitor();
-//	}
-
+	//	if ((inAddress == 0x0F240000) || (inAddress == 0x0F240800))
+	//	{
+	//		mEmulator->BreakInMonitor();
+	//	}
+	
 	return false;
 }
 
@@ -2280,7 +2285,7 @@ Boolean
 TMemory::TranslateAndCheckFlashAddress( KUInt32 inAddress, PAddr* outAddress )
 {
 	PAddr theAddress;
-
+	
 	if (IsMMUEnabled())
 	{
 		if (TranslateW( (VAddr) inAddress, theAddress ))
@@ -2312,32 +2317,32 @@ TMemory::TranslateAndCheckFlashAddress( KUInt32 inAddress, PAddr* outAddress )
 Boolean
 TMemory::WriteToFlash32Bits( KUInt32 inWord, KUInt32 inMask, KUInt32 inAddress )
 {
-	PAddr theAddress;
+	PAddr theAddress = 0;
 	
 	if (TranslateAndCheckFlashAddress( inAddress, &theAddress ))
 	{
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Out of bounds flash access at P0x%.8X (V0x%.8X)",
-				(unsigned int) theAddress,
-				(unsigned int) inAddress );
+						   "Out of bounds flash access at P0x%.8X (V0x%.8X)",
+						   (unsigned int) theAddress,
+						   (unsigned int) inAddress );
 		}
 		return true;
 	}
-
+	
 #if debugFlash
 	if (mLog)
 	{
 		mLog->FLogLine(
-			"WriteToFlash32Bits (word = %.8X, mask = %.8X, addr = V0x%.8X : P0x%.8X)",
-			(unsigned int) inWord,
-			(unsigned int) inMask,
-			(unsigned int) inAddress,
-			(unsigned int) theAddress );
+					   "WriteToFlash32Bits (word = %.8X, mask = %.8X, addr = V0x%.8X : P0x%.8X)",
+					   (unsigned int) inWord,
+					   (unsigned int) inMask,
+					   (unsigned int) inAddress,
+					   (unsigned int) theAddress );
 	}
 #endif
-
+	
 	KUInt32 theOffset;
 	KUInt32 theBank;
 	if (theAddress < TMemoryConsts::kFlashBank2)
@@ -2360,32 +2365,32 @@ TMemory::WriteToFlash32Bits( KUInt32 inWord, KUInt32 inMask, KUInt32 inAddress )
 Boolean
 TMemory::WriteToFlash16Bits( KUInt32 inWord, KUInt32 inMask, KUInt32 inAddress )
 {
-	PAddr theAddress;
+	PAddr theAddress = 0;
 	
 	if (TranslateAndCheckFlashAddress( inAddress, &theAddress ))
 	{
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Out of bounds flash access at P0x%.8X (V0x%.8X)",
-				(unsigned int) theAddress,
-				(unsigned int) inAddress );
+						   "Out of bounds flash access at P0x%.8X (V0x%.8X)",
+						   (unsigned int) theAddress,
+						   (unsigned int) inAddress );
 		}
 		return true;
 	}
-
+	
 #if debugFlash
 	if (mLog)
 	{
 		mLog->FLogLine(
-			"WriteToFlash16Bits (word = %.8X, mask = %.8X, addr = V0x%.8X : P0x%.8X)",
-			(unsigned int) inWord,
-			(unsigned int) inMask,
-			(unsigned int) inAddress,
-			(unsigned int) theAddress );
+					   "WriteToFlash16Bits (word = %.8X, mask = %.8X, addr = V0x%.8X : P0x%.8X)",
+					   (unsigned int) inWord,
+					   (unsigned int) inMask,
+					   (unsigned int) inAddress,
+					   (unsigned int) theAddress );
 	}
 #endif
-
+	
 	KUInt32 theOffset;
 	KUInt32 theBank;
 	if (theAddress < TMemoryConsts::kFlashBank2)
@@ -2401,10 +2406,10 @@ TMemory::WriteToFlash16Bits( KUInt32 inWord, KUInt32 inMask, KUInt32 inAddress )
 	if (theAddress & 0x2)
 	{
 		// It's the lower 16 bits.
-		mFlash.Write( inWord, inMask, theOffset &~ 0x1, theBank );	
+		mFlash.Write( inWord, inMask, theOffset &~ 0x1, theBank );
 	} else {
 		// It's the higher 16 bits.
-		mFlash.Write( (inWord << 16), (inMask << 16), theOffset &~ 0x1, theBank );	
+		mFlash.Write( (inWord << 16), (inMask << 16), theOffset &~ 0x1, theBank );
 	}
 	
 	return false;
@@ -2415,33 +2420,33 @@ TMemory::WriteToFlash16Bits( KUInt32 inWord, KUInt32 inMask, KUInt32 inAddress )
 Boolean
 TMemory::EraseFlash( KUInt32 inAddress, KUInt32 inBlockSize )
 {
-	PAddr theAddress;
+	PAddr theAddress = 0;
 	
 	if (TranslateAndCheckFlashAddress( inAddress, &theAddress ))
 	{
 		if (mLog)
 		{
 			mLog->FLogLine(
-				"Out of bounds flash access at P0x%.8X (V0x%.8X)",
-				(unsigned int) theAddress,
-				(unsigned int) inAddress );
+						   "Out of bounds flash access at P0x%.8X (V0x%.8X)",
+						   (unsigned int) theAddress,
+						   (unsigned int) inAddress );
 		}
 		return true;
 	}
-
+	
 #if debugFlash
 	if (mLog)
 	{
 		mLog->FLogLine(
-			"EraseFlash (addr = V0x%.8X : P0x%.8X, size = %.8X)",
-			(unsigned int) inAddress,
-			(unsigned int) theAddress,
-			(unsigned int) inBlockSize );
+					   "EraseFlash (addr = V0x%.8X : P0x%.8X, size = %.8X)",
+					   (unsigned int) inAddress,
+					   (unsigned int) theAddress,
+					   (unsigned int) inBlockSize );
 	}
 #endif
-
+	
 	// We assume that the whole block is within a single bank.
-
+	
 	KUInt32 theOffset;
 	KUInt32 theBank;
 	if (theAddress < TMemoryConsts::kFlashBank2)
@@ -2496,14 +2501,14 @@ TMemory::ComputeSerialNumber( const KUInt32 inNewtonID[2] )
 	}
 	
 	int theCRC = kSerialNumberCRC[checksum >> 1];
-
+	
 	mSerialNumber[0] =
-			(theCRC << 24)
-		|	(inNewtonID[0] << 8)
-		|	(inNewtonID[1] >> 24);
+	(theCRC << 24)
+	|	(inNewtonID[0] << 8)
+	|	(inNewtonID[1] >> 24);
 	mSerialNumber[1] =
-			(inNewtonID[1] << 8)
-		|	0x01;
+	(inNewtonID[1] << 8)
+	|	0x01;
 }
 
 // -------------------------------------------------------------------------- //
@@ -2606,20 +2611,20 @@ TMemory::SetBreakpoint( VAddr inAddress, KUInt16 inID )
 		{
 			break;
 		}
-
+		
 		KUInt32 theValue = 0xE1200070;
 		theValue |= inID & 0x000F;
 		theValue |= (inID & 0xFFF0) << 4;
-
+		
 		if (!(theAddress & TMemoryConsts::kROMEndMask))
 		{
 			*((KUInt32*) ((KUIntPtr) mROMImagePtr + theAddress)) = theValue;
-
+			
 			// Invalidate JIT.
 			mJIT.Invalidate( theAddress );
 		} else {
 			theResult = WriteP( theAddress, theValue );
-
+			
 			if (theResult)
 			{
 				break;
@@ -2628,7 +2633,7 @@ TMemory::SetBreakpoint( VAddr inAddress, KUInt16 inID )
 		
 		KUInt32 theBPCount = mBPCount + 1;
 		mBreakpoints = (SBreakpoint*) ::realloc( mBreakpoints,
-			sizeof(SBreakpoint) * theBPCount);
+												sizeof(SBreakpoint) * theBPCount);
 		mBPCount = theBPCount;
 		mBreakpoints[theBPCount - 1].fAddress = theAddress;
 		mBreakpoints[theBPCount - 1].fOriginalValue = originalValue;
@@ -2680,18 +2685,18 @@ TMemory::ClearBreakpoint( VAddr inAddress )
 				KUInt32 theOriginalValue = cursor->fOriginalValue;
 				
 				(void) ::memmove(
-					cursor, &cursor[1],
-					(endBP - cursor) * sizeof (SBreakpoint) );
+								 cursor, &cursor[1],
+								 (endBP - cursor) * sizeof (SBreakpoint) );
 				KUInt32 theBPCount = mBPCount - 1;
 				mBreakpoints = (SBreakpoint*) ::realloc( mBreakpoints,
-					sizeof(SBreakpoint) * theBPCount);
+														sizeof(SBreakpoint) * theBPCount);
 				mBPCount = theBPCount;
 				
 				if (!(theAddress & TMemoryConsts::kROMEndMask))
 				{
 					*((KUInt32*) ((KUIntPtr) mROMImagePtr + theAddress))
-						= theOriginalValue;
-
+					= theOriginalValue;
+					
 					// Invalidate JIT.
 					mJIT.Invalidate( theAddress );
 				} else {
@@ -2750,8 +2755,8 @@ TMemory::DisableBreakpoint( VAddr inAddress )
 				if (!(theAddress & TMemoryConsts::kROMEndMask))
 				{
 					*((KUInt32*) ((KUIntPtr) mROMImagePtr + theAddress))
-						= theOriginalValue;
-
+					= theOriginalValue;
+					
 					// Invalidate JIT.
 					mJIT.Invalidate( theAddress );
 				} else {
@@ -2807,8 +2812,8 @@ TMemory::EnableBreakpoint( VAddr inAddress)
 				if (!(theAddress & TMemoryConsts::kROMEndMask))
 				{
 					*((KUInt32*) ((KUIntPtr) mROMImagePtr + theAddress))
-						= cursor->fBPValue;
-
+					= cursor->fBPValue;
+					
 					// Invalidate JIT.
 					mJIT.Invalidate( theAddress );
 				} else {
@@ -2842,10 +2847,10 @@ TMemory::SaveState( TStream* inStream ) const
 	
 	// The ROM.
 	inStream->PutInt32ArrayBE( (KUInt32*) mROMImagePtr, 0x01000000 / sizeof( KUInt32 ) );
-
+	
 	// The RAM
 	inStream->PutInt32ArrayBE( (KUInt32*) mRAM, mRAMSize / sizeof( KUInt32 ) );
-
+	
 	// The breakpoints.
 	KUInt32 indexBP;
 	for (indexBP = 0; indexBP < mBPCount; indexBP++)
@@ -2854,10 +2859,10 @@ TMemory::SaveState( TStream* inStream ) const
 		inStream->PutInt32BE( mBreakpoints[indexBP].fOriginalValue );
 		inStream->PutInt32BE( mBreakpoints[indexBP].fBPValue );
 	}
-
+	
 	// The MMU
 	mMMU.SaveState( inStream );
-
+	
 	// The flash.
 	mFlash.SaveState( inStream );
 }
@@ -2872,15 +2877,15 @@ TMemory::LoadState( TStream* inStream )
 	mRAMEnd = inStream->GetInt32BE();
 	mBankCtrlRegister = inStream->GetInt32BE();
 	mBPCount = inStream->GetInt32BE();
-		
+	
 	// The ROM.
 	inStream->GetInt32ArrayBE( (KUInt32*) mROMImagePtr, 0x01000000 / sizeof( KUInt32 ) );
-
+	
 	// The RAM
 	mRAM = (KUInt8*) ::realloc( mRAM, mRAMSize );
 	inStream->GetInt32ArrayBE( (KUInt32*) mRAM, mRAMSize / sizeof( KUInt32 ) );
 	mRAMOffset = ((KUIntPtr) mRAM) - TMemoryConsts::kRAMStart;
-
+	
 	// The breakpoints.
 	KUInt32 BPSize = sizeof(SBreakpoint) * mBPCount;
 	mBreakpoints = (SBreakpoint*) ::realloc( mBreakpoints, BPSize );
@@ -2891,13 +2896,13 @@ TMemory::LoadState( TStream* inStream )
 		mBreakpoints[indexBP].fOriginalValue = inStream->GetInt32BE();
 		mBreakpoints[indexBP].fBPValue = inStream->GetInt32BE();
 	}
-
+	
 	// The MMU
 	mMMU.LoadState( inStream );
-
+	
 	// The flash.
 	mFlash.LoadState( inStream );
-  
+	
 	// Invalidate the JIT cache.
 	mJIT.InvalidateTLB();
 }
@@ -2915,7 +2920,7 @@ TMemory::Init( void )
 	}
 	mRAM = (KUInt8*) ::calloc( 1, mRAMSize );
 	mRAMOffset = ((KUIntPtr) mRAM) - TMemoryConsts::kRAMStart;
-	mBreakpoints = (SBreakpoint*) ::malloc( 0 );
+	mBreakpoints = (SBreakpoint*) ::malloc( 1 );
 	mSerialNumber[0] = 0;
 	mSerialNumber[1] = 0;
 }

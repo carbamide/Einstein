@@ -233,7 +233,9 @@
     NSBundle *thisBundle = [NSBundle mainBundle];
 	
     if (!(einsteinRExPath = [thisBundle pathForResource:@"Einstein" ofType:@"rex"]) ) {
-        _mLog->LogLine("Couldn't load Einstein REX");
+		if (_mLog) {
+			_mLog->LogLine("Couldn't load Einstein REX");
+		}
         return FALSE;
     }
 	
@@ -303,14 +305,18 @@
     int currentScreenResolution = [(NSNumber *)[prefs objectForKey:@"screen_resolution"] intValue];
 	
     if (currentScreenResolution != _lastKnownScreenResolution) {
-        _mLog->LogLine("Newton screen resolution changed by Settings.");
+		if (_mLog) {
+			_mLog->LogLine("Newton screen resolution changed by Settings.");
+		}
 		
         _lastKnownScreenResolution = currentScreenResolution;
 		
         [self resetEmulator];
     }
 	
-    _mLog->LogLine("Detaching emulator thread");
+	if (_mLog) {
+		_mLog->LogLine("Detaching emulator thread");
+	}
 	
     [NSThread detachNewThreadSelector:@selector(emulatorThread) toTarget:self withObject:nil];
 }
@@ -333,7 +339,9 @@
 
 - (void)resetEmulator
 {
-    _mLog->LogLine("Resetting emulator");
+	if (_mLog) {
+		_mLog->LogLine("Resetting emulator");
+	}
 	
     [(iEinsteinView *)[self view] reset];
 	

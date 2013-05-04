@@ -944,12 +944,12 @@ TScreenManager::InsertSample(
 {
 	if (!mBypassTablet)
 	{
-		KUInt32 theTimeInTicks = inTimeInTicks;
-		if (theTimeInTicks == 0)
-		{
-			theTimeInTicks = mInterruptManager->GetTimer();
-		}
-//		mPlatformManager->SendTabletSampleEvent( inPackedSample, theTimeInTicks );
+//		KUInt32 theTimeInTicks = inTimeInTicks;
+//		if (theTimeInTicks == 0)
+//		{
+//			theTimeInTicks = mInterruptManager->GetTimer();
+//		}
+////		mPlatformManager->SendTabletSampleEvent( inPackedSample, theTimeInTicks );
 		
 		KUInt32 newPCrsr = mTabletBufPCrsr;
 		mTabletBuffer[newPCrsr++] = inPackedSample;

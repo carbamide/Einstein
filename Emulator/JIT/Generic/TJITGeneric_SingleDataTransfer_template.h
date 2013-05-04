@@ -55,7 +55,10 @@ SingleDataTransfer_Template(BITS_FLAGS, Rn, Rd)
 	}
 #else
 	// Immediate
+	//FIXME this might break
+
 	offset = theInstruction & 0x00000FFF;
+		
 #endif
 #if (Rn == 15)
 	KUInt32 theAddress = GETPC();

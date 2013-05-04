@@ -7,6 +7,7 @@
 #include "TPlatformManager.h"
 #include "TEmulator.h"
 #import "AppDelegate.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface UITouch (Private)
 -(float)_pathMajorRadius;
@@ -17,16 +18,15 @@
 @property (nonatomic) CGColorSpaceRef rgbColorSpace;
 @property (nonatomic) CGColorSpaceRef theColorSpace;
 
-
 @end
 @implementation iEinsteinView
 
 - (void)awakeFromNib
-{
+{	
 	_theColorSpace = CGColorSpaceCreateDeviceRGB();
-		
+	
 	_choosePackageView = [[ChoosePackageView alloc] initWithFrame:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? CGRectMake(788, 0.0, 240.0, 1024) : CGRectMake(340, 0.0, 240.0, [[UIScreen mainScreen] bounds].size.height)];
-
+	
 	[self setMultipleTouchEnabled:YES];
 	
 	AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
@@ -102,36 +102,30 @@
 										  NULL,
 										  false,
 										  kCGRenderingIntentDefault);
-			
-            CGColorSpaceRelease(_theColorSpace);
-			
+						
             CGRect screenBounds = [[UIScreen mainScreen] bounds];
             CGRect r = [self frame];
 			
-            if (screenBounds.size.width > _newtonScreenWidth && screenBounds.size.height > _newtonScreenHeight) {
-				// Newton screen resolution is rectangular (like 320x480)
+			// Newton screen resolution is rectangular (like 320x480)
+			
+			int wmod = (int)r.size.width % _newtonScreenWidth;
+			int hmod = (int)r.size.height % _newtonScreenHeight;
+			
+			if (wmod > hmod) {
+				r.size.width -= wmod;
 				
-				int wmod = (int)r.size.width % _newtonScreenWidth;
-				int hmod = (int)r.size.height % _newtonScreenHeight;
+				int scale = (int)r.size.width / _newtonScreenWidth;
+				r.size.height = _newtonScreenHeight * scale;
+			}
+			else {
+				r.size.height -= hmod;
 				
-				if (wmod > hmod) {
-					r.size.width -= wmod;
-					
-					int scale = (int)r.size.width / _newtonScreenWidth;
-					r.size.height = _newtonScreenHeight * scale;
-				}
-				else {
-					r.size.height -= hmod;
-					
-					int scale = (int)r.size.height / _newtonScreenHeight;
-					r.size.width = _newtonScreenWidth * scale;
-                }
-				
-                // Center image on screen
-				
-                r.origin.x += (screenBounds.size.width - r.size.width) / 2;
-                r.origin.y += (screenBounds.size.height - r.size.height) / 2;
-            }
+				int scale = (int)r.size.height / _newtonScreenHeight;
+				r.size.width = _newtonScreenWidth * scale;
+			}
+						
+			r.origin.x += (screenBounds.size.width - r.size.width) / 2;
+			r.origin.y += (screenBounds.size.height - r.size.height) / 2;
 			
             _screenImageRect = CGRectIntegral(r);
         }
@@ -140,9 +134,11 @@
 		
 		CGContextRef newContext = CGLayerGetContext(shapeLayer);
 		
+		CGContextClipToRect(newContext, _screenImageRect);
+
         CGContextSetInterpolationQuality(newContext, kCGInterpolationNone);
         CGContextDrawImage(newContext, _screenImageRect, _mScreenImage);
-				
+		
 		CGContextDrawLayerAtPoint(theContext, _screenImageRect.origin, shapeLayer);
 		CGLayerRelease(shapeLayer);
     }
@@ -153,13 +149,15 @@
     _mEmulator = NULL;
     _mScreenManager = NULL;
 	CGImageRelease(_mScreenImage);
-
+	
     _mScreenImage = NULL;
 }
 
 - (void)setNeedsDisplayInNewtonRect:(NSValue *)v
 {
-	[SVProgressHUD dismiss];
+	if ([SVProgressHUD isVisible]) {
+		[SVProgressHUD dismiss];
+	}
 	
     CGRect inRect = [v CGRectValue];
     CGRect r = _screenImageRect;
@@ -182,7 +180,7 @@
 	if ([[touches anyObject] _pathMajorRadius] > 10) {
 		return;
 	}
-
+	
     if ([[event touchesForView:self] count] == 1) {
  		UITouch *t = [touches anyObject];
 		
