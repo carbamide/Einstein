@@ -21,8 +21,9 @@
 @end
 @implementation iEinsteinView
 
+
 - (void)awakeFromNib
-{	
+{
 	_theColorSpace = CGColorSpaceCreateDeviceRGB();
 	
 	_choosePackageView = [[ChoosePackageView alloc] initWithFrame:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? CGRectMake(788, 0.0, 240.0, 1024) : CGRectMake(340, 0.0, 240.0, [[UIScreen mainScreen] bounds].size.height)];
@@ -48,6 +49,14 @@
 	[upGesture setDirection:UISwipeGestureRecognizerDirectionUp];
 	
 	[self addGestureRecognizer:upGesture];
+	
+	//	EAGLContext *aContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
+	//
+	//    self.context = aContext;
+	//
+	//    self.drawableColorFormat = GLKViewDrawableColorFormatRGBA8888;
+	//    self.drawableDepthFormat = GLKViewDrawableDepthFormat16;
+	//    self.drawableMultisample = GLKViewDrawableMultisample4X;
 }
 
 -(void)menu
@@ -75,12 +84,8 @@
     CGContextRef theContext = UIGraphicsGetCurrentContext();
 	
     if (_mScreenManager == NULL) {
-        CGFloat black[] = { 0.0, 0.0, 0.0, 1.0 };
-		
-        CGRect frame = [self frame];
-		
-        CGContextSetFillColor(theContext, black);
-        CGContextFillRect(theContext, frame);
+		glClearColor(0.0, 0.0, 0.0, 1.0);
+		glClear(GL_COLOR_BUFFER_BIT);
     }
     else {
         if (_mScreenImage == NULL) {
@@ -102,7 +107,7 @@
 										  NULL,
 										  false,
 										  kCGRenderingIntentDefault);
-						
+			
             CGRect screenBounds = [[UIScreen mainScreen] bounds];
             CGRect r = [self frame];
 			
@@ -123,7 +128,7 @@
 				int scale = (int)r.size.height / _newtonScreenHeight;
 				r.size.width = _newtonScreenWidth * scale;
 			}
-						
+			
 			r.origin.x += (screenBounds.size.width - r.size.width) / 2;
 			r.origin.y += (screenBounds.size.height - r.size.height) / 2;
 			
@@ -135,22 +140,44 @@
 		CGContextRef newContext = CGLayerGetContext(shapeLayer);
 		
 		CGContextClipToRect(newContext, _screenImageRect);
-
-        CGContextSetInterpolationQuality(newContext, kCGInterpolationNone);
-        CGContextDrawImage(newContext, _screenImageRect, _mScreenImage);
+		
+		CGContextSetInterpolationQuality(newContext, kCGInterpolationNone);
+		CGContextDrawImage(newContext, _screenImageRect, _mScreenImage);
 		
 		CGContextDrawLayerAtPoint(theContext, _screenImageRect.origin, shapeLayer);
 		CGLayerRelease(shapeLayer);
-    }
+	}
+	
+	//		UIImage *image = [UIImage imageWithCGImage:_mScreenImage];
+	//
+	//		NSError *error = nil;
+	//
+	//		GLKTextureLoader *textureloader = [[GLKTextureLoader alloc] initWithSharegroup:self.context.sharegroup];
+	//
+	//		GLKTextureInfo *myTexture;
+	//
+	//		[textureloader textureWithCGImage:image.CGImage options:nil queue:nil completionHandler:^(GLKTextureInfo *textureInfo, NSError *error) {
+	//
+	//			if(error) {
+	//				NSLog(@"[ERROR] Error loading texture from image: %@",error);
+	//			}
+	//			else {
+	//				NSLog(@"[INFO] GlkitViewController prepared texture %@", textureInfo);
+	//			}
+	//		}];
+	//
+	//		glClearColor(0.0, 0.0, 0.0, 1.0);
+	//		glClear(GL_COLOR_BUFFER_BIT);
+	//	}
 }
 
 - (void)reset
 {
-    _mEmulator = NULL;
-    _mScreenManager = NULL;
+	_mEmulator = NULL;
+	_mScreenManager = NULL;
 	CGImageRelease(_mScreenImage);
 	
-    _mScreenImage = NULL;
+	_mScreenImage = NULL;
 }
 
 - (void)setNeedsDisplayInNewtonRect:(NSValue *)v
@@ -159,20 +186,20 @@
 		[SVProgressHUD dismiss];
 	}
 	
-    CGRect inRect = [v CGRectValue];
-    CGRect r = _screenImageRect;
+	CGRect inRect = [v CGRectValue];
+	CGRect r = _screenImageRect;
 	
-    float wratio = r.size.width / _newtonScreenWidth;
-    float hratio = r.size.height / _newtonScreenHeight;
+	float wratio = r.size.width / _newtonScreenWidth;
+	float hratio = r.size.height / _newtonScreenHeight;
 	
-    int left = (inRect.origin.x * wratio) + r.origin.x;
-    int top = (inRect.origin.y * hratio) + r.origin.y;
-    int right = left + (inRect.size.width * wratio);
-    int bottom = top + (inRect.size.height * hratio);
+	int left = (inRect.origin.x * wratio) + r.origin.x;
+	int top = (inRect.origin.y * hratio) + r.origin.y;
+	int right = left + (inRect.size.width * wratio);
+	int bottom = top + (inRect.size.height * hratio);
 	
-    CGRect outRect = CGRectMake(left, top, right - left + 1, bottom - top + 1);
+	CGRect outRect = CGRectMake(left, top, right - left + 1, bottom - top + 1);
 	
-    [self setNeedsDisplayInRect:outRect];
+	[self setNeedsDisplayInRect:outRect];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -181,8 +208,8 @@
 		return;
 	}
 	
-    if ([[event touchesForView:self] count] == 1) {
- 		UITouch *t = [touches anyObject];
+	if ([[event touchesForView:self] count] == 1) {
+		UITouch *t = [touches anyObject];
 		
 		if (!_mEmulator->GetPlatformManager()->IsPowerOn()) {
 			_mEmulator->GetPlatformManager()->SendPowerSwitchEvent();
@@ -204,7 +231,7 @@
 		return;
 	}
 	
-    if ([[event touchesForView:self] count] == 1) {
+	if ([[event touchesForView:self] count] == 1) {
 		UITouch *t = [touches anyObject];
 		
 		CGPoint p = [t locationInView:self];
@@ -219,7 +246,13 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    _mScreenManager->PenUp();
+	_mScreenManager->PenUp();
+}
+
+- (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
+	
+	
+	
 }
 
 @end

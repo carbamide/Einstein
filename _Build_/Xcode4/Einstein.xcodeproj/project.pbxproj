@@ -36,6 +36,8 @@
 		298BCB8F171BADBA00BB11E4 /* IASKSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 298BCB80171BADBA00BB11E4 /* IASKSwitch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		298BCB90171BADBA00BB11E4 /* IASKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 298BCB82171BADBA00BB11E4 /* IASKTextField.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		298BCB92171BAE1E00BB11E4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 298BCB91171BAE1E00BB11E4 /* MessageUI.framework */; };
+		29BB509A1735E95E00F2423F /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29BB50991735E95E00F2423F /* GLKit.framework */; };
+		29BB509C1735E96200F2423F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29BB509B1735E96200F2423F /* OpenGLES.framework */; };
 		29CD9D391729FAED006B08CB /* Einstein.rex in Resources */ = {isa = PBXBuildFile; fileRef = 29CD9D381729FAED006B08CB /* Einstein.rex */; };
 		29CD9D46172A0E78006B08CB /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 29CD9D3C172A0E78006B08CB /* ioapi.c */; };
 		29CD9D47172A0E78006B08CB /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 29CD9D3E172A0E78006B08CB /* mztools.c */; };
@@ -184,6 +186,8 @@
 		298BCB91171BAE1E00BB11E4 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		29BB50991735E95E00F2423F /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
+		29BB509B1735E96200F2423F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
 		29CD9D381729FAED006B08CB /* Einstein.rex */ = {isa = PBXFileReference; lastKnownFileType = file; path = Einstein.rex; sourceTree = "<group>"; };
 		29CD9D3B172A0E78006B08CB /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
 		29CD9D3C172A0E78006B08CB /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
@@ -599,6 +603,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29BB509C1735E96200F2423F /* OpenGLES.framework in Frameworks */,
+				29BB509A1735E95E00F2423F /* GLKit.framework in Frameworks */,
 				298BCB92171BAE1E00BB11E4 /* MessageUI.framework in Frameworks */,
 				2933DD04172AF982001253CF /* libbz2.dylib in Frameworks */,
 				29CD9D4C172A0FB0006B08CB /* libz.dylib in Frameworks */,
@@ -762,6 +768,8 @@
 		29B97314FDCFA39411CA2CEA /* Einstein */ = {
 			isa = PBXGroup;
 			children = (
+				29BB509B1735E96200F2423F /* OpenGLES.framework */,
+				29BB50991735E95E00F2423F /* GLKit.framework */,
 				C99E3154111B72C0002165EC /* Sources */,
 				2968BF6C1728697A00848D91 /* Emulator */,
 				C99E3156111B72CC002165EC /* Vendor */,

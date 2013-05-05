@@ -1,6 +1,7 @@
 #import <UIKit/UIKit.h>
 #include <K/Defines/KDefinitions.h>
 #import "ChoosePackageView.h"
+#import <GLKit/GLKit.h>
 
 class TScreenManager;
 class TEmulator;

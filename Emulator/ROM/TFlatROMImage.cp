@@ -67,12 +67,8 @@ TFlatROMImage::TFlatROMImage(
 		::exit( 1 );
 	}
 
-	Boolean is8MB = false;
 	KUInt32 theSize = theInfos.st_size;
-	if (theSize == 0x00800000)
-	{
-		is8MB = true;
-	} else if (theSize != 0x01000000) {
+	if (theSize != 0x01000000) {
 		(void) ::fprintf( stderr, "ROM file should be 8MB or 16MB long\n" );
 		::exit( 1 );
 	}

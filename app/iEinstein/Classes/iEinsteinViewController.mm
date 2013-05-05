@@ -276,7 +276,7 @@
     int newtonScreenHeight = heightLUT[index];
 	
     iEinsteinView *einsteinView = (iEinsteinView *)[self view];
-		
+	
     Boolean isLandscape = (newtonScreenWidth > newtonScreenHeight);
 	
     _mScreenManager = new TIOSScreenManager(einsteinView, self, _mLog, newtonScreenWidth, newtonScreenHeight, true, isLandscape);
