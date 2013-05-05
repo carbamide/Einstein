@@ -135,17 +135,8 @@
             _screenImageRect = CGRectIntegral(r);
         }
 		
-		CGLayerRef shapeLayer = CGLayerCreateWithContext(theContext, _screenImageRect.size, NULL);
-		
-		CGContextRef newContext = CGLayerGetContext(shapeLayer);
-		
-		CGContextClipToRect(newContext, _screenImageRect);
-		
-		CGContextSetInterpolationQuality(newContext, kCGInterpolationNone);
-		CGContextDrawImage(newContext, _screenImageRect, _mScreenImage);
-		
-		CGContextDrawLayerAtPoint(theContext, _screenImageRect.origin, shapeLayer);
-		CGLayerRelease(shapeLayer);
+        CGContextSetInterpolationQuality(theContext, kCGInterpolationNone);
+        CGContextDrawImage(theContext, _screenImageRect, _mScreenImage);
 	}
 	
 	//		UIImage *image = [UIImage imageWithCGImage:_mScreenImage];
