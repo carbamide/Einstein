@@ -14,10 +14,7 @@
 @end
 
 @interface iEinsteinView ()
-
-@property (nonatomic) CGColorSpaceRef rgbColorSpace;
 @property (nonatomic) CGColorSpaceRef theColorSpace;
-
 @end
 @implementation iEinsteinView
 
@@ -49,14 +46,6 @@
 	[upGesture setDirection:UISwipeGestureRecognizerDirectionUp];
 	
 	[self addGestureRecognizer:upGesture];
-	
-	//	EAGLContext *aContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
-	//
-	//    self.context = aContext;
-	//
-	//    self.drawableColorFormat = GLKViewDrawableColorFormatRGBA8888;
-	//    self.drawableDepthFormat = GLKViewDrawableDepthFormat16;
-	//    self.drawableMultisample = GLKViewDrawableMultisample4X;
 }
 
 -(void)menu
@@ -81,6 +70,8 @@
 
 - (void)drawRect:(CGRect)rect
 {
+//	[EAGLContext setCurrentContext:self.context];
+	
     CGContextRef theContext = UIGraphicsGetCurrentContext();
 	
     if (_mScreenManager == NULL) {
@@ -102,7 +93,7 @@
 										  32,
 										  _newtonScreenWidth * sizeof(KUInt32),
 										  _theColorSpace,
-										  kCGImageAlphaNoneSkipLast,
+										  kCGImageAlphaNone,
 										  ((TIOSScreenManager *)_mScreenManager)->GetDataProvider(),
 										  NULL,
 										  false,
@@ -135,31 +126,19 @@
             _screenImageRect = CGRectIntegral(r);
         }
 		
-        CGContextSetInterpolationQuality(theContext, kCGInterpolationNone);
-        CGContextDrawImage(theContext, _screenImageRect, _mScreenImage);
+		CGContextSetInterpolationQuality(theContext, kCGInterpolationNone);
+		CGContextDrawImage(theContext, _screenImageRect, _mScreenImage);
 	}
+}
+
+- (GLKMatrix4)modelMatrix
+{
+    GLKMatrix4 modelMatrix = GLKMatrix4Identity;
+    modelMatrix = GLKMatrix4Translate(modelMatrix, self.frame.origin.x, self.frame.origin.y, 0);
 	
-	//		UIImage *image = [UIImage imageWithCGImage:_mScreenImage];
-	//
-	//		NSError *error = nil;
-	//
-	//		GLKTextureLoader *textureloader = [[GLKTextureLoader alloc] initWithSharegroup:self.context.sharegroup];
-	//
-	//		GLKTextureInfo *myTexture;
-	//
-	//		[textureloader textureWithCGImage:image.CGImage options:nil queue:nil completionHandler:^(GLKTextureInfo *textureInfo, NSError *error) {
-	//
-	//			if(error) {
-	//				NSLog(@"[ERROR] Error loading texture from image: %@",error);
-	//			}
-	//			else {
-	//				NSLog(@"[INFO] GlkitViewController prepared texture %@", textureInfo);
-	//			}
-	//		}];
-	//
-	//		glClearColor(0.0, 0.0, 0.0, 1.0);
-	//		glClear(GL_COLOR_BUFFER_BIT);
-	//	}
+    modelMatrix = GLKMatrix4Scale(modelMatrix, 1, 1, 1.0f);
+	
+    return modelMatrix;
 }
 
 - (void)reset
@@ -238,12 +217,6 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	_mScreenManager->PenUp();
-}
-
-- (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
-	
-	
-	
 }
 
 @end
