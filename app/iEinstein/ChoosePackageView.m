@@ -14,7 +14,7 @@
 
 - (id)initWithFrame:(CGRect)rect
 {
-    if ((self = [super initWithFrame:rect]) != nil) {
+    if (self = [super initWithFrame:rect]) {
 		[self getDocDirListing];
 		
         _diskFiles = @[];
@@ -33,9 +33,11 @@
         
         UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(hide)];
         
+
         [_navItem setRightBarButtonItem:button animated:NO];
-        
         [_navBar pushNavigationItem:_navItem animated:NO];
+		
+		[_navBar setBackgroundColor:[UIColor whiteColor]];
         
         [self addSubview:_navBar];
         

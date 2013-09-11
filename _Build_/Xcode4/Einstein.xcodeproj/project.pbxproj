@@ -36,8 +36,6 @@
 		298BCB8F171BADBA00BB11E4 /* IASKSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 298BCB80171BADBA00BB11E4 /* IASKSwitch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		298BCB90171BADBA00BB11E4 /* IASKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 298BCB82171BADBA00BB11E4 /* IASKTextField.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		298BCB92171BAE1E00BB11E4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 298BCB91171BAE1E00BB11E4 /* MessageUI.framework */; };
-		29BB509A1735E95E00F2423F /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29BB50991735E95E00F2423F /* GLKit.framework */; };
-		29BB509C1735E96200F2423F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29BB509B1735E96200F2423F /* OpenGLES.framework */; };
 		29CD9D391729FAED006B08CB /* Einstein.rex in Resources */ = {isa = PBXBuildFile; fileRef = 29CD9D381729FAED006B08CB /* Einstein.rex */; };
 		29CD9D46172A0E78006B08CB /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 29CD9D3C172A0E78006B08CB /* ioapi.c */; };
 		29CD9D47172A0E78006B08CB /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 29CD9D3E172A0E78006B08CB /* mztools.c */; };
@@ -186,8 +184,6 @@
 		298BCB91171BAE1E00BB11E4 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		29BB50991735E95E00F2423F /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
-		29BB509B1735E96200F2423F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
 		29CD9D381729FAED006B08CB /* Einstein.rex */ = {isa = PBXFileReference; lastKnownFileType = file; path = Einstein.rex; sourceTree = "<group>"; };
 		29CD9D3B172A0E78006B08CB /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
 		29CD9D3C172A0E78006B08CB /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
@@ -603,8 +599,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29BB509C1735E96200F2423F /* OpenGLES.framework in Frameworks */,
-				29BB509A1735E95E00F2423F /* GLKit.framework in Frameworks */,
 				298BCB92171BAE1E00BB11E4 /* MessageUI.framework in Frameworks */,
 				2933DD04172AF982001253CF /* libbz2.dylib in Frameworks */,
 				29CD9D4C172A0FB0006B08CB /* libz.dylib in Frameworks */,
@@ -768,8 +762,6 @@
 		29B97314FDCFA39411CA2CEA /* Einstein */ = {
 			isa = PBXGroup;
 			children = (
-				29BB509B1735E96200F2423F /* OpenGLES.framework */,
-				29BB50991735E95E00F2423F /* GLKit.framework */,
 				C99E3154111B72C0002165EC /* Sources */,
 				2968BF6C1728697A00848D91 /* Emulator */,
 				C99E3156111B72CC002165EC /* Vendor */,
@@ -859,11 +851,11 @@
 			children = (
 				C9B4AA2D123D474800D8D2C7 /* AppDelegate.h */,
 				C94ADB37123E9ADD00406839 /* AppDelegate.mm */,
+				297DDE7D172EB632000FCBFB /* DirectoryWatcher.h */,
+				297DDE7E172EB632000FCBFB /* DirectoryWatcher.m */,
 				2968BF70172870DD00848D91 /* Views */,
 				2968BF71172870E300848D91 /* View Controllers */,
 				2968BF6E17286A6A00848D91 /* Supporting Files */,
-				297DDE7D172EB632000FCBFB /* DirectoryWatcher.h */,
-				297DDE7E172EB632000FCBFB /* DirectoryWatcher.m */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -1689,6 +1681,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0460;
+				TargetAttributes = {
+					C9B4AA23123D471D00D8D2C7 = {
+						DevelopmentTeam = RG2JJ52ENN;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Einstein" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1882,7 +1879,8 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Joshua Barrow (VV74J74MG8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1908,11 +1906,11 @@
 				);
 				INFOPLIST_FILE = "iEinstein-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = iOSEinstein;
-				PROVISIONING_PROFILE = "7D0757FE-A6B2-4A9D-A03A-4B195C91DEEB";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1927,7 +1925,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Joshua Barrow (VV74J74MG8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -1950,11 +1949,11 @@
 				);
 				INFOPLIST_FILE = "iEinstein-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = iOSEinstein;
-				PROVISIONING_PROFILE = "7D0757FE-A6B2-4A9D-A03A-4B195C91DEEB";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1984,7 +1983,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Joshua Barrow (VV74J74MG8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -2007,11 +2007,11 @@
 				);
 				INFOPLIST_FILE = "iEinstein-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = iOSEinstein;
-				PROVISIONING_PROFILE = "7D0757FE-A6B2-4A9D-A03A-4B195C91DEEB";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -69,14 +69,11 @@
 }
 
 - (void)drawRect:(CGRect)rect
-{
-//	[EAGLContext setCurrentContext:self.context];
-	
+{	
     CGContextRef theContext = UIGraphicsGetCurrentContext();
 	
     if (_mScreenManager == NULL) {
-		glClearColor(0.0, 0.0, 0.0, 1.0);
-		glClear(GL_COLOR_BUFFER_BIT);
+		[self setBackgroundColor:[UIColor blackColor]];
     }
     else {
         if (_mScreenImage == NULL) {
@@ -129,16 +126,6 @@
 		CGContextSetInterpolationQuality(theContext, kCGInterpolationNone);
 		CGContextDrawImage(theContext, _screenImageRect, _mScreenImage);
 	}
-}
-
-- (GLKMatrix4)modelMatrix
-{
-    GLKMatrix4 modelMatrix = GLKMatrix4Identity;
-    modelMatrix = GLKMatrix4Translate(modelMatrix, self.frame.origin.x, self.frame.origin.y, 0);
-	
-    modelMatrix = GLKMatrix4Scale(modelMatrix, 1, 1, 1.0f);
-	
-    return modelMatrix;
 }
 
 - (void)reset

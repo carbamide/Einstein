@@ -77,16 +77,18 @@
     [_window addSubview:[_viewController view]];
     [_window makeKeyAndVisible];
 	
+	[[UIApplication sharedApplication] setStatusBarHidden:YES];
+
 	[[UIApplication sharedApplication] setIdleTimerDisabled:![[NSUserDefaults standardUserDefaults] boolForKey:@"sleep_screen"]];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didChangePreferences:) name:NSUserDefaultsDidChangeNotification object:nil];
 	
 	NSString *docdir = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"717006.rom" ofType:nil];
-	NSString *filePath2 = [docdir stringByAppendingPathComponent:@"717006.rom"];
+	NSString *destinationPath = [docdir stringByAppendingPathComponent:@"717006.rom"];
 	
-	if (![[NSFileManager defaultManager] fileExistsAtPath:filePath2]) {
-		[[NSFileManager defaultManager] copyItemAtPath:filePath toPath:filePath2 error:nil];
+	if (![[NSFileManager defaultManager] fileExistsAtPath:destinationPath]) {
+		[[NSFileManager defaultManager] copyItemAtPath:filePath toPath:destinationPath error:nil];
 	}
 	
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
